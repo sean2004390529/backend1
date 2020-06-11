@@ -16,10 +16,10 @@ public enum BaseResponseCode implements ResponseCodeInterface{
     
     DATA_ERROR(4000001,"传入的数据异常"),
     METHOD_IDENTITY_ERROR(4000002,"凭证过期"),
-    ACCOUNT_ERROR(4000003,"璇ヨ处鍙蜂笉瀛樺湪"),
+    ACCOUNT_ERROR(4000003,"登录账户不存在"),
     
-    ACCOUNT_LOCK(4010001,"璇ヨ处鍙疯閿佸畾"),
-    ACCOUNT_PASSWORD_ERROR(4000004,"鐢ㄦ埛鍚嶅瘑鐮佷笉鍖归厤"),
+    ACCOUNT_LOCK(4010001,"该账户被锁定"),
+    ACCOUNT_PASSWORD_ERROR(4000004,"账户或密码错误"),
     TOKEN_ERROR(4010001,"鐢ㄦ埛鏈櫥褰曪紝璇烽噸鏂扮櫥褰�"),
     TOKEN_NOT_NULL(4010001,"token 涓嶈兘涓虹┖"),
     SHIRO_AUTHENTICATION_ERROR(4010001,"鐢ㄦ埛璁よ瘉寮傚父"),
