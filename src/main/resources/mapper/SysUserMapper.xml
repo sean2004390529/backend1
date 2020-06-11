@@ -239,4 +239,12 @@
   	where username=#{username} and deleted=1
   </select>
   
+  <!-- 查询所有用户 -->
+  <select id="selectAll" resultMap="BaseResultMap">
+  	select <include refid="Base_Column_List"></include>
+  	from sys_user
+  	where deleted=1
+  </select>
+  
+  
 </mapper>

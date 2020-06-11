@@ -8,6 +8,8 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.sean.base.entity.SysUser;
 import com.sean.base.mapper.SysUserMapper;
 import com.sean.constants.Constant;
@@ -15,9 +17,12 @@ import com.sean.exception.BusinessException;
 import com.sean.exception.code.BaseResponseCode;
 import com.sean.service.UserService;
 import com.sean.utils.JwtTokenUtil;
+import com.sean.utils.PageUtil;
 import com.sean.utils.PasswordUtils;
 import com.sean.vo.req.LoginReqVO;
+import com.sean.vo.req.UserPageReqVO;
 import com.sean.vo.resp.LoginRespVO;
+import com.sean.vo.resp.PageVO;
 
 @Service
 public class UserServiceImpl implements UserService{
@@ -97,4 +102,19 @@ public class UserServiceImpl implements UserService{
         }
         return permissions;
     }
+
+//	@Override
+//	public PageInfo<SysUser> pageInfo(UserPageReqVO vo) {
+//		PageHelper.startPage(vo.getPageNum(), vo.getPageSize());
+//		List<SysUser> allUser = sysUserMapper.selectAll();
+//		PageInfo<SysUser> pageInfo =new PageInfo<>(allUser);
+//		return pageInfo;
+//	}
+    
+	@Override
+	public PageVO<SysUser> pageInfo(UserPageReqVO vo) {
+		PageHelper.startPage(vo.getPageNum(), vo.getPageSize());
+		List<SysUser> allUser = sysUserMapper.selectAll();
+		return PageUtil.getPageVO(allUser);
+	}
 }
