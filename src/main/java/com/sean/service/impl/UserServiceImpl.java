@@ -103,18 +103,18 @@ public class UserServiceImpl implements UserService{
         return permissions;
     }
 
-//	@Override
-//	public PageInfo<SysUser> pageInfo(UserPageReqVO vo) {
-//		PageHelper.startPage(vo.getPageNum(), vo.getPageSize());
-//		List<SysUser> allUser = sysUserMapper.selectAll();
-//		PageInfo<SysUser> pageInfo =new PageInfo<>(allUser);
-//		return pageInfo;
-//	}
-    
 	@Override
-	public PageVO<SysUser> pageInfo(UserPageReqVO vo) {
+	public PageInfo<SysUser> pageInfo(UserPageReqVO vo) {
 		PageHelper.startPage(vo.getPageNum(), vo.getPageSize());
 		List<SysUser> allUser = sysUserMapper.selectAll();
-		return PageUtil.getPageVO(allUser);
+		PageInfo<SysUser> pageInfo =new PageInfo<>(allUser);
+		return pageInfo;
 	}
+    
+//	@Override
+//	public PageVO<SysUser> pageInfo(UserPageReqVO vo) {
+//		PageHelper.startPage(vo.getPageNum(), vo.getPageSize());
+//		List<SysUser> allUser = sysUserMapper.selectAll();
+//		return PageUtil.getPageVO(allUser);
+//	}
 }

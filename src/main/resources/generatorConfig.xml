@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
-        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+        "http://mybatis.org/dtd/mybatis-generator -config_1_0.dtd">
 <generatorConfiguration>
     <!--classPathEntry:数据库的JDBC驱动,换成你自己的驱动位置  -->
     <classPathEntry location="D:\apache-maven-3.6.3\repository\mysql\mysql-connector-java\5.1.47\mysql-connector-java-5.1.47.jar" />
@@ -23,7 +23,7 @@
         </commentGenerator>
 
         <!-- jdbc连接 -->
-        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://192.168.163.128:3306/company_frame" userId="root"
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://192.168.163.130:3306/company_frame" userId="root"
                         password="P@ssw0rd"/>
         <!-- 类型转换 -->
         <javaTypeResolver>
@@ -46,7 +46,7 @@
         </javaClientGenerator>
 
 
-        <table tableName="sys_user" domainObjectName="SysUser"
+        <!--  <table tableName="sys_user" domainObjectName="SysUser"
                enableCountByExample="false"
                enableUpdateByExample="false"
                enableDeleteByExample="false"
@@ -56,6 +56,58 @@
             <columnOverride column="status" javaType="java.lang.Integer"/>
             <columnOverride column="create_where" javaType="java.lang.Integer"/>
             <columnOverride column="deleted" javaType="java.lang.Integer"/>
+        </table>-->
+        <table tableName="sys_dept" domainObjectName="SysDept"
+
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="true">
+            <columnOverride column="status" javaType="java.lang.Integer"/>
+            <columnOverride column="deleted" javaType="java.lang.Integer"/>
+        </table>
+
+        <table tableName="sys_log" domainObjectName="SysLog"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="true">
+        </table>
+        <table tableName="sys_permission" domainObjectName="SysPermission"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="true">
+            <columnOverride column="type" javaType="java.lang.Integer"/>
+            <columnOverride column="status" javaType="java.lang.Integer"/>
+            <columnOverride column="deleted" javaType="java.lang.Integer"/>
+        </table>
+        <table tableName="sys_role" domainObjectName="SysRole"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="true">
+            <columnOverride column="status" javaType="java.lang.Integer"/>
+            <columnOverride column="deleted" javaType="java.lang.Integer"/>
+        </table>
+        <table tableName="sys_role_permission" domainObjectName="SysRolePermission"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="true">
+        </table>
+
+        <table tableName="sys_user_role" domainObjectName="SysUserRole"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="true">
         </table>
 
     </context>

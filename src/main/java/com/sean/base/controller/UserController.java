@@ -7,7 +7,6 @@ import java.util.Map;
 
 import javax.validation.Valid;
 
-import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,13 +15,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.github.pagehelper.PageInfo;
 import com.sean.base.entity.SysUser;
 import com.sean.service.UserService;
 import com.sean.utils.DataResult;
 import com.sean.vo.req.LoginReqVO;
 import com.sean.vo.req.UserPageReqVO;
 import com.sean.vo.resp.LoginRespVO;
-import com.sean.vo.resp.PageVO;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiModelProperty;
@@ -58,21 +57,21 @@ public class UserController {
         return result;
     }
     
-//    @PostMapping("/users")
-//    @ApiModelProperty("分页查询用户接口")
-//    public DataResult<PageInfo<SysUser>> pageInfo(@RequestBody UserPageReqVO vo){
-//    	DataResult result = DataResult.success();
-//    	result.setData(userService.pageInfo(vo));
-//    	return result;
-//    }
-    
-    @PostMapping("/users")
+    @PostMapping("/user/list")
     @ApiModelProperty("分页查询用户接口")
-    @RequiresPermissions("sys:user:list")
-    public DataResult<PageVO<SysUser>> pageInfo(@RequestBody UserPageReqVO vo){
+    public DataResult<PageInfo<SysUser>> pageInfo(@RequestBody UserPageReqVO vo){
     	DataResult result = DataResult.success();
     	result.setData(userService.pageInfo(vo));
     	return result;
     }
+    
+//    @PostMapping("/user/list")
+//    @ApiModelProperty("分页查询用户接口")
+//    public DataResult<PageVO<SysUser>> pageInfo(@RequestBody UserPageReqVO vo){
+//    	System.out.println(vo);
+//    	DataResult result = DataResult.success();
+//    	result.setData(userService.pageInfo(vo));
+//    	return result;
+//    }
     
 }
