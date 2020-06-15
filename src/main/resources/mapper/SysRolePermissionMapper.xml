@@ -79,4 +79,11 @@
       create_time = #{createTime,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=VARCHAR}
   </update>
+  
+  <!-- 查询所有权限 -->
+  <select id="selectAll" resultMap="BaseResultMap">
+	  select <include refid="Base_Column_List"></include>
+	  from sys_premission
+	  where deleted=1
+  </select>
 </mapper>

@@ -174,4 +174,6 @@
       deleted = #{deleted,jdbcType=TINYINT}
     where id = #{id,jdbcType=VARCHAR}
   </update>
+  
+
 </mapper>

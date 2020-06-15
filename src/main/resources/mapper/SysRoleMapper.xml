@@ -114,4 +114,24 @@
       deleted = #{deleted,jdbcType=TINYINT}
     where id = #{id,jdbcType=VARCHAR}
   </update>
+  
+  <!-- 查询所有用户 -->
+  <select id="selectAll" resultMap="BaseResultMap" parameterType="com.sean.vo.req.RolePageReqVO" >
+  	select <include refid="Base_Column_List"></include>
+  	from sys_role
+    <where>
+      deleted=1
+  	  <if test="name !=null and name != ''">
+        and name like  concat('%',#{name},'%')
+      </if>
+      <if test="description !=null and description != ''">
+        and description like  concat('%',#{description},'%')
+      </if>
+      <if test="status !=null and status !='' or status==0">
+        and status=#{status}
+      </if>
+    </where>
+    ORDER BY create_time
+  </select>
+  
 </mapper>

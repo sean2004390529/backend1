@@ -25,10 +25,11 @@ public class CustomAccessControlerFilter extends AccessControlFilter {
     @Override
     protected boolean onAccessDenied(ServletRequest servletRequest, ServletResponse servletResponse) throws Exception {
         HttpServletRequest request= (HttpServletRequest) servletRequest;
-
+        System.out.println("onAccessDenied: " + request.getRequestURI().toString());
         //判断客户端是否携带accessToken
         try {
             String accessToken=request.getHeader(Constant.ACCESS_TOKEN);
+            System.out.println(accessToken);
             if(StringUtils.isEmpty(accessToken)){
                 throw new BusinessException(BaseResponseCode.TOKEN_NOT_NULL);
             }

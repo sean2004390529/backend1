@@ -20,7 +20,7 @@ import com.sean.utils.JwtTokenUtil;
 import com.sean.utils.PageUtil;
 import com.sean.utils.PasswordUtils;
 import com.sean.vo.req.LoginReqVO;
-import com.sean.vo.req.UserPageReqVO;
+import com.sean.vo.req.PageReqVO;
 import com.sean.vo.resp.LoginRespVO;
 import com.sean.vo.resp.PageVO;
 
@@ -104,7 +104,7 @@ public class UserServiceImpl implements UserService{
     }
 
 	@Override
-	public PageInfo<SysUser> pageInfo(UserPageReqVO vo) {
+	public PageInfo<SysUser> pageInfo(PageReqVO vo) {
 		PageHelper.startPage(vo.getPageNum(), vo.getPageSize());
 		List<SysUser> allUser = sysUserMapper.selectAll();
 		PageInfo<SysUser> pageInfo =new PageInfo<>(allUser);

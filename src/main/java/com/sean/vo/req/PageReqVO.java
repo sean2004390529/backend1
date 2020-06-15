@@ -2,7 +2,7 @@ package com.sean.vo.req;
 
 import io.swagger.annotations.ApiModelProperty;
 
-public class UserPageReqVO {
+public class PageReqVO {
 
 	@ApiModelProperty("当前第几页")
 	private Integer pageNum = 1;

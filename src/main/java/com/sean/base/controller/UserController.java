@@ -20,7 +20,7 @@ import com.sean.base.entity.SysUser;
 import com.sean.service.UserService;
 import com.sean.utils.DataResult;
 import com.sean.vo.req.LoginReqVO;
-import com.sean.vo.req.UserPageReqVO;
+import com.sean.vo.req.PageReqVO;
 import com.sean.vo.resp.LoginRespVO;
 
 import io.swagger.annotations.Api;
@@ -59,7 +59,7 @@ public class UserController {
     
     @PostMapping("/user/list")
     @ApiModelProperty("分页查询用户接口")
-    public DataResult<PageInfo<SysUser>> pageInfo(@RequestBody UserPageReqVO vo){
+    public DataResult<PageInfo<SysUser>> pageInfo(@RequestBody PageReqVO vo){
     	DataResult result = DataResult.success();
     	result.setData(userService.pageInfo(vo));
     	return result;

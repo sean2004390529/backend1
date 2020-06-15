@@ -1,5 +1,7 @@
 package com.sean.base.mapper;
 
+import java.util.List;
+
 import com.sean.base.entity.SysPermission;
 
 public interface SysPermissionMapper {
@@ -14,4 +16,6 @@ public interface SysPermissionMapper {
     int updateByPrimaryKeySelective(SysPermission record);
 
     int updateByPrimaryKey(SysPermission record);
+    
+    List<SysPermission> selectAll();
 }

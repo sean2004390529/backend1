@@ -58,6 +58,7 @@ public class ShiroConfig {
         filterChainDefinitionMap.put("/api/v1/user/login", "anon");
         filterChainDefinitionMap.put("/api/v1/user/info", "anon");
         filterChainDefinitionMap.put("/api/v1/user/**", "anon");
+        filterChainDefinitionMap.put("/api/v1/role/**", "anon");
         //放开swagger-ui地址
         filterChainDefinitionMap.put("/swagger/**", "anon");
         filterChainDefinitionMap.put("/v2/api-docs", "anon");
