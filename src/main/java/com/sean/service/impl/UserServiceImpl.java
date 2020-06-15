@@ -1,15 +1,17 @@
 package com.sean.service.impl;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.github.pagehelper.PageHelper;
-import com.github.pagehelper.PageInfo;
 import com.sean.base.entity.SysUser;
 import com.sean.base.mapper.SysUserMapper;
 import com.sean.constants.Constant;
@@ -20,7 +22,9 @@ import com.sean.utils.JwtTokenUtil;
 import com.sean.utils.PageUtil;
 import com.sean.utils.PasswordUtils;
 import com.sean.vo.req.LoginReqVO;
-import com.sean.vo.req.PageReqVO;
+import com.sean.vo.req.UserAddReqVO;
+import com.sean.vo.req.UserPageReqVO;
+import com.sean.vo.req.UserUpdateReqVO;
 import com.sean.vo.resp.LoginRespVO;
 import com.sean.vo.resp.PageVO;
 
@@ -103,18 +107,55 @@ public class UserServiceImpl implements UserService{
         return permissions;
     }
 
-	@Override
-	public PageInfo<SysUser> pageInfo(PageReqVO vo) {
-		PageHelper.startPage(vo.getPageNum(), vo.getPageSize());
-		List<SysUser> allUser = sysUserMapper.selectAll();
-		PageInfo<SysUser> pageInfo =new PageInfo<>(allUser);
-		return pageInfo;
-	}
-    
 //	@Override
-//	public PageVO<SysUser> pageInfo(UserPageReqVO vo) {
+//	public PageInfo<SysUser> pageInfo(UserPageReqVO vo) {
 //		PageHelper.startPage(vo.getPageNum(), vo.getPageSize());
 //		List<SysUser> allUser = sysUserMapper.selectAll();
-//		return PageUtil.getPageVO(allUser);
+//		PageInfo<SysUser> pageInfo =new PageInfo<>(allUser);
+//		return pageInfo;
 //	}
+    
+    // 查询所有用户
+	@Override
+	public PageVO<SysUser> selectAll(UserPageReqVO vo) {
+		PageHelper.startPage(vo.getPageNum(), vo.getPageSize());
+		List<SysUser> allUser = sysUserMapper.selectAll(vo);
+		return PageUtil.getPageVO(allUser);
+	}
+
+	// 增加用户，密码加密存储
+	@Override
+	public void addUser(UserAddReqVO vo) {
+		SysUser sysUser = new SysUser();
+		BeanUtils.copyProperties(vo, sysUser);
+		sysUser.setId(UUID.randomUUID().toString());
+		sysUser.setCreateTime(new Date());
+		
+		// 加盐保存密码
+		String salt = PasswordUtils.getSalt();
+		String encryPwd = PasswordUtils.encode(vo.getPassword(), salt);
+		sysUser.setSalt(salt);
+		sysUser.setPassword(encryPwd);
+		
+		int ret = sysUserMapper.insertSelective(sysUser);
+		if(ret!=1) {
+			throw new BusinessException(BaseResponseCode.DATA_ERROR);
+		}
+	}
+
+	// 更新用户信息，此方法不更新密码
+	@Override
+	public void updateUser(UserUpdateReqVO vo) {
+		SysUser sysUser = new SysUser();
+		BeanUtils.copyProperties(vo, sysUser);
+		sysUser.setUpdateTime(new Date());
+		
+		int ret = sysUserMapper.updateByPrimaryKeySelective(sysUser);
+		if(ret!=1) {
+			throw new BusinessException(BaseResponseCode.OPERATION_ERROR);
+		}
+	}
+	
+	
+	
 }

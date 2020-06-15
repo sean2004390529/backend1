@@ -26,6 +26,8 @@ public enum BaseResponseCode implements ResponseCodeInterface{
     ACCOUNT_HAS_DELETED_ERROR(4010001,"该账户已被删除"),
     TOKEN_PAST_DUE(4010002,"token失效，请重新登录"),
     NOT_PERMISSION(4030001,"没有权限访问该资源"),
+    
+    OPERATION_ERROR(4000005,"操作错误"),
     ;
 
     private int code;

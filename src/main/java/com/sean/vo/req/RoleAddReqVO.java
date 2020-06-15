@@ -6,7 +6,7 @@ import javax.validation.constraints.NotBlank;
 
 import io.swagger.annotations.ApiModelProperty;
 
-public class AddRoleReqVO {
+public class RoleAddReqVO {
 
 	@ApiModelProperty("角色名称")
 	@NotBlank(message = "角色名称不能为空")

@@ -5,7 +5,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
-import org.apache.commons.beanutils.BeanUtils;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +16,7 @@ import com.sean.exception.BusinessException;
 import com.sean.exception.code.BaseResponseCode;
 import com.sean.service.RoleService;
 import com.sean.utils.PageUtil;
-import com.sean.vo.req.AddRoleReqVO;
+import com.sean.vo.req.RoleAddReqVO;
 import com.sean.vo.req.RolePageReqVO;
 import com.sean.vo.req.RoleUpdateReqVO;
 import com.sean.vo.resp.PageVO;
@@ -52,17 +52,9 @@ public class RoleServiceImpl implements RoleService{
 
 	// 新增角色
 	@Override
-	public SysRole addRole(AddRoleReqVO vo) {
+	public SysRole addRole(RoleAddReqVO vo) {
 		SysRole sysRole = new SysRole();
-		try {
-			BeanUtils.copyProperties(sysRole, vo);
-		} catch (IllegalAccessException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (InvocationTargetException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		BeanUtils.copyProperties(vo, sysRole);
 		sysRole.setId(UUID.randomUUID().toString());
 		sysRole.setCreateTime(new Date());
 		int i = sysRoleMapper.insertSelective(sysRole);
@@ -79,15 +71,7 @@ public class RoleServiceImpl implements RoleService{
 		if(null==sysRole) {
 			throw new BusinessException(BaseResponseCode.DATA_ERROR);
 		}
-		try {
-			BeanUtils.copyProperties(sysRole, vo);
-		} catch (IllegalAccessException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (InvocationTargetException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		BeanUtils.copyProperties(vo, sysRole);
 		sysRole.setUpdateTime(new Date());
 		int ret = sysRoleMapper.updateByPrimaryKeySelective(sysRole);
 		if(ret!=1) {

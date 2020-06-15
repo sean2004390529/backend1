@@ -11,17 +11,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.github.pagehelper.PageInfo;
 import com.sean.base.entity.SysUser;
 import com.sean.service.UserService;
 import com.sean.utils.DataResult;
 import com.sean.vo.req.LoginReqVO;
-import com.sean.vo.req.PageReqVO;
+import com.sean.vo.req.UserAddReqVO;
+import com.sean.vo.req.UserPageReqVO;
+import com.sean.vo.req.UserUpdateReqVO;
 import com.sean.vo.resp.LoginRespVO;
+import com.sean.vo.resp.PageVO;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiModelProperty;
@@ -57,21 +60,39 @@ public class UserController {
         return result;
     }
     
-    @PostMapping("/user/list")
-    @ApiModelProperty("分页查询用户接口")
-    public DataResult<PageInfo<SysUser>> pageInfo(@RequestBody PageReqVO vo){
-    	DataResult result = DataResult.success();
-    	result.setData(userService.pageInfo(vo));
-    	return result;
-    }
-    
 //    @PostMapping("/user/list")
 //    @ApiModelProperty("分页查询用户接口")
-//    public DataResult<PageVO<SysUser>> pageInfo(@RequestBody UserPageReqVO vo){
-//    	System.out.println(vo);
+//    public DataResult<PageInfo<SysUser>> pageInfo(@RequestBody PageReqVO vo){
 //    	DataResult result = DataResult.success();
 //    	result.setData(userService.pageInfo(vo));
 //    	return result;
 //    }
+    
+    @PostMapping("/user/list")
+    @ApiModelProperty("分页查询用户接口")
+    public DataResult<PageVO<SysUser>> pageInfo(@RequestBody UserPageReqVO vo){
+    	System.out.println(vo);
+    	DataResult result = DataResult.success();
+    	result.setData(userService.selectAll(vo));
+    	return result;
+    }
+    
+    @PostMapping("/user")
+    @ApiModelProperty("新增用户")
+    public DataResult addUser(@RequestBody @Valid UserAddReqVO vo) {
+    	DataResult result = DataResult.success();
+    	userService.addUser(vo);
+    	return result;
+    }
+    
+    @PutMapping("/user")
+    @ApiModelProperty("修改用户信息")
+    public DataResult updateUser(@RequestBody @Valid UserUpdateReqVO vo) {
+    	System.out.println(vo);
+    	DataResult result = DataResult.success();
+    	userService.updateUser(vo);
+    	return result;
+    }
+    
     
 }

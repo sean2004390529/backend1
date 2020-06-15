@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.sean.base.entity.SysRole;
 import com.sean.service.RoleService;
 import com.sean.utils.DataResult;
-import com.sean.vo.req.AddRoleReqVO;
+import com.sean.vo.req.RoleAddReqVO;
 import com.sean.vo.req.RolePageReqVO;
 import com.sean.vo.req.RoleUpdateReqVO;
 import com.sean.vo.resp.PageVO;
@@ -50,7 +50,7 @@ public class RoleController {
 	
 	@PostMapping("/role")
 	@ApiModelProperty("新增角色")
-	public DataResult<SysRole> addRole(@RequestBody @Valid AddRoleReqVO vo){
+	public DataResult<SysRole> addRole(@RequestBody @Valid RoleAddReqVO vo){
 		DataResult result = DataResult.success();
 		result.setData(roleService.addRole(vo));
 		return result;

@@ -240,10 +240,25 @@
   </select>
   
   <!-- 查询所有用户 -->
-  <select id="selectAll" resultMap="BaseResultMap">
-  	select <include refid="Base_Column_List"></include>
+  <select id="selectAll" resultMap="BaseResultMap" parameterType="com.sean.vo.req.UserPageReqVO">
+  	select id, username, phone, dept_id, email, status, sex, create_time, update_time
   	from sys_user
-  	where deleted=1
+  	<where>
+      deleted=1
+  	  <if test="username !=null and username != ''">
+        and username like concat('%',#{username},'%')
+      </if>
+      <if test="email !=null and email != ''">
+        and email like concat('%',#{email},'%')
+      </if>
+      <if test="phone !=null and phone != ''">
+        and phone like concat('%',#{phone},'%')
+      </if>
+      <if test="status !=null and status !='' or status==0">
+        and status=#{status}
+      </if>
+    </where>
+  	order by create_time
   </select>
   
   
