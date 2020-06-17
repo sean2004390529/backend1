@@ -10,6 +10,7 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -21,10 +22,12 @@ import com.sean.service.UserService;
 import com.sean.utils.DataResult;
 import com.sean.vo.req.LoginReqVO;
 import com.sean.vo.req.UserAddReqVO;
+import com.sean.vo.req.UserOwnRoleReqVO;
 import com.sean.vo.req.UserPageReqVO;
 import com.sean.vo.req.UserUpdateReqVO;
 import com.sean.vo.resp.LoginRespVO;
 import com.sean.vo.resp.PageVO;
+import com.sean.vo.resp.UserOwnRoleRespVO;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiModelProperty;
@@ -94,5 +97,19 @@ public class UserController {
     	return result;
     }
     
+    @GetMapping("/user/roles/{userId}")
+    @ApiModelProperty("通过用户id，查询拥有角色")
+    public DataResult<UserOwnRoleRespVO> getUserOwnRole(@PathVariable("userId") String userId){
+    	DataResult result = DataResult.success();
+    	result.setData(userService.getUserOwnRole(userId));
+    	return result;
+    }
     
+    @PutMapping("/user/roles")
+    @ApiModelProperty("通过用户id，更新拥有角色")
+    public DataResult setUserOwnRole(@RequestBody @Valid UserOwnRoleReqVO vo) {
+    	DataResult result = DataResult.success();
+    	userService.setUserOwnRole(vo);
+    	return result;
+    }
 }

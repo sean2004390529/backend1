@@ -115,7 +115,7 @@
     where id = #{id,jdbcType=VARCHAR}
   </update>
   
-  <!-- 查询所有用户 -->
+  <!-- 查询所有角色 带查询条件-->
   <select id="selectAll" resultMap="BaseResultMap" parameterType="com.sean.vo.req.RolePageReqVO" >
   	select <include refid="Base_Column_List"></include>
   	from sys_role
@@ -134,4 +134,10 @@
     ORDER BY create_time
   </select>
   
+  <!-- 不带条件 - 查询所有角色 -->
+  <select id="selectAllNoPage" resultMap="BaseResultMap">
+  	select <include refid="Base_Column_List"></include>
+  	from sys_role
+  	where deleted=1
+  </select>
 </mapper>

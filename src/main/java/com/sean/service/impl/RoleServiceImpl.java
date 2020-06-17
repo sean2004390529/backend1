@@ -36,20 +36,21 @@ public class RoleServiceImpl implements RoleService{
 //		return pageInfo;
 //	}
 	
+	// 查询所有角色--分页
 	@Override
 	public PageVO<SysRole> selectAll(RolePageReqVO vo) {
 		PageHelper.startPage(vo.getPageNum(), vo.getPageSize());
 		List<SysRole> allRole = sysRoleMapper.selectAll(vo);
 		return PageUtil.getPageVO(allRole);
 	}
-//	@Override
-//	public PageVO<SysUser> pageInfo(UserPageReqVO vo) {
-//		PageHelper.startPage(vo.getPageNum(), vo.getPageSize());
-//		List<SysUser> allUser = sysUserMapper.selectAll();
-//		return PageUtil.getPageVO(allUser);
-//	}
-
-
+	
+	// 查询所有角色--不分页
+	@Override
+	public List<SysRole> selectAllNoPage() {
+		return sysRoleMapper.selectAllNoPage();
+	}
+	
+	
 	// 新增角色
 	@Override
 	public SysRole addRole(RoleAddReqVO vo) {
@@ -79,6 +80,9 @@ public class RoleServiceImpl implements RoleService{
 		}
 	}
 
-
+	@Override
+	public SysRole selectByPrimaryKey(String id) {
+		return sysRoleMapper.selectByPrimaryKey(id);
+	}
 	
 }

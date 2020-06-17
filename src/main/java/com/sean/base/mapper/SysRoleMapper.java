@@ -18,5 +18,10 @@ public interface SysRoleMapper {
 
     int updateByPrimaryKey(SysRole record);
 
+    // 查询所有角色--分页
     List<SysRole> selectAll(RolePageReqVO vo);
+    
+    // 查询所有角色--不分页
+    List<SysRole> selectAllNoPage();
+    
 }

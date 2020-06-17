@@ -6,33 +6,55 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
+import java.util.concurrent.TimeUnit;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.github.pagehelper.PageHelper;
+import com.sean.base.entity.SysRole;
 import com.sean.base.entity.SysUser;
 import com.sean.base.mapper.SysUserMapper;
 import com.sean.constants.Constant;
 import com.sean.exception.BusinessException;
 import com.sean.exception.code.BaseResponseCode;
+import com.sean.service.RedisService;
+import com.sean.service.RoleService;
+import com.sean.service.UserRoleService;
 import com.sean.service.UserService;
 import com.sean.utils.JwtTokenUtil;
 import com.sean.utils.PageUtil;
 import com.sean.utils.PasswordUtils;
+import com.sean.utils.TokenSettings;
 import com.sean.vo.req.LoginReqVO;
 import com.sean.vo.req.UserAddReqVO;
+import com.sean.vo.req.UserOwnRoleReqVO;
 import com.sean.vo.req.UserPageReqVO;
 import com.sean.vo.req.UserUpdateReqVO;
 import com.sean.vo.resp.LoginRespVO;
 import com.sean.vo.resp.PageVO;
+import com.sean.vo.resp.UserOwnRoleRespVO;
 
 @Service
 public class UserServiceImpl implements UserService{
 
 	@Autowired
+	private RedisService redisService;
+	
+	@Autowired
+	private TokenSettings tokenSettings;
+	
+	@Autowired
 	private SysUserMapper sysUserMapper;
+	
+	// 用户与角色关联表
+	@Autowired
+	private UserRoleService userRoleService;
+	
+	// 角色查询
+	@Autowired
+	private RoleService roleService;
 	
 	@Override
 	public LoginRespVO login(LoginReqVO vo) {
@@ -155,7 +177,30 @@ public class UserServiceImpl implements UserService{
 			throw new BusinessException(BaseResponseCode.OPERATION_ERROR);
 		}
 	}
-	
-	
+
+	// 通过用户id，查询拥有角色
+	@Override
+	public UserOwnRoleRespVO getUserOwnRole(String userId) {
+		// 创建Response对象
+		UserOwnRoleRespVO respVO = new UserOwnRoleRespVO();
+		// 查询用户拥有的角色id集合
+		respVO.setSelectedRoles(userRoleService.getRoleIdsByUserId(userId));
+		// 查询用户可以选择的全部角色列表
+		respVO.setAllRoles(roleService.selectAllNoPage());
+		return respVO;
+	}
+
+	// 通过用户ID，更新roles
+	@Override
+	public void setUserOwnRole(UserOwnRoleReqVO vo) {
+		//更新roles
+		userRoleService.addUserRoleInfo(vo);
+		// 标记到redis，权限已经变更了，需要用户主动刷新，签发token
+		redisService.set(
+				Constant.JWT_REFRESH_KEY + vo.getUserId(), 
+				vo.getUserId(), 
+				tokenSettings.getAccessTokenExpireTime().toMillis(),
+				TimeUnit.MILLISECONDS);
+	}
 	
 }
