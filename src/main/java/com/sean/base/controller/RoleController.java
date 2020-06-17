@@ -1,9 +1,12 @@
 package com.sean.base.controller;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -21,6 +24,7 @@ import com.sean.vo.resp.PageVO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 
 @RestController
 @RequestMapping("/api/v1")
@@ -65,5 +69,11 @@ public class RoleController {
         return result;
     }
 	
+    @DeleteMapping("/role")
+    @ApiModelProperty("[批量]删除角色")
+    public DataResult deleteRole(@RequestBody @ApiParam("角色id集合") List<String> list) {
+    	roleService.batchDeleteRole(list);
+    	return DataResult.success();
+    }
 	
 }

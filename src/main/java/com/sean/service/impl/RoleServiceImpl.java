@@ -84,5 +84,13 @@ public class RoleServiceImpl implements RoleService{
 	public SysRole selectByPrimaryKey(String id) {
 		return sysRoleMapper.selectByPrimaryKey(id);
 	}
+
+	@Override
+	public void batchDeleteRole(List<String> list) {
+		int i = sysRoleMapper.batchDeleteRole(list);
+		if(i==0) {
+			throw new BusinessException(BaseResponseCode.OPERATION_ERROR);
+		}
+	}
 	
 }

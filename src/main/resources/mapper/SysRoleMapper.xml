@@ -140,4 +140,15 @@
   	from sys_role
   	where deleted=1
   </select>
+  
+  <!--  批量逻辑删除角色(list需要删除用户的id列表) -->
+  <update id="batchDeleteRole">
+  	update sys_role
+  	set deleted=0
+  	where id in
+  	<foreach collection="list" open="(" close=")" separator="," item="item">
+  		#{item}
+  	</foreach>
+  </update>
+  
 </mapper>

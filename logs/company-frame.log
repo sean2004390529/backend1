@@ -1612,3 +1612,416 @@
 2020-06-17 17:09:52.989  INFO 13088 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
 2020-06-17 17:10:32.676  INFO 13088 --- [Thread-160] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2020-06-17 17:10:32.678  INFO 13088 --- [Thread-160] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2020-06-17 17:10:33.010  INFO 13088 --- [restartedMain] com.sean.InternalSystemApplication       : Starting InternalSystemApplication on SEAN-PC with PID 13088 (D:\JavaPJ\InternalSystem\target\classes started by sean in D:\JavaPJ\InternalSystem)
+2020-06-17 17:10:33.010 DEBUG 13088 --- [restartedMain] com.sean.InternalSystemApplication       : Running with Spring Boot v2.1.14.RELEASE, Spring v5.1.15.RELEASE
+2020-06-17 17:10:33.010  INFO 13088 --- [restartedMain] com.sean.InternalSystemApplication       : No active profile set, falling back to default profiles: default
+2020-06-17 17:10:33.223  INFO 13088 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-17 17:10:33.223  INFO 13088 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-17 17:10:33.231  INFO 13088 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 0 Redis repository interfaces.
+2020-06-17 17:10:33.260  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.sean.config.ShiroConfig$$EnhancerBySpringCGLIB$$f9c20ee3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:10:33.264  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.sean.config.RedisConfig$$EnhancerBySpringCGLIB$$4490962d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:10:33.268  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:10:33.269  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration$$EnhancerBySpringCGLIB$$a4c0b2ff] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:10:33.270  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'lettuceClientResources' of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:10:33.271  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisConnectionFactory' of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:10:33.272  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisTemplate' of type [org.springframework.data.redis.core.RedisTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:10:33.273  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisService' of type [com.sean.service.RedisService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:10:33.273  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'customHashedCredentialsMatcher' of type [com.sean.shiro.CustomHashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:10:33.274  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisCacheManager' of type [com.sean.shiro.RedisCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:10:33.275  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'customRealm' of type [com.sean.shiro.CustomRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:10:33.276  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:10:33.277  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:10:33.347  INFO 13088 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-17 17:10:33.347  INFO 13088 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-17 17:10:33.347  INFO 13088 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.34]
+2020-06-17 17:10:33.354  INFO 13088 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-17 17:10:33.354  INFO 13088 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 343 ms
+2020-06-17 17:10:33.608  INFO 13088 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-06-17 17:10:33.670  INFO 13088 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 17:10:33.685  INFO 13088 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-06-17 17:10:33.791  INFO 13088 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-17 17:10:33.791  INFO 13088 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-17 17:10:33.795  INFO 13088 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-17 17:10:33.812  INFO 13088 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_1
+2020-06-17 17:10:33.819  INFO 13088 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-06-17 17:10:33.819  INFO 13088 --- [restartedMain] com.sean.InternalSystemApplication       : Started InternalSystemApplication in 0.822 seconds (JVM running for 12819.579)
+2020-06-17 17:10:33.821  INFO 13088 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-06-17 17:11:06.527  INFO 13088 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-17 17:11:06.528  INFO 13088 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-17 17:11:06.532  INFO 13088 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2020-06-17 17:11:06.565  INFO 13088 --- [http-nio-8080-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-8} inited
+2020-06-17 17:11:06.566 DEBUG 13088 --- [http-nio-8080-exec-1] c.s.b.m.SysUserMapper.selectAll_COUNT    : ==>  Preparing: SELECT count(0) FROM sys_user WHERE deleted = 1 
+2020-06-17 17:11:06.566 DEBUG 13088 --- [http-nio-8080-exec-1] c.s.b.m.SysUserMapper.selectAll_COUNT    : ==> Parameters: 
+2020-06-17 17:11:06.567 DEBUG 13088 --- [http-nio-8080-exec-1] c.s.b.m.SysUserMapper.selectAll_COUNT    : <==      Total: 1
+2020-06-17 17:11:06.568 DEBUG 13088 --- [http-nio-8080-exec-1] c.s.base.mapper.SysUserMapper.selectAll  : ==>  Preparing: select id, username, phone, dept_id, email, status, sex, create_time, update_time from sys_user WHERE deleted=1 order by create_time LIMIT ? 
+2020-06-17 17:11:06.568 DEBUG 13088 --- [http-nio-8080-exec-1] c.s.base.mapper.SysUserMapper.selectAll  : ==> Parameters: 10(Integer)
+2020-06-17 17:11:06.570 DEBUG 13088 --- [http-nio-8080-exec-1] c.s.base.mapper.SysUserMapper.selectAll  : <==      Total: 2
+2020-06-17 17:11:15.441 DEBUG 13088 --- [http-nio-8080-exec-4] c.s.b.m.SysUserMapper.insertSelective    : ==>  Preparing: insert into sys_user ( id, username, salt, `password`, phone, `status`, create_time ) values ( ?, ?, ?, ?, ?, ?, ? ) 
+2020-06-17 17:11:15.442 DEBUG 13088 --- [http-nio-8080-exec-4] c.s.b.m.SysUserMapper.insertSelective    : ==> Parameters: 364d0cad-779a-4569-a4df-ae3346985c94(String), 11(String), 2aae26221f0b4d2ea745(String), 5a0cfdf4def6972b32d3335dfbd42605(String), 11(String), 1(Integer), 2020-06-17 17:11:15.44(Timestamp)
+2020-06-17 17:11:15.444 DEBUG 13088 --- [http-nio-8080-exec-4] c.s.b.m.SysUserMapper.insertSelective    : <==    Updates: 1
+2020-06-17 17:11:15.937 DEBUG 13088 --- [http-nio-8080-exec-5] c.s.b.m.SysUserMapper.selectAll_COUNT    : ==>  Preparing: SELECT count(0) FROM sys_user WHERE deleted = 1 
+2020-06-17 17:11:15.937 DEBUG 13088 --- [http-nio-8080-exec-5] c.s.b.m.SysUserMapper.selectAll_COUNT    : ==> Parameters: 
+2020-06-17 17:11:15.938 DEBUG 13088 --- [http-nio-8080-exec-5] c.s.b.m.SysUserMapper.selectAll_COUNT    : <==      Total: 1
+2020-06-17 17:11:15.938 DEBUG 13088 --- [http-nio-8080-exec-5] c.s.base.mapper.SysUserMapper.selectAll  : ==>  Preparing: select id, username, phone, dept_id, email, status, sex, create_time, update_time from sys_user WHERE deleted=1 order by create_time LIMIT ? 
+2020-06-17 17:11:15.938 DEBUG 13088 --- [http-nio-8080-exec-5] c.s.base.mapper.SysUserMapper.selectAll  : ==> Parameters: 10(Integer)
+2020-06-17 17:11:15.939 DEBUG 13088 --- [http-nio-8080-exec-5] c.s.base.mapper.SysUserMapper.selectAll  : <==      Total: 3
+2020-06-17 17:11:19.488 DEBUG 13088 --- [http-nio-8080-exec-7] c.s.b.m.S.getRoleIdsByUserId             : ==>  Preparing: select id, user_id, role_id, create_time from sys_user_role where user_id=? 
+2020-06-17 17:11:19.488 DEBUG 13088 --- [http-nio-8080-exec-7] c.s.b.m.S.getRoleIdsByUserId             : ==> Parameters: 9a26f5f1-cbd2-473d-82db-1d6dcf459861(String)
+2020-06-17 17:11:19.489 DEBUG 13088 --- [http-nio-8080-exec-7] c.s.b.m.S.getRoleIdsByUserId             : <==      Total: 0
+2020-06-17 17:11:19.489 DEBUG 13088 --- [http-nio-8080-exec-7] c.s.b.m.SysRoleMapper.selectAllNoPage    : ==>  Preparing: select id, `name`, description, `status`, create_time, update_time, deleted from sys_role where deleted=1 
+2020-06-17 17:11:19.490 DEBUG 13088 --- [http-nio-8080-exec-7] c.s.b.m.SysRoleMapper.selectAllNoPage    : ==> Parameters: 
+2020-06-17 17:11:19.490 DEBUG 13088 --- [http-nio-8080-exec-7] c.s.b.m.SysRoleMapper.selectAllNoPage    : <==      Total: 5
+2020-06-17 17:11:23.979 DEBUG 13088 --- [http-nio-8080-exec-9] c.s.b.m.S.batchRemoveRoleByUserId        : ==>  Preparing: delete from sys_user_role where user_id=? 
+2020-06-17 17:11:23.981 DEBUG 13088 --- [http-nio-8080-exec-9] c.s.b.m.S.batchRemoveRoleByUserId        : ==> Parameters: 9a26f5f1-cbd2-473d-82db-1d6dcf459861(String)
+2020-06-17 17:11:23.982 DEBUG 13088 --- [http-nio-8080-exec-9] c.s.b.m.S.batchRemoveRoleByUserId        : <==    Updates: 0
+2020-06-17 17:11:23.983 DEBUG 13088 --- [http-nio-8080-exec-9] c.s.b.m.S.batchInsertRoleByUserId        : ==>  Preparing: insert into sys_user_role( id, user_id, role_id, create_time )values (?, ?, ?, ?) , (?, ?, ?, ?) 
+2020-06-17 17:11:23.984 DEBUG 13088 --- [http-nio-8080-exec-9] c.s.b.m.S.batchInsertRoleByUserId        : ==> Parameters: 57e19694-cab0-44a8-adfa-508f1d046bc7(String), 9a26f5f1-cbd2-473d-82db-1d6dcf459861(String), UDkrhi234iasdflss(String), 2020-06-17 17:11:23.983(Timestamp), 4eaf7f3a-974d-4ed3-92a5-1c6fa0eca931(String), 9a26f5f1-cbd2-473d-82db-1d6dcf459861(String), sfasfe&eoasrhddXdgfdf(String), 2020-06-17 17:11:23.983(Timestamp)
+2020-06-17 17:11:23.985 DEBUG 13088 --- [http-nio-8080-exec-9] c.s.b.m.S.batchInsertRoleByUserId        : <==    Updates: 2
+2020-06-17 17:11:31.144 DEBUG 13088 --- [http-nio-8080-exec-2] c.s.b.m.S.getRoleIdsByUserId             : ==>  Preparing: select id, user_id, role_id, create_time from sys_user_role where user_id=? 
+2020-06-17 17:11:31.144 DEBUG 13088 --- [http-nio-8080-exec-2] c.s.b.m.S.getRoleIdsByUserId             : ==> Parameters: 364d0cad-779a-4569-a4df-ae3346985c94(String)
+2020-06-17 17:11:31.145 DEBUG 13088 --- [http-nio-8080-exec-2] c.s.b.m.S.getRoleIdsByUserId             : <==      Total: 0
+2020-06-17 17:11:31.145 DEBUG 13088 --- [http-nio-8080-exec-2] c.s.b.m.SysRoleMapper.selectAllNoPage    : ==>  Preparing: select id, `name`, description, `status`, create_time, update_time, deleted from sys_role where deleted=1 
+2020-06-17 17:11:31.145 DEBUG 13088 --- [http-nio-8080-exec-2] c.s.b.m.SysRoleMapper.selectAllNoPage    : ==> Parameters: 
+2020-06-17 17:11:31.146 DEBUG 13088 --- [http-nio-8080-exec-2] c.s.b.m.SysRoleMapper.selectAllNoPage    : <==      Total: 5
+2020-06-17 17:11:36.099 DEBUG 13088 --- [http-nio-8080-exec-1] c.s.b.m.S.batchRemoveRoleByUserId        : ==>  Preparing: delete from sys_user_role where user_id=? 
+2020-06-17 17:11:36.099 DEBUG 13088 --- [http-nio-8080-exec-1] c.s.b.m.S.batchRemoveRoleByUserId        : ==> Parameters: 364d0cad-779a-4569-a4df-ae3346985c94(String)
+2020-06-17 17:11:36.100 DEBUG 13088 --- [http-nio-8080-exec-1] c.s.b.m.S.batchRemoveRoleByUserId        : <==    Updates: 0
+2020-06-17 17:11:36.101 DEBUG 13088 --- [http-nio-8080-exec-1] c.s.b.m.S.batchInsertRoleByUserId        : ==>  Preparing: insert into sys_user_role( id, user_id, role_id, create_time )values (?, ?, ?, ?) , (?, ?, ?, ?) 
+2020-06-17 17:11:36.102 DEBUG 13088 --- [http-nio-8080-exec-1] c.s.b.m.S.batchInsertRoleByUserId        : ==> Parameters: ad160875-23cb-4354-9d49-afab5adb45aa(String), 364d0cad-779a-4569-a4df-ae3346985c94(String), 2e458b3d-4603-4b08-be36-4a016e1ddf54(String), 2020-06-17 17:11:36.1(Timestamp), ee643350-f465-4ec0-8518-f32477314ba9(String), 364d0cad-779a-4569-a4df-ae3346985c94(String), UDkrhi234iasdflss(String), 2020-06-17 17:11:36.1(Timestamp)
+2020-06-17 17:11:36.105 DEBUG 13088 --- [http-nio-8080-exec-1] c.s.b.m.S.batchInsertRoleByUserId        : <==    Updates: 2
+2020-06-17 17:11:44.012 DEBUG 13088 --- [http-nio-8080-exec-4] c.s.b.m.SysUserMapper.batchDeleteUser    : ==>  Preparing: update sys_user set deleted=0 where id in ( ? ) 
+2020-06-17 17:11:44.013 DEBUG 13088 --- [http-nio-8080-exec-4] c.s.b.m.SysUserMapper.batchDeleteUser    : ==> Parameters: 364d0cad-779a-4569-a4df-ae3346985c94(String)
+2020-06-17 17:11:44.014 DEBUG 13088 --- [http-nio-8080-exec-4] c.s.b.m.SysUserMapper.batchDeleteUser    : <==    Updates: 1
+2020-06-17 17:11:44.014 DEBUG 13088 --- [http-nio-8080-exec-4] c.s.b.m.S.batchRemoveRoleByUserId        : ==>  Preparing: delete from sys_user_role where user_id=? 
+2020-06-17 17:11:44.014 DEBUG 13088 --- [http-nio-8080-exec-4] c.s.b.m.S.batchRemoveRoleByUserId        : ==> Parameters: 364d0cad-779a-4569-a4df-ae3346985c94(String)
+2020-06-17 17:11:44.017 DEBUG 13088 --- [http-nio-8080-exec-4] c.s.b.m.S.batchRemoveRoleByUserId        : <==    Updates: 2
+2020-06-17 17:11:44.034 DEBUG 13088 --- [http-nio-8080-exec-5] c.s.b.m.SysUserMapper.selectAll_COUNT    : ==>  Preparing: SELECT count(0) FROM sys_user WHERE deleted = 1 
+2020-06-17 17:11:44.034 DEBUG 13088 --- [http-nio-8080-exec-5] c.s.b.m.SysUserMapper.selectAll_COUNT    : ==> Parameters: 
+2020-06-17 17:11:44.035 DEBUG 13088 --- [http-nio-8080-exec-5] c.s.b.m.SysUserMapper.selectAll_COUNT    : <==      Total: 1
+2020-06-17 17:11:44.035 DEBUG 13088 --- [http-nio-8080-exec-5] c.s.base.mapper.SysUserMapper.selectAll  : ==>  Preparing: select id, username, phone, dept_id, email, status, sex, create_time, update_time from sys_user WHERE deleted=1 order by create_time LIMIT ? 
+2020-06-17 17:11:44.035 DEBUG 13088 --- [http-nio-8080-exec-5] c.s.base.mapper.SysUserMapper.selectAll  : ==> Parameters: 10(Integer)
+2020-06-17 17:11:44.036 DEBUG 13088 --- [http-nio-8080-exec-5] c.s.base.mapper.SysUserMapper.selectAll  : <==      Total: 2
+2020-06-17 17:12:02.015 DEBUG 13088 --- [http-nio-8080-exec-6] c.s.b.m.SysUserMapper.insertSelective    : ==>  Preparing: insert into sys_user ( id, username, salt, `password`, phone, `status`, create_time ) values ( ?, ?, ?, ?, ?, ?, ? ) 
+2020-06-17 17:12:02.016 DEBUG 13088 --- [http-nio-8080-exec-6] c.s.b.m.SysUserMapper.insertSelective    : ==> Parameters: d5270f55-a422-42e7-a1bb-e80abdc38455(String), 121(String), be6dae225db54f10b8b6(String), 3ce0aebd51827791d2dcff6418672e8c(String), (String), 1(Integer), 2020-06-17 17:12:02.015(Timestamp)
+2020-06-17 17:12:02.018 DEBUG 13088 --- [http-nio-8080-exec-6] c.s.b.m.SysUserMapper.insertSelective    : <==    Updates: 1
+2020-06-17 17:12:02.520 DEBUG 13088 --- [http-nio-8080-exec-7] c.s.b.m.SysUserMapper.selectAll_COUNT    : ==>  Preparing: SELECT count(0) FROM sys_user WHERE deleted = 1 
+2020-06-17 17:12:02.520 DEBUG 13088 --- [http-nio-8080-exec-7] c.s.b.m.SysUserMapper.selectAll_COUNT    : ==> Parameters: 
+2020-06-17 17:12:02.521 DEBUG 13088 --- [http-nio-8080-exec-7] c.s.b.m.SysUserMapper.selectAll_COUNT    : <==      Total: 1
+2020-06-17 17:12:02.521 DEBUG 13088 --- [http-nio-8080-exec-7] c.s.base.mapper.SysUserMapper.selectAll  : ==>  Preparing: select id, username, phone, dept_id, email, status, sex, create_time, update_time from sys_user WHERE deleted=1 order by create_time LIMIT ? 
+2020-06-17 17:12:02.521 DEBUG 13088 --- [http-nio-8080-exec-7] c.s.base.mapper.SysUserMapper.selectAll  : ==> Parameters: 10(Integer)
+2020-06-17 17:12:02.522 DEBUG 13088 --- [http-nio-8080-exec-7] c.s.base.mapper.SysUserMapper.selectAll  : <==      Total: 3
+2020-06-17 17:12:05.606 DEBUG 13088 --- [http-nio-8080-exec-9] c.s.b.m.S.getRoleIdsByUserId             : ==>  Preparing: select id, user_id, role_id, create_time from sys_user_role where user_id=? 
+2020-06-17 17:12:05.606 DEBUG 13088 --- [http-nio-8080-exec-9] c.s.b.m.S.getRoleIdsByUserId             : ==> Parameters: d5270f55-a422-42e7-a1bb-e80abdc38455(String)
+2020-06-17 17:12:05.607 DEBUG 13088 --- [http-nio-8080-exec-9] c.s.b.m.S.getRoleIdsByUserId             : <==      Total: 0
+2020-06-17 17:12:05.607 DEBUG 13088 --- [http-nio-8080-exec-9] c.s.b.m.SysRoleMapper.selectAllNoPage    : ==>  Preparing: select id, `name`, description, `status`, create_time, update_time, deleted from sys_role where deleted=1 
+2020-06-17 17:12:05.607 DEBUG 13088 --- [http-nio-8080-exec-9] c.s.b.m.SysRoleMapper.selectAllNoPage    : ==> Parameters: 
+2020-06-17 17:12:05.609 DEBUG 13088 --- [http-nio-8080-exec-9] c.s.b.m.SysRoleMapper.selectAllNoPage    : <==      Total: 5
+2020-06-17 17:12:10.794 DEBUG 13088 --- [http-nio-8080-exec-10] c.s.b.m.S.batchRemoveRoleByUserId        : ==>  Preparing: delete from sys_user_role where user_id=? 
+2020-06-17 17:12:10.794 DEBUG 13088 --- [http-nio-8080-exec-10] c.s.b.m.S.batchRemoveRoleByUserId        : ==> Parameters: d5270f55-a422-42e7-a1bb-e80abdc38455(String)
+2020-06-17 17:12:10.795 DEBUG 13088 --- [http-nio-8080-exec-10] c.s.b.m.S.batchRemoveRoleByUserId        : <==    Updates: 0
+2020-06-17 17:12:10.795 DEBUG 13088 --- [http-nio-8080-exec-10] c.s.b.m.S.batchInsertRoleByUserId        : ==>  Preparing: insert into sys_user_role( id, user_id, role_id, create_time )values (?, ?, ?, ?) , (?, ?, ?, ?) , (?, ?, ?, ?) , (?, ?, ?, ?) , (?, ?, ?, ?) 
+2020-06-17 17:12:10.796 DEBUG 13088 --- [http-nio-8080-exec-10] c.s.b.m.S.batchInsertRoleByUserId        : ==> Parameters: 5ce9f7e8-ec86-4f9b-a43b-bafa9641c3dd(String), d5270f55-a422-42e7-a1bb-e80abdc38455(String), 2e458b3d-4603-4b08-be36-4a016e1ddf54(String), 2020-06-17 17:12:10.795(Timestamp), e79e7a43-8145-4abe-831e-a858e682e8ee(String), d5270f55-a422-42e7-a1bb-e80abdc38455(String), e5890581-e25f-4eb7-a52e-a6b84f0d4267(String), 2020-06-17 17:12:10.795(Timestamp), c162550e-64cf-4522-99cd-ce8a75f5f63d(String), d5270f55-a422-42e7-a1bb-e80abdc38455(String), 72b780bb-09ed-44fb-b68a-30d6abe528b8(String), 2020-06-17 17:12:10.795(Timestamp), 0cc3a110-97ec-4284-a75f-78a82fd087cf(String), d5270f55-a422-42e7-a1bb-e80abdc38455(String), UDkrhi234iasdflss(String), 2020-06-17 17:12:10.795(Timestamp), 2aca5ff0-5bb5-459d-93ed-4410b6fa626c(String), d5270f55-a422-42e7-a1bb-e80abdc38455(String), sfasfe&eoasrhddXdgfdf(String), 2020-06-17 17:12:10.795(Timestamp)
+2020-06-17 17:12:10.797 DEBUG 13088 --- [http-nio-8080-exec-10] c.s.b.m.S.batchInsertRoleByUserId        : <==    Updates: 5
+2020-06-17 17:12:26.784 DEBUG 13088 --- [http-nio-8080-exec-2] c.s.b.m.SysUserMapper.batchDeleteUser    : ==>  Preparing: update sys_user set deleted=0 where id in ( ? ) 
+2020-06-17 17:12:26.785 DEBUG 13088 --- [http-nio-8080-exec-2] c.s.b.m.SysUserMapper.batchDeleteUser    : ==> Parameters: d5270f55-a422-42e7-a1bb-e80abdc38455(String)
+2020-06-17 17:12:26.787 DEBUG 13088 --- [http-nio-8080-exec-2] c.s.b.m.SysUserMapper.batchDeleteUser    : <==    Updates: 1
+2020-06-17 17:12:26.787 DEBUG 13088 --- [http-nio-8080-exec-2] c.s.b.m.S.batchRemoveRoleByUserId        : ==>  Preparing: delete from sys_user_role where user_id=? 
+2020-06-17 17:12:26.787 DEBUG 13088 --- [http-nio-8080-exec-2] c.s.b.m.S.batchRemoveRoleByUserId        : ==> Parameters: d5270f55-a422-42e7-a1bb-e80abdc38455(String)
+2020-06-17 17:12:26.789 DEBUG 13088 --- [http-nio-8080-exec-2] c.s.b.m.S.batchRemoveRoleByUserId        : <==    Updates: 5
+2020-06-17 17:12:26.805 DEBUG 13088 --- [http-nio-8080-exec-1] c.s.b.m.SysUserMapper.selectAll_COUNT    : ==>  Preparing: SELECT count(0) FROM sys_user WHERE deleted = 1 
+2020-06-17 17:12:26.805 DEBUG 13088 --- [http-nio-8080-exec-1] c.s.b.m.SysUserMapper.selectAll_COUNT    : ==> Parameters: 
+2020-06-17 17:12:26.806 DEBUG 13088 --- [http-nio-8080-exec-1] c.s.b.m.SysUserMapper.selectAll_COUNT    : <==      Total: 1
+2020-06-17 17:12:26.807 DEBUG 13088 --- [http-nio-8080-exec-1] c.s.base.mapper.SysUserMapper.selectAll  : ==>  Preparing: select id, username, phone, dept_id, email, status, sex, create_time, update_time from sys_user WHERE deleted=1 order by create_time LIMIT ? 
+2020-06-17 17:12:26.807 DEBUG 13088 --- [http-nio-8080-exec-1] c.s.base.mapper.SysUserMapper.selectAll  : ==> Parameters: 10(Integer)
+2020-06-17 17:12:26.809 DEBUG 13088 --- [http-nio-8080-exec-1] c.s.base.mapper.SysUserMapper.selectAll  : <==      Total: 2
+2020-06-17 17:12:48.836 DEBUG 13088 --- [http-nio-8080-exec-4] c.s.b.m.SysRoleMapper.selectAll_COUNT    : ==>  Preparing: SELECT count(0) FROM sys_role WHERE deleted = 1 
+2020-06-17 17:12:48.836 DEBUG 13088 --- [http-nio-8080-exec-4] c.s.b.m.SysRoleMapper.selectAll_COUNT    : ==> Parameters: 
+2020-06-17 17:12:48.837 DEBUG 13088 --- [http-nio-8080-exec-4] c.s.b.m.SysRoleMapper.selectAll_COUNT    : <==      Total: 1
+2020-06-17 17:12:48.838 DEBUG 13088 --- [http-nio-8080-exec-4] c.s.base.mapper.SysRoleMapper.selectAll  : ==>  Preparing: select id, `name`, description, `status`, create_time, update_time, deleted from sys_role WHERE deleted=1 ORDER BY create_time LIMIT ? 
+2020-06-17 17:12:48.838 DEBUG 13088 --- [http-nio-8080-exec-4] c.s.base.mapper.SysRoleMapper.selectAll  : ==> Parameters: 10(Integer)
+2020-06-17 17:12:48.839 DEBUG 13088 --- [http-nio-8080-exec-4] c.s.base.mapper.SysRoleMapper.selectAll  : <==      Total: 5
+2020-06-17 17:20:06.997 DEBUG 13088 --- [http-nio-8080-exec-6] c.s.b.m.SysUserMapper.selectAll_COUNT    : ==>  Preparing: SELECT count(0) FROM sys_user WHERE deleted = 1 
+2020-06-17 17:20:06.998 DEBUG 13088 --- [http-nio-8080-exec-6] c.s.b.m.SysUserMapper.selectAll_COUNT    : ==> Parameters: 
+2020-06-17 17:20:06.998 DEBUG 13088 --- [http-nio-8080-exec-6] c.s.b.m.SysUserMapper.selectAll_COUNT    : <==      Total: 1
+2020-06-17 17:20:06.999 DEBUG 13088 --- [http-nio-8080-exec-6] c.s.base.mapper.SysUserMapper.selectAll  : ==>  Preparing: select id, username, phone, dept_id, email, status, sex, create_time, update_time from sys_user WHERE deleted=1 order by create_time LIMIT ? 
+2020-06-17 17:20:06.999 DEBUG 13088 --- [http-nio-8080-exec-6] c.s.base.mapper.SysUserMapper.selectAll  : ==> Parameters: 10(Integer)
+2020-06-17 17:20:07.000 DEBUG 13088 --- [http-nio-8080-exec-6] c.s.base.mapper.SysUserMapper.selectAll  : <==      Total: 2
+2020-06-17 17:20:09.626 DEBUG 13088 --- [http-nio-8080-exec-7] c.s.b.m.SysRoleMapper.selectAll_COUNT    : ==>  Preparing: SELECT count(0) FROM sys_role WHERE deleted = 1 
+2020-06-17 17:20:09.626 DEBUG 13088 --- [http-nio-8080-exec-7] c.s.b.m.SysRoleMapper.selectAll_COUNT    : ==> Parameters: 
+2020-06-17 17:20:09.627 DEBUG 13088 --- [http-nio-8080-exec-7] c.s.b.m.SysRoleMapper.selectAll_COUNT    : <==      Total: 1
+2020-06-17 17:20:09.628 DEBUG 13088 --- [http-nio-8080-exec-7] c.s.base.mapper.SysRoleMapper.selectAll  : ==>  Preparing: select id, `name`, description, `status`, create_time, update_time, deleted from sys_role WHERE deleted=1 ORDER BY create_time LIMIT ? 
+2020-06-17 17:20:09.628 DEBUG 13088 --- [http-nio-8080-exec-7] c.s.base.mapper.SysRoleMapper.selectAll  : ==> Parameters: 10(Integer)
+2020-06-17 17:20:09.629 DEBUG 13088 --- [http-nio-8080-exec-7] c.s.base.mapper.SysRoleMapper.selectAll  : <==      Total: 5
+2020-06-17 17:20:13.704 DEBUG 13088 --- [http-nio-8080-exec-8] c.s.b.m.SysUserMapper.selectAll_COUNT    : ==>  Preparing: SELECT count(0) FROM sys_user WHERE deleted = 1 
+2020-06-17 17:20:13.704 DEBUG 13088 --- [http-nio-8080-exec-8] c.s.b.m.SysUserMapper.selectAll_COUNT    : ==> Parameters: 
+2020-06-17 17:20:13.704 DEBUG 13088 --- [http-nio-8080-exec-8] c.s.b.m.SysUserMapper.selectAll_COUNT    : <==      Total: 1
+2020-06-17 17:20:13.705 DEBUG 13088 --- [http-nio-8080-exec-8] c.s.base.mapper.SysUserMapper.selectAll  : ==>  Preparing: select id, username, phone, dept_id, email, status, sex, create_time, update_time from sys_user WHERE deleted=1 order by create_time LIMIT ? 
+2020-06-17 17:20:13.705 DEBUG 13088 --- [http-nio-8080-exec-8] c.s.base.mapper.SysUserMapper.selectAll  : ==> Parameters: 10(Integer)
+2020-06-17 17:20:13.707 DEBUG 13088 --- [http-nio-8080-exec-8] c.s.base.mapper.SysUserMapper.selectAll  : <==      Total: 2
+2020-06-17 17:20:15.435 DEBUG 13088 --- [http-nio-8080-exec-9] c.s.b.m.SysRoleMapper.selectAll_COUNT    : ==>  Preparing: SELECT count(0) FROM sys_role WHERE deleted = 1 
+2020-06-17 17:20:15.435 DEBUG 13088 --- [http-nio-8080-exec-9] c.s.b.m.SysRoleMapper.selectAll_COUNT    : ==> Parameters: 
+2020-06-17 17:20:15.436 DEBUG 13088 --- [http-nio-8080-exec-9] c.s.b.m.SysRoleMapper.selectAll_COUNT    : <==      Total: 1
+2020-06-17 17:20:15.437 DEBUG 13088 --- [http-nio-8080-exec-9] c.s.base.mapper.SysRoleMapper.selectAll  : ==>  Preparing: select id, `name`, description, `status`, create_time, update_time, deleted from sys_role WHERE deleted=1 ORDER BY create_time LIMIT ? 
+2020-06-17 17:20:15.437 DEBUG 13088 --- [http-nio-8080-exec-9] c.s.base.mapper.SysRoleMapper.selectAll  : ==> Parameters: 10(Integer)
+2020-06-17 17:20:15.438 DEBUG 13088 --- [http-nio-8080-exec-9] c.s.base.mapper.SysRoleMapper.selectAll  : <==      Total: 5
+2020-06-17 17:20:18.318 DEBUG 13088 --- [http-nio-8080-exec-10] c.s.b.m.SysUserMapper.selectAll_COUNT    : ==>  Preparing: SELECT count(0) FROM sys_user WHERE deleted = 1 
+2020-06-17 17:20:18.318 DEBUG 13088 --- [http-nio-8080-exec-10] c.s.b.m.SysUserMapper.selectAll_COUNT    : ==> Parameters: 
+2020-06-17 17:20:18.319 DEBUG 13088 --- [http-nio-8080-exec-10] c.s.b.m.SysUserMapper.selectAll_COUNT    : <==      Total: 1
+2020-06-17 17:20:18.319 DEBUG 13088 --- [http-nio-8080-exec-10] c.s.base.mapper.SysUserMapper.selectAll  : ==>  Preparing: select id, username, phone, dept_id, email, status, sex, create_time, update_time from sys_user WHERE deleted=1 order by create_time LIMIT ? 
+2020-06-17 17:20:18.319 DEBUG 13088 --- [http-nio-8080-exec-10] c.s.base.mapper.SysUserMapper.selectAll  : ==> Parameters: 10(Integer)
+2020-06-17 17:20:18.320 DEBUG 13088 --- [http-nio-8080-exec-10] c.s.base.mapper.SysUserMapper.selectAll  : <==      Total: 2
+2020-06-17 17:20:19.976 DEBUG 13088 --- [http-nio-8080-exec-2] c.s.b.m.SysRoleMapper.selectAll_COUNT    : ==>  Preparing: SELECT count(0) FROM sys_role WHERE deleted = 1 
+2020-06-17 17:20:19.977 DEBUG 13088 --- [http-nio-8080-exec-2] c.s.b.m.SysRoleMapper.selectAll_COUNT    : ==> Parameters: 
+2020-06-17 17:20:19.977 DEBUG 13088 --- [http-nio-8080-exec-2] c.s.b.m.SysRoleMapper.selectAll_COUNT    : <==      Total: 1
+2020-06-17 17:20:19.978 DEBUG 13088 --- [http-nio-8080-exec-2] c.s.base.mapper.SysRoleMapper.selectAll  : ==>  Preparing: select id, `name`, description, `status`, create_time, update_time, deleted from sys_role WHERE deleted=1 ORDER BY create_time LIMIT ? 
+2020-06-17 17:20:19.978 DEBUG 13088 --- [http-nio-8080-exec-2] c.s.base.mapper.SysRoleMapper.selectAll  : ==> Parameters: 10(Integer)
+2020-06-17 17:20:19.980 DEBUG 13088 --- [http-nio-8080-exec-2] c.s.base.mapper.SysRoleMapper.selectAll  : <==      Total: 5
+2020-06-17 17:21:42.307 DEBUG 13088 --- [http-nio-8080-exec-5] c.s.b.m.SysRoleMapper.selectAll_COUNT    : ==>  Preparing: SELECT count(0) FROM sys_role WHERE deleted = 1 
+2020-06-17 17:21:42.307 DEBUG 13088 --- [http-nio-8080-exec-5] c.s.b.m.SysRoleMapper.selectAll_COUNT    : ==> Parameters: 
+2020-06-17 17:21:42.308 DEBUG 13088 --- [http-nio-8080-exec-5] c.s.b.m.SysRoleMapper.selectAll_COUNT    : <==      Total: 1
+2020-06-17 17:21:42.308 DEBUG 13088 --- [http-nio-8080-exec-5] c.s.base.mapper.SysRoleMapper.selectAll  : ==>  Preparing: select id, `name`, description, `status`, create_time, update_time, deleted from sys_role WHERE deleted=1 ORDER BY create_time LIMIT ? 
+2020-06-17 17:21:42.308 DEBUG 13088 --- [http-nio-8080-exec-5] c.s.base.mapper.SysRoleMapper.selectAll  : ==> Parameters: 10(Integer)
+2020-06-17 17:21:42.310 DEBUG 13088 --- [http-nio-8080-exec-5] c.s.base.mapper.SysRoleMapper.selectAll  : <==      Total: 5
+2020-06-17 17:25:06.990 DEBUG 13088 --- [http-nio-8080-exec-9] c.s.b.m.SysRoleMapper.selectAll_COUNT    : ==>  Preparing: SELECT count(0) FROM sys_role WHERE deleted = 1 
+2020-06-17 17:25:06.990 DEBUG 13088 --- [http-nio-8080-exec-9] c.s.b.m.SysRoleMapper.selectAll_COUNT    : ==> Parameters: 
+2020-06-17 17:25:06.991 DEBUG 13088 --- [http-nio-8080-exec-9] c.s.b.m.SysRoleMapper.selectAll_COUNT    : <==      Total: 1
+2020-06-17 17:25:06.992 DEBUG 13088 --- [http-nio-8080-exec-9] c.s.base.mapper.SysRoleMapper.selectAll  : ==>  Preparing: select id, `name`, description, `status`, create_time, update_time, deleted from sys_role WHERE deleted=1 ORDER BY create_time LIMIT ? 
+2020-06-17 17:25:06.993 DEBUG 13088 --- [http-nio-8080-exec-9] c.s.base.mapper.SysRoleMapper.selectAll  : ==> Parameters: 10(Integer)
+2020-06-17 17:25:06.994 DEBUG 13088 --- [http-nio-8080-exec-9] c.s.base.mapper.SysRoleMapper.selectAll  : <==      Total: 5
+2020-06-17 17:25:17.463 DEBUG 13088 --- [http-nio-8080-exec-2] c.s.b.m.SysRoleMapper.selectAll_COUNT    : ==>  Preparing: SELECT count(0) FROM sys_role WHERE deleted = 1 
+2020-06-17 17:25:17.463 DEBUG 13088 --- [http-nio-8080-exec-2] c.s.b.m.SysRoleMapper.selectAll_COUNT    : ==> Parameters: 
+2020-06-17 17:25:17.464 DEBUG 13088 --- [http-nio-8080-exec-2] c.s.b.m.SysRoleMapper.selectAll_COUNT    : <==      Total: 1
+2020-06-17 17:25:17.465 DEBUG 13088 --- [http-nio-8080-exec-2] c.s.base.mapper.SysRoleMapper.selectAll  : ==>  Preparing: select id, `name`, description, `status`, create_time, update_time, deleted from sys_role WHERE deleted=1 ORDER BY create_time LIMIT ? 
+2020-06-17 17:25:17.465 DEBUG 13088 --- [http-nio-8080-exec-2] c.s.base.mapper.SysRoleMapper.selectAll  : ==> Parameters: 10(Integer)
+2020-06-17 17:25:17.466 DEBUG 13088 --- [http-nio-8080-exec-2] c.s.base.mapper.SysRoleMapper.selectAll  : <==      Total: 5
+2020-06-17 17:26:33.689 DEBUG 13088 --- [http-nio-8080-exec-3] c.s.b.m.SysRoleMapper.selectAll_COUNT    : ==>  Preparing: SELECT count(0) FROM sys_role WHERE deleted = 1 
+2020-06-17 17:26:33.689 DEBUG 13088 --- [http-nio-8080-exec-3] c.s.b.m.SysRoleMapper.selectAll_COUNT    : ==> Parameters: 
+2020-06-17 17:26:33.690 DEBUG 13088 --- [http-nio-8080-exec-3] c.s.b.m.SysRoleMapper.selectAll_COUNT    : <==      Total: 1
+2020-06-17 17:26:33.691 DEBUG 13088 --- [http-nio-8080-exec-3] c.s.base.mapper.SysRoleMapper.selectAll  : ==>  Preparing: select id, `name`, description, `status`, create_time, update_time, deleted from sys_role WHERE deleted=1 ORDER BY create_time LIMIT ? 
+2020-06-17 17:26:33.691 DEBUG 13088 --- [http-nio-8080-exec-3] c.s.base.mapper.SysRoleMapper.selectAll  : ==> Parameters: 10(Integer)
+2020-06-17 17:26:33.692 DEBUG 13088 --- [http-nio-8080-exec-3] c.s.base.mapper.SysRoleMapper.selectAll  : <==      Total: 5
+2020-06-17 17:26:57.319 DEBUG 13088 --- [http-nio-8080-exec-4] c.s.b.m.SysRoleMapper.selectAll_COUNT    : ==>  Preparing: SELECT count(0) FROM sys_role WHERE deleted = 1 
+2020-06-17 17:26:57.319 DEBUG 13088 --- [http-nio-8080-exec-4] c.s.b.m.SysRoleMapper.selectAll_COUNT    : ==> Parameters: 
+2020-06-17 17:26:57.322 DEBUG 13088 --- [http-nio-8080-exec-4] c.s.b.m.SysRoleMapper.selectAll_COUNT    : <==      Total: 1
+2020-06-17 17:26:57.323 DEBUG 13088 --- [http-nio-8080-exec-4] c.s.base.mapper.SysRoleMapper.selectAll  : ==>  Preparing: select id, `name`, description, `status`, create_time, update_time, deleted from sys_role WHERE deleted=1 ORDER BY create_time LIMIT ? 
+2020-06-17 17:26:57.323 DEBUG 13088 --- [http-nio-8080-exec-4] c.s.base.mapper.SysRoleMapper.selectAll  : ==> Parameters: 10(Integer)
+2020-06-17 17:26:57.325 DEBUG 13088 --- [http-nio-8080-exec-4] c.s.base.mapper.SysRoleMapper.selectAll  : <==      Total: 5
+2020-06-17 17:29:37.014  INFO 13088 --- [Thread-166] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-17 17:29:37.014  INFO 13088 --- [Thread-166] com.alibaba.druid.pool.DruidDataSource   : {dataSource-8} closing ...
+2020-06-17 17:29:37.017  INFO 13088 --- [Thread-166] com.alibaba.druid.pool.DruidDataSource   : {dataSource-8} closed
+2020-06-17 17:29:37.538  INFO 13088 --- [restartedMain] com.sean.InternalSystemApplication       : Starting InternalSystemApplication on SEAN-PC with PID 13088 (D:\JavaPJ\InternalSystem\target\classes started by sean in D:\JavaPJ\InternalSystem)
+2020-06-17 17:29:37.539 DEBUG 13088 --- [restartedMain] com.sean.InternalSystemApplication       : Running with Spring Boot v2.1.14.RELEASE, Spring v5.1.15.RELEASE
+2020-06-17 17:29:37.539  INFO 13088 --- [restartedMain] com.sean.InternalSystemApplication       : No active profile set, falling back to default profiles: default
+2020-06-17 17:29:37.756  INFO 13088 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-17 17:29:37.756  INFO 13088 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-17 17:29:37.764  INFO 13088 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 0 Redis repository interfaces.
+2020-06-17 17:29:37.793  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.sean.config.ShiroConfig$$EnhancerBySpringCGLIB$$f9c20ee3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:29:37.797  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.sean.config.RedisConfig$$EnhancerBySpringCGLIB$$4490962d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:29:37.800  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:29:37.801  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration$$EnhancerBySpringCGLIB$$a4c0b2ff] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:29:37.802  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'lettuceClientResources' of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:29:37.803  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisConnectionFactory' of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:29:37.804  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisTemplate' of type [org.springframework.data.redis.core.RedisTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:29:37.805  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisService' of type [com.sean.service.RedisService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:29:37.805  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'customHashedCredentialsMatcher' of type [com.sean.shiro.CustomHashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:29:37.806  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisCacheManager' of type [com.sean.shiro.RedisCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:29:37.807  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'customRealm' of type [com.sean.shiro.CustomRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:29:37.808  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:29:37.809  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:29:37.880  INFO 13088 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-17 17:29:37.881  INFO 13088 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-17 17:29:37.881  INFO 13088 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.34]
+2020-06-17 17:29:37.888  INFO 13088 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-17 17:29:37.888  INFO 13088 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 348 ms
+2020-06-17 17:29:38.144  INFO 13088 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-06-17 17:29:38.206  INFO 13088 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 17:29:38.221  INFO 13088 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-06-17 17:29:38.327  INFO 13088 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-17 17:29:38.327  INFO 13088 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-17 17:29:38.331  INFO 13088 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-17 17:29:38.348  INFO 13088 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_1
+2020-06-17 17:29:38.354  INFO 13088 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-06-17 17:29:38.354  INFO 13088 --- [restartedMain] com.sean.InternalSystemApplication       : Started InternalSystemApplication in 0.829 seconds (JVM running for 13964.113)
+2020-06-17 17:29:38.356  INFO 13088 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-06-17 17:30:14.015  INFO 13088 --- [Thread-172] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-17 17:30:14.016  INFO 13088 --- [Thread-172] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2020-06-17 17:30:14.302  INFO 13088 --- [restartedMain] com.sean.InternalSystemApplication       : Starting InternalSystemApplication on SEAN-PC with PID 13088 (D:\JavaPJ\InternalSystem\target\classes started by sean in D:\JavaPJ\InternalSystem)
+2020-06-17 17:30:14.302 DEBUG 13088 --- [restartedMain] com.sean.InternalSystemApplication       : Running with Spring Boot v2.1.14.RELEASE, Spring v5.1.15.RELEASE
+2020-06-17 17:30:14.302  INFO 13088 --- [restartedMain] com.sean.InternalSystemApplication       : No active profile set, falling back to default profiles: default
+2020-06-17 17:30:14.513  INFO 13088 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-17 17:30:14.513  INFO 13088 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-17 17:30:14.520  INFO 13088 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7ms. Found 0 Redis repository interfaces.
+2020-06-17 17:30:14.548  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.sean.config.ShiroConfig$$EnhancerBySpringCGLIB$$f9c20ee3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:30:14.552  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.sean.config.RedisConfig$$EnhancerBySpringCGLIB$$4490962d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:30:14.556  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:30:14.557  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration$$EnhancerBySpringCGLIB$$a4c0b2ff] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:30:14.558  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'lettuceClientResources' of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:30:14.558  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisConnectionFactory' of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:30:14.560  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisTemplate' of type [org.springframework.data.redis.core.RedisTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:30:14.560  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisService' of type [com.sean.service.RedisService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:30:14.561  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'customHashedCredentialsMatcher' of type [com.sean.shiro.CustomHashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:30:14.562  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisCacheManager' of type [com.sean.shiro.RedisCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:30:14.562  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'customRealm' of type [com.sean.shiro.CustomRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:30:14.563  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:30:14.564  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:30:14.634  INFO 13088 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-17 17:30:14.634  INFO 13088 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-17 17:30:14.634  INFO 13088 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.34]
+2020-06-17 17:30:14.642  INFO 13088 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-17 17:30:14.642  INFO 13088 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 339 ms
+2020-06-17 17:30:14.894  INFO 13088 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-06-17 17:30:14.954  INFO 13088 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 17:30:14.969  INFO 13088 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-06-17 17:30:15.073  INFO 13088 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-17 17:30:15.074  INFO 13088 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-17 17:30:15.077  INFO 13088 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-17 17:30:15.094  INFO 13088 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_1
+2020-06-17 17:30:15.100  INFO 13088 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-06-17 17:30:15.100  INFO 13088 --- [restartedMain] com.sean.InternalSystemApplication       : Started InternalSystemApplication in 0.813 seconds (JVM running for 14000.859)
+2020-06-17 17:30:15.102  INFO 13088 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-06-17 17:31:00.978  INFO 13088 --- [Thread-178] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-17 17:31:00.980  INFO 13088 --- [Thread-178] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2020-06-17 17:31:01.266  INFO 13088 --- [restartedMain] com.sean.InternalSystemApplication       : Starting InternalSystemApplication on SEAN-PC with PID 13088 (D:\JavaPJ\InternalSystem\target\classes started by sean in D:\JavaPJ\InternalSystem)
+2020-06-17 17:31:01.266 DEBUG 13088 --- [restartedMain] com.sean.InternalSystemApplication       : Running with Spring Boot v2.1.14.RELEASE, Spring v5.1.15.RELEASE
+2020-06-17 17:31:01.266  INFO 13088 --- [restartedMain] com.sean.InternalSystemApplication       : No active profile set, falling back to default profiles: default
+2020-06-17 17:31:01.483  INFO 13088 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-17 17:31:01.483  INFO 13088 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-17 17:31:01.491  INFO 13088 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 0 Redis repository interfaces.
+2020-06-17 17:31:01.521  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.sean.config.ShiroConfig$$EnhancerBySpringCGLIB$$f9c20ee3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:31:01.524  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.sean.config.RedisConfig$$EnhancerBySpringCGLIB$$4490962d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:31:01.528  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:31:01.529  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration$$EnhancerBySpringCGLIB$$a4c0b2ff] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:31:01.530  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'lettuceClientResources' of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:31:01.531  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisConnectionFactory' of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:31:01.532  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisTemplate' of type [org.springframework.data.redis.core.RedisTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:31:01.533  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisService' of type [com.sean.service.RedisService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:31:01.533  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'customHashedCredentialsMatcher' of type [com.sean.shiro.CustomHashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:31:01.534  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisCacheManager' of type [com.sean.shiro.RedisCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:31:01.535  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'customRealm' of type [com.sean.shiro.CustomRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:31:01.536  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:31:01.537  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:31:01.612  INFO 13088 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-17 17:31:01.613  INFO 13088 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-17 17:31:01.613  INFO 13088 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.34]
+2020-06-17 17:31:01.620  INFO 13088 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-17 17:31:01.620  INFO 13088 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 352 ms
+2020-06-17 17:31:01.875  INFO 13088 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-06-17 17:31:01.936  INFO 13088 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 17:31:01.950  INFO 13088 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-06-17 17:31:02.059  INFO 13088 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-17 17:31:02.060  INFO 13088 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-17 17:31:02.063  INFO 13088 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-17 17:31:02.082  INFO 13088 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_1
+2020-06-17 17:31:02.088  INFO 13088 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-06-17 17:31:02.089  INFO 13088 --- [restartedMain] com.sean.InternalSystemApplication       : Started InternalSystemApplication in 0.836 seconds (JVM running for 14047.847)
+2020-06-17 17:31:02.091  INFO 13088 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-06-17 17:31:12.533  INFO 13088 --- [Thread-184] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-17 17:31:12.534  INFO 13088 --- [Thread-184] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2020-06-17 17:31:12.817  INFO 13088 --- [restartedMain] com.sean.InternalSystemApplication       : Starting InternalSystemApplication on SEAN-PC with PID 13088 (D:\JavaPJ\InternalSystem\target\classes started by sean in D:\JavaPJ\InternalSystem)
+2020-06-17 17:31:12.817 DEBUG 13088 --- [restartedMain] com.sean.InternalSystemApplication       : Running with Spring Boot v2.1.14.RELEASE, Spring v5.1.15.RELEASE
+2020-06-17 17:31:12.817  INFO 13088 --- [restartedMain] com.sean.InternalSystemApplication       : No active profile set, falling back to default profiles: default
+2020-06-17 17:31:13.050  INFO 13088 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-17 17:31:13.050  INFO 13088 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-17 17:31:13.057  INFO 13088 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7ms. Found 0 Redis repository interfaces.
+2020-06-17 17:31:13.088  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.sean.config.ShiroConfig$$EnhancerBySpringCGLIB$$f9c20ee3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:31:13.092  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.sean.config.RedisConfig$$EnhancerBySpringCGLIB$$4490962d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:31:13.096  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:31:13.097  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration$$EnhancerBySpringCGLIB$$a4c0b2ff] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:31:13.098  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'lettuceClientResources' of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:31:13.099  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisConnectionFactory' of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:31:13.100  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisTemplate' of type [org.springframework.data.redis.core.RedisTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:31:13.101  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisService' of type [com.sean.service.RedisService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:31:13.101  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'customHashedCredentialsMatcher' of type [com.sean.shiro.CustomHashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:31:13.102  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisCacheManager' of type [com.sean.shiro.RedisCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:31:13.102  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'customRealm' of type [com.sean.shiro.CustomRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:31:13.103  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:31:13.105  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:31:13.176  INFO 13088 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-17 17:31:13.177  INFO 13088 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-17 17:31:13.177  INFO 13088 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.34]
+2020-06-17 17:31:13.184  INFO 13088 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-17 17:31:13.184  INFO 13088 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 365 ms
+2020-06-17 17:31:13.442  INFO 13088 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-06-17 17:31:13.503  INFO 13088 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 17:31:13.518  INFO 13088 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-06-17 17:31:13.624  INFO 13088 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-17 17:31:13.624  INFO 13088 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-17 17:31:13.628  INFO 13088 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-17 17:31:13.645  INFO 13088 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_1
+2020-06-17 17:31:13.658  INFO 13088 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-06-17 17:31:13.659  INFO 13088 --- [restartedMain] com.sean.InternalSystemApplication       : Started InternalSystemApplication in 0.857 seconds (JVM running for 14059.417)
+2020-06-17 17:31:13.661  INFO 13088 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-06-17 17:32:18.771  INFO 13088 --- [Thread-190] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-17 17:32:18.775  INFO 13088 --- [Thread-190] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2020-06-17 17:32:19.056  INFO 13088 --- [restartedMain] com.sean.InternalSystemApplication       : Starting InternalSystemApplication on SEAN-PC with PID 13088 (D:\JavaPJ\InternalSystem\target\classes started by sean in D:\JavaPJ\InternalSystem)
+2020-06-17 17:32:19.056 DEBUG 13088 --- [restartedMain] com.sean.InternalSystemApplication       : Running with Spring Boot v2.1.14.RELEASE, Spring v5.1.15.RELEASE
+2020-06-17 17:32:19.056  INFO 13088 --- [restartedMain] com.sean.InternalSystemApplication       : No active profile set, falling back to default profiles: default
+2020-06-17 17:32:19.275  INFO 13088 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-17 17:32:19.275  INFO 13088 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-17 17:32:19.283  INFO 13088 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 0 Redis repository interfaces.
+2020-06-17 17:32:19.313  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.sean.config.ShiroConfig$$EnhancerBySpringCGLIB$$f9c20ee3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:32:19.316  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.sean.config.RedisConfig$$EnhancerBySpringCGLIB$$4490962d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:32:19.320  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:32:19.322  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration$$EnhancerBySpringCGLIB$$a4c0b2ff] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:32:19.322  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'lettuceClientResources' of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:32:19.323  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisConnectionFactory' of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:32:19.325  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisTemplate' of type [org.springframework.data.redis.core.RedisTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:32:19.325  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisService' of type [com.sean.service.RedisService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:32:19.326  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'customHashedCredentialsMatcher' of type [com.sean.shiro.CustomHashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:32:19.327  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisCacheManager' of type [com.sean.shiro.RedisCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:32:19.327  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'customRealm' of type [com.sean.shiro.CustomRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:32:19.328  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:32:19.329  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:32:19.403  INFO 13088 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-17 17:32:19.403  INFO 13088 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-17 17:32:19.403  INFO 13088 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.34]
+2020-06-17 17:32:19.411  INFO 13088 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-17 17:32:19.411  INFO 13088 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 353 ms
+2020-06-17 17:32:19.670  INFO 13088 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-06-17 17:32:19.731  INFO 13088 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 17:32:19.746  INFO 13088 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-06-17 17:32:19.851  INFO 13088 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-17 17:32:19.852  INFO 13088 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-17 17:32:19.856  INFO 13088 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-17 17:32:19.873  INFO 13088 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_1
+2020-06-17 17:32:19.879  INFO 13088 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-06-17 17:32:19.879  INFO 13088 --- [restartedMain] com.sean.InternalSystemApplication       : Started InternalSystemApplication in 0.837 seconds (JVM running for 14125.638)
+2020-06-17 17:32:19.881  INFO 13088 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-06-17 17:33:22.961  INFO 13088 --- [Thread-196] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-17 17:33:22.965  INFO 13088 --- [Thread-196] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2020-06-17 17:33:23.229  INFO 13088 --- [restartedMain] com.sean.InternalSystemApplication       : Starting InternalSystemApplication on SEAN-PC with PID 13088 (D:\JavaPJ\InternalSystem\target\classes started by sean in D:\JavaPJ\InternalSystem)
+2020-06-17 17:33:23.230 DEBUG 13088 --- [restartedMain] com.sean.InternalSystemApplication       : Running with Spring Boot v2.1.14.RELEASE, Spring v5.1.15.RELEASE
+2020-06-17 17:33:23.230  INFO 13088 --- [restartedMain] com.sean.InternalSystemApplication       : No active profile set, falling back to default profiles: default
+2020-06-17 17:33:23.449  INFO 13088 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-17 17:33:23.449  INFO 13088 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-17 17:33:23.457  INFO 13088 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 0 Redis repository interfaces.
+2020-06-17 17:33:23.486  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.sean.config.ShiroConfig$$EnhancerBySpringCGLIB$$f9c20ee3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:33:23.490  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.sean.config.RedisConfig$$EnhancerBySpringCGLIB$$4490962d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:33:23.494  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:33:23.495  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration$$EnhancerBySpringCGLIB$$a4c0b2ff] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:33:23.496  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'lettuceClientResources' of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:33:23.497  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisConnectionFactory' of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:33:23.498  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisTemplate' of type [org.springframework.data.redis.core.RedisTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:33:23.499  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisService' of type [com.sean.service.RedisService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:33:23.499  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'customHashedCredentialsMatcher' of type [com.sean.shiro.CustomHashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:33:23.500  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisCacheManager' of type [com.sean.shiro.RedisCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:33:23.501  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'customRealm' of type [com.sean.shiro.CustomRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:33:23.501  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:33:23.502  INFO 13088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-17 17:33:23.575  INFO 13088 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-17 17:33:23.576  INFO 13088 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-17 17:33:23.576  INFO 13088 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.34]
+2020-06-17 17:33:23.583  INFO 13088 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-17 17:33:23.583  INFO 13088 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 352 ms
+2020-06-17 17:33:23.845  INFO 13088 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-06-17 17:33:23.907  INFO 13088 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 17:33:23.922  INFO 13088 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-06-17 17:33:24.024  INFO 13088 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-17 17:33:24.024  INFO 13088 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-17 17:33:24.028  INFO 13088 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-17 17:33:24.046  INFO 13088 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_1
+2020-06-17 17:33:24.053  INFO 13088 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-06-17 17:33:24.053  INFO 13088 --- [restartedMain] com.sean.InternalSystemApplication       : Started InternalSystemApplication in 0.836 seconds (JVM running for 14189.813)
+2020-06-17 17:33:24.055  INFO 13088 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-06-17 17:35:37.733  INFO 13088 --- [Thread-202] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-17 17:35:37.734  INFO 13088 --- [Thread-202] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...

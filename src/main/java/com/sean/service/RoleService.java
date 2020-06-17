@@ -25,4 +25,8 @@ public interface RoleService {
 	
 	// 通过ID，查找角色
 	SysRole selectByPrimaryKey(String id);
+	
+    // 批量删除角色(list需要删除用户的id列表)
+    void batchDeleteRole(List<String> list);
+    
 }
