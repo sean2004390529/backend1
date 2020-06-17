@@ -20,14 +20,15 @@ public enum BaseResponseCode implements ResponseCodeInterface{
     
     ACCOUNT_LOCK(4010001,"该账户被锁定"),
     ACCOUNT_PASSWORD_ERROR(4000004,"账户或密码错误"),
-    TOKEN_ERROR(4010001,"鐢ㄦ埛鏈櫥褰曪紝璇烽噸鏂扮櫥褰�"),
+    TOKEN_ERROR(4010001,"用户未登录，请重新登录"),
     TOKEN_NOT_NULL(4010001,"认证token不能为空，请重新登录"),
-    SHIRO_AUTHENTICATION_ERROR(4010001,"token认证失败，请重新登录"),
+    SHIRO_AUTHENTICATION_ERROR(4010001,"用户认证异常"),
     ACCOUNT_HAS_DELETED_ERROR(4010001,"该账户已被删除"),
     TOKEN_PAST_DUE(4010002,"token失效，请重新登录"),
     NOT_PERMISSION(4030001,"没有权限访问该资源"),
     
-    OPERATION_ERROR(4000005,"操作错误"),
+    OPERATION_ERROR(4000005,"操作失败"),
+    ACCOUNT_LOCK_TIP(4010001,"该账户被锁定"),
     ;
 
     private int code;

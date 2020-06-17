@@ -5,10 +5,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,8 +20,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sean.base.entity.SysUser;
+import com.sean.base.mapper.SysUserRoleMapper;
+import com.sean.constants.Constant;
 import com.sean.service.UserService;
 import com.sean.utils.DataResult;
+import com.sean.utils.JwtTokenUtil;
 import com.sean.vo.req.LoginReqVO;
 import com.sean.vo.req.UserAddReqVO;
 import com.sean.vo.req.UserOwnRoleReqVO;
@@ -32,13 +37,14 @@ import com.sean.vo.resp.UserOwnRoleRespVO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 
 @RestController
 @RequestMapping("/api/v1")
 @CrossOrigin
 @Api(tags="用户模块相关接口")
 public class UserController {
-
+	
     @Autowired
     private UserService userService;
 	
@@ -110,6 +116,22 @@ public class UserController {
     public DataResult setUserOwnRole(@RequestBody @Valid UserOwnRoleReqVO vo) {
     	DataResult result = DataResult.success();
     	userService.setUserOwnRole(vo);
+    	return result;
+    }
+    
+    @DeleteMapping("/user")
+    @ApiModelProperty("[批量]删除用户")
+    public DataResult deleteUser(@RequestBody @ApiParam("用户id集合") List<String> list, 
+    		HttpServletRequest request) {
+    	// 获取当前操作人
+//    	String accessToken = request.getHeader(Constant.ACCESS_TOKEN);
+//    	String userId = JwtTokenUtil.getUserId(accessToken);
+//    	System.out.println("UserController-- deleteUser -- userId: " + userId);
+    	
+    	// 删除用户
+    	userService.batchDeleteUser(list);
+    	
+    	DataResult result = DataResult.success();
     	return result;
     }
 }

@@ -1,6 +1,8 @@
 package com.sean.service;
 
 
+import java.util.List;
+
 import com.sean.base.entity.SysUser;
 import com.sean.vo.req.LoginReqVO;
 import com.sean.vo.req.UserAddReqVO;
@@ -34,4 +36,8 @@ public interface UserService {
     
     // 通过用户ID，更新roles
     void setUserOwnRole(UserOwnRoleReqVO vo);
+    
+    // 批量删除用户(list需要删除用户的id列表)
+    void batchDeleteUser(List<String> list);
+    
 }

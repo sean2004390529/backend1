@@ -16,6 +16,7 @@ import com.github.pagehelper.PageHelper;
 import com.sean.base.entity.SysRole;
 import com.sean.base.entity.SysUser;
 import com.sean.base.mapper.SysUserMapper;
+import com.sean.base.mapper.SysUserRoleMapper;
 import com.sean.constants.Constant;
 import com.sean.exception.BusinessException;
 import com.sean.exception.code.BaseResponseCode;
@@ -51,6 +52,9 @@ public class UserServiceImpl implements UserService{
 	// 用户与角色关联表
 	@Autowired
 	private UserRoleService userRoleService;
+	
+	@Autowired
+	private SysUserRoleMapper sysUserRoleMapper;
 	
 	// 角色查询
 	@Autowired
@@ -176,6 +180,14 @@ public class UserServiceImpl implements UserService{
 		if(ret!=1) {
 			throw new BusinessException(BaseResponseCode.OPERATION_ERROR);
 		}
+		//如果禁用用户，则redis标记
+		if(vo.getStatus()==0) {
+			redisService.set(Constant.ACCOUNT_LOCK_KEY+vo.getId(), vo.getId());
+		}
+		//如果启用用户，则删除redis标记
+		if(vo.getStatus()==1) {
+			redisService.delete(Constant.ACCOUNT_LOCK_KEY+vo.getId());
+		}
 	}
 
 	// 通过用户id，查询拥有角色
@@ -201,6 +213,33 @@ public class UserServiceImpl implements UserService{
 				vo.getUserId(), 
 				tokenSettings.getAccessTokenExpireTime().toMillis(),
 				TimeUnit.MILLISECONDS);
+	}
+
+	@Override
+	public void batchDeleteUser(List<String> list) {
+		// 创建一个虚拟user，并传入虚拟user的更新ID与更新日期到被删除User列表中的各User
+//		SysUser sysUser = new SysUser();
+//		sysUser.setUpdateId(operationId);
+//		sysUser.setUpdateTime(new Date());
+		int i = sysUserMapper.batchDeleteUser(list);
+		if(i==0) {
+			throw new BusinessException(BaseResponseCode.OPERATION_ERROR);
+		}
+		
+		// 删除与之关联的角色记录
+		for(String userId : list) {
+			sysUserRoleMapper.batchRemoveRoleByUserId(userId);
+		}
+		
+		// redis标记用户已经被删除
+		for(String userId : list) {
+			redisService.set(
+					Constant.DELETED_USER_KEY+userId, 
+					userId,
+					tokenSettings.getRefreshTokenExpireAppTime().toMillis(),
+					TimeUnit.MICROSECONDS
+					);
+		}
 	}
 	
 }

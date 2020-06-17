@@ -138,6 +138,8 @@ public class JwtTokenUtil {
         String userId=null;
         try {
             Claims claims = getClaimsFromToken(token);
+            System.out.println("token :" + token);
+            System.out.println("claims: " + claims);
             userId = claims.getSubject();
         } catch (Exception e) {
 //            log.error("eror={}",e);
