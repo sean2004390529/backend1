@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sean.base.mapper.TodoMapper">
+  <resultMap id="BaseResultMap" type="com.sean.base.entity.Todo">
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+    <result column="result" jdbcType="VARCHAR" property="result" />
+    <result column="status" jdbcType="TINYINT" property="status" />
+    <result column="urgent" jdbcType="TINYINT" property="urgent" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="complete_time" jdbcType="TIMESTAMP" property="completeTime" />
+    <result column="deleted" jdbcType="TINYINT" property="deleted" />
+    <result column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="tag_id" jdbcType="VARCHAR" property="tagId" />
+    <result column="is_public" jdbcType="TINYINT" property="isPublic" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, description, `result`, `status`, urgent, create_time, update_time, complete_time, 
+    deleted, user_id, tag_id, is_public
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from todo_todo
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from todo_todo
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.sean.base.entity.Todo">
+    insert into todo_todo (id, description, `result`, 
+      `status`, urgent, create_time, 
+      update_time, complete_time, deleted, 
+      user_id, tag_id, is_public
+      )
+    values (#{id,jdbcType=VARCHAR}, #{description,jdbcType=VARCHAR}, #{result,jdbcType=VARCHAR}, 
+      #{status,jdbcType=TINYINT}, #{urgent,jdbcType=TINYINT}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{updateTime,jdbcType=TIMESTAMP}, #{completeTime,jdbcType=TIMESTAMP}, #{deleted,jdbcType=TINYINT}, 
+      #{userId,jdbcType=VARCHAR}, #{tagId,jdbcType=VARCHAR}, #{isPublic,jdbcType=TINYINT}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.sean.base.entity.Todo">
+    insert into todo_todo
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="description != null">
+        description,
+      </if>
+      <if test="result != null">
+        `result`,
+      </if>
+      <if test="status != null">
+        `status`,
+      </if>
+      <if test="urgent != null">
+        urgent,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+      <if test="completeTime != null">
+        complete_time,
+      </if>
+      <if test="deleted != null">
+        deleted,
+      </if>
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="tagId != null">
+        tag_id,
+      </if>
+      <if test="isPublic != null">
+        is_public,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null">
+        #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="result != null">
+        #{result,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=TINYINT},
+      </if>
+      <if test="urgent != null">
+        #{urgent,jdbcType=TINYINT},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="completeTime != null">
+        #{completeTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deleted != null">
+        #{deleted,jdbcType=TINYINT},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="tagId != null">
+        #{tagId,jdbcType=VARCHAR},
+      </if>
+      <if test="isPublic != null">
+        #{isPublic,jdbcType=TINYINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.sean.base.entity.Todo">
+    update todo_todo
+    <set>
+      <if test="description != null">
+        description = #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="result != null">
+        `result` = #{result,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        `status` = #{status,jdbcType=TINYINT},
+      </if>
+      <if test="urgent != null">
+        urgent = #{urgent,jdbcType=TINYINT},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="completeTime != null">
+        complete_time = #{completeTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deleted != null">
+        deleted = #{deleted,jdbcType=TINYINT},
+      </if>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="tagId != null">
+        tag_id = #{tagId,jdbcType=VARCHAR},
+      </if>
+      <if test="isPublic != null">
+        is_public = #{isPublic,jdbcType=TINYINT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.sean.base.entity.Todo">
+    update todo_todo
+    set description = #{description,jdbcType=VARCHAR},
+      `result` = #{result,jdbcType=VARCHAR},
+      `status` = #{status,jdbcType=TINYINT},
+      urgent = #{urgent,jdbcType=TINYINT},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      complete_time = #{completeTime,jdbcType=TIMESTAMP},
+      deleted = #{deleted,jdbcType=TINYINT},
+      user_id = #{userId,jdbcType=VARCHAR},
+      tag_id = #{tagId,jdbcType=VARCHAR},
+      is_public = #{isPublic,jdbcType=TINYINT}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  
+  <!-- 查询所有角色 带查询条件-->
+  <select id="selectAll" resultMap="BaseResultMap" parameterType="com.sean.vo.req.TodoPageReqVO" >
+  	select <include refid="Base_Column_List"></include>
+  	from todo_todo
+    <where>
+      deleted=1
+      <if test="description !=null and description != ''">
+        and description like  concat('%',#{description},'%')
+      </if>
+      <if test="result !=null and result != ''">
+        and result like  concat('%',#{result},'%')
+      </if>
+      <if test="status !=null and status !='' or status==0">
+        and status=#{status}
+      </if>
+      <if test="urgent !=null and urgent !='' or urgent==0">
+        and urgent=#{urgent}
+      </if>
+      <if test="isPublic !=null and isPublic !='' or isPublic==0">
+        and is_public=#{isPublic}
+      </if>
+    </where>
+    ORDER BY create_time
+  </select>
+  
+  <!--  批量逻辑删除角色(list需要删除Todo的id列表) -->
+  <update id="batchDeleteTodo">
+  	update todo_todo
+  	set deleted=0
+  	where id in
+  	<foreach collection="list" open="(" close=")" separator="," item="item">
+  		#{item}
+  	</foreach>
+  </update>
+  
+</mapper>

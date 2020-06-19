@@ -23,7 +23,7 @@
         </commentGenerator>
 
         <!-- jdbc连接 -->
-        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://192.168.163.130:3306/company_frame" userId="root"
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://192.168.163.100:3306/company_frame" userId="root"
                         password="P@ssw0rd"/>
         <!-- 类型转换 -->
         <javaTypeResolver>
@@ -45,8 +45,8 @@
             <property name="enableSubPackages" value="false"/>
         </javaClientGenerator>
 
-
-        <!--  <table tableName="sys_user" domainObjectName="SysUser"
+<!--
+          <table tableName="sys_user" domainObjectName="SysUser"
                enableCountByExample="false"
                enableUpdateByExample="false"
                enableDeleteByExample="false"
@@ -56,7 +56,7 @@
             <columnOverride column="status" javaType="java.lang.Integer"/>
             <columnOverride column="create_where" javaType="java.lang.Integer"/>
             <columnOverride column="deleted" javaType="java.lang.Integer"/>
-        </table>-->
+        </table>
         <table tableName="sys_dept" domainObjectName="SysDept"
 
                enableCountByExample="false"
@@ -109,6 +109,18 @@
                enableSelectByExample="false"
                selectByExampleQueryId="true">
         </table>
-
+-->
+		
+		<table tableName="todo_todo" domainObjectName="Todo"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="true">
+            <columnOverride column="status" javaType="java.lang.Integer"/>
+            <columnOverride column="urgent" javaType="java.lang.Integer"/>
+            <columnOverride column="deleted" javaType="java.lang.Integer"/>
+            <columnOverride column="is_public" javaType="java.lang.Integer"/>
+        </table>
     </context>
 </generatorConfiguration>
