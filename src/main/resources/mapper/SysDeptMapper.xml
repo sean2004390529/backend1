@@ -120,60 +120,116 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.sean.base.entity.SysDept">
-    update sys_dept
-    <set>
-      <if test="deptNo != null">
-        dept_no = #{deptNo,jdbcType=VARCHAR},
-      </if>
-      <if test="name != null">
-        `name` = #{name,jdbcType=VARCHAR},
-      </if>
-      <if test="pid != null">
-        pid = #{pid,jdbcType=VARCHAR},
-      </if>
-      <if test="status != null">
-        `status` = #{status,jdbcType=TINYINT},
-      </if>
-      <if test="relationCode != null">
-        relation_code = #{relationCode,jdbcType=VARCHAR},
-      </if>
-      <if test="deptManagerId != null">
-        dept_manager_id = #{deptManagerId,jdbcType=VARCHAR},
-      </if>
-      <if test="managerName != null">
-        manager_name = #{managerName,jdbcType=VARCHAR},
-      </if>
-      <if test="phone != null">
-        phone = #{phone,jdbcType=VARCHAR},
-      </if>
-      <if test="createTime != null">
-        create_time = #{createTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="updateTime != null">
-        update_time = #{updateTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="deleted != null">
-        deleted = #{deleted,jdbcType=TINYINT},
-      </if>
-    </set>
-    where id = #{id,jdbcType=VARCHAR}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.sean.base.entity.SysDept">
-    update sys_dept
-    set dept_no = #{deptNo,jdbcType=VARCHAR},
-      `name` = #{name,jdbcType=VARCHAR},
-      pid = #{pid,jdbcType=VARCHAR},
-      `status` = #{status,jdbcType=TINYINT},
-      relation_code = #{relationCode,jdbcType=VARCHAR},
-      dept_manager_id = #{deptManagerId,jdbcType=VARCHAR},
-      manager_name = #{managerName,jdbcType=VARCHAR},
-      phone = #{phone,jdbcType=VARCHAR},
-      create_time = #{createTime,jdbcType=TIMESTAMP},
-      update_time = #{updateTime,jdbcType=TIMESTAMP},
-      deleted = #{deleted,jdbcType=TINYINT}
-    where id = #{id,jdbcType=VARCHAR}
-  </update>
+	<update id="updateByPrimaryKeySelective" parameterType="com.sean.base.entity.SysDept">
+	  update sys_dept
+	  <set>
+	    <if test="deptNo != null">
+	      dept_no = #{deptNo,jdbcType=VARCHAR},
+	    </if>
+	    <if test="name != null">
+	      `name` = #{name,jdbcType=VARCHAR},
+	    </if>
+	    <if test="pid != null">
+	      pid = #{pid,jdbcType=VARCHAR},
+	    </if>
+	    <if test="status != null">
+	      `status` = #{status,jdbcType=TINYINT},
+	    </if>
+	    <if test="relationCode != null">
+	      relation_code = #{relationCode,jdbcType=VARCHAR},
+	    </if>
+	    <if test="deptManagerId != null">
+	      dept_manager_id = #{deptManagerId,jdbcType=VARCHAR},
+	    </if>
+	    <if test="managerName != null">
+	      manager_name = #{managerName,jdbcType=VARCHAR},
+	    </if>
+	    <if test="phone != null">
+	      phone = #{phone,jdbcType=VARCHAR},
+	    </if>
+	    <if test="createTime != null">
+	      create_time = #{createTime,jdbcType=TIMESTAMP},
+	    </if>
+	    <if test="updateTime != null">
+	      update_time = #{updateTime,jdbcType=TIMESTAMP},
+	    </if>
+	    <if test="deleted != null">
+	      deleted = #{deleted,jdbcType=TINYINT},
+	    </if>
+	  </set>
+	  where id = #{id,jdbcType=VARCHAR}
+	</update>
+	<update id="updateByPrimaryKey" parameterType="com.sean.base.entity.SysDept">
+	  update sys_dept
+	  set dept_no = #{deptNo,jdbcType=VARCHAR},
+	    `name` = #{name,jdbcType=VARCHAR},
+	    pid = #{pid,jdbcType=VARCHAR},
+	    `status` = #{status,jdbcType=TINYINT},
+	    relation_code = #{relationCode,jdbcType=VARCHAR},
+	    dept_manager_id = #{deptManagerId,jdbcType=VARCHAR},
+	    manager_name = #{managerName,jdbcType=VARCHAR},
+	    phone = #{phone,jdbcType=VARCHAR},
+	    create_time = #{createTime,jdbcType=TIMESTAMP},
+	    update_time = #{updateTime,jdbcType=TIMESTAMP},
+	    deleted = #{deleted,jdbcType=TINYINT}
+	  where id = #{id,jdbcType=VARCHAR}
+	</update>
   
-
+  	<resultMap type="com.sean.base.entity.SysDept" id="BaseTreeResultMap">
+	  	<id column="id" jdbcType="VARCHAR" property="id" />
+	    <result column="dept_no" jdbcType="VARCHAR" property="deptNo" />
+	    <result column="name" jdbcType="VARCHAR" property="name" />
+	    <result column="pid" jdbcType="VARCHAR" property="pid" />
+	    <result column="status" jdbcType="TINYINT" property="status" />
+	    <result column="relation_code" jdbcType="VARCHAR" property="relationCode" />
+	    <result column="dept_manager_id" jdbcType="VARCHAR" property="deptManagerId" />
+	    <result column="manager_name" jdbcType="VARCHAR" property="managerName" />
+	    <result column="phone" jdbcType="VARCHAR" property="phone" />
+	    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+	    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+	    <result column="deleted" jdbcType="TINYINT" property="deleted" />
+  		<collection column="pid" property="subDept" javaType="java.util.ArrayList" ofType="com.sean.base.entity.SysDept" select="getSubDept" />
+  	</resultMap>
+  
+  	<resultMap type="com.sean.base.entity.SysDept" id="recursionDeptMap">
+	  	<id column="id" jdbcType="VARCHAR" property="id" />
+	    <result column="dept_no" jdbcType="VARCHAR" property="deptNo" />
+	    <result column="name" jdbcType="VARCHAR" property="name" />
+	    <result column="pid" jdbcType="VARCHAR" property="pid" />
+	    <result column="status" jdbcType="TINYINT" property="status" />
+	    <result column="relation_code" jdbcType="VARCHAR" property="relationCode" />
+	    <result column="dept_manager_id" jdbcType="VARCHAR" property="deptManagerId" />
+	    <result column="manager_name" jdbcType="VARCHAR" property="managerName" />
+	    <result column="phone" jdbcType="VARCHAR" property="phone" />
+	    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+	    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+	    <result column="deleted" jdbcType="TINYINT" property="deleted" />
+  		<collection column="id" property="subDept" javaType="java.util.ArrayList" ofType="com.sean.base.entity.SysDept" select="findDeptByPid" />
+  	</resultMap>
+  
+  	<!-- 查看子部门 -->
+  	<select id="findDeptByPid" resultMap="recursionDeptMap">
+		select <include refid="Base_Column_List"></include>
+		from sys_dept
+		where pid=#{id} and deleted=1
+		order by create_time
+	</select>
+	
+	<!-- 查看根部门 -->
+  	<select id="findAllRecursion" resultMap="recursionDeptMap">
+		select <include refid="Base_Column_List"></include>
+		from sys_dept
+		where pid=0 and deleted=1
+		order by create_time
+	</select>
+  
+	<!-- 查询所有部门  -->
+	<select id="selectAll" resultMap="BaseResultMap">
+		select <include refid="Base_Column_List"></include>
+		from sys_dept
+		where deleted=1
+		order by create_time
+	</select>
+	
+	
 </mapper>

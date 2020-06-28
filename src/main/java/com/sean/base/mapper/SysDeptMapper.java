@@ -1,5 +1,7 @@
 package com.sean.base.mapper;
 
+import java.util.List;
+
 import com.sean.base.entity.SysDept;
 
 public interface SysDeptMapper {
@@ -14,4 +16,11 @@ public interface SysDeptMapper {
     int updateByPrimaryKeySelective(SysDept record);
 
     int updateByPrimaryKey(SysDept record);
+    
+    // 查找部门树
+    List<SysDept> findAllRecursion();
+    
+    // 查询所有部门
+    List<SysDept> selectAll();
+    
 }

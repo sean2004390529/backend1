@@ -29,7 +29,7 @@ import io.swagger.annotations.ApiParam;
 @RestController
 @RequestMapping("/api/v1")
 @CrossOrigin
-@Api(tags="角色模块相关接口")
+@Api(tags="角色模块相关接口", description = "角色模块相关接口")
 public class RoleController {
 
 	@Autowired

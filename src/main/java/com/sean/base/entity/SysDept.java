@@ -2,6 +2,7 @@ package com.sean.base.entity;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 public class SysDept implements Serializable {
     private String id;
@@ -27,7 +28,13 @@ public class SysDept implements Serializable {
     private Date updateTime;
 
     private Integer deleted;
-
+    
+    //新增数据库中没有的这一栏（父集部门名称）
+//    private String pidName;
+    
+    private List<SysDept> subDept;
+    
+    
     private static final long serialVersionUID = 1L;
 
     public String getId() {
@@ -125,8 +132,18 @@ public class SysDept implements Serializable {
     public void setDeleted(Integer deleted) {
         this.deleted = deleted;
     }
-
-    @Override
+    
+//    public String getPidName() {
+//		return pidName;
+//	}
+//
+//	public void setPidName(String pidName) {
+//		this.pidName = pidName;
+//	}
+    
+    
+    
+	@Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append(getClass().getSimpleName());
@@ -148,4 +165,12 @@ public class SysDept implements Serializable {
         sb.append("]");
         return sb.toString();
     }
+
+	public List<SysDept> getSubDept() {
+		return subDept;
+	}
+
+	public void setSubDept(List<SysDept> subDept) {
+		this.subDept = subDept;
+	}
 }

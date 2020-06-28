@@ -42,7 +42,7 @@ import io.swagger.annotations.ApiParam;
 @RestController
 @RequestMapping("/api/v1")
 @CrossOrigin
-@Api(tags="用户模块相关接口")
+@Api(tags="用户模块相关接口", description = "用户模块相关接口")
 public class UserController {
 	
     @Autowired

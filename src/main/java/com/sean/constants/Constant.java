@@ -21,5 +21,7 @@ public class Constant {
     public static final String JWT_REFRESH_KEY="jwt-refresh-key_";
 
     public static final String JWT_REFRESH_IDENTIFICATION="jwt-refresj-identification_";
+    
+    public static final String DEPT_CODE_KEY="dept-code-key_";
 }
 
