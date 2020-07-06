@@ -231,5 +231,10 @@
 		order by create_time
 	</select>
 	
-	
+	<!--  逻辑删除部门 -->
+  	<update id="deleteDept">
+  		update sys_dept
+  		set deleted=0
+  		where id = #{id}
+  	</update>
 </mapper>

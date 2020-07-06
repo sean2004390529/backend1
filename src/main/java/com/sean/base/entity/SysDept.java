@@ -173,4 +173,17 @@ public class SysDept implements Serializable {
 	public void setSubDept(List<SysDept> subDept) {
 		this.subDept = subDept;
 	}
+	
+	@Override
+	public int hashCode() {
+		String result = name + id;
+		return result.hashCode();
+	}
+	
+	public boolean equals(Object obj) {
+		SysDept dept = (SysDept)obj;
+		return this.getName().equals(dept.getName()) && this.getId().equals(dept.getId());
+	}
+	
+	
 }

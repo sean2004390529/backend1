@@ -23,4 +23,9 @@ public interface SysDeptMapper {
     // 查询所有部门
     List<SysDept> selectAll();
     
+    // 查看子部门
+    List<SysDept> findDeptByPid(String id);
+    
+    // 删除部门
+    int deleteDept(String id);
 }

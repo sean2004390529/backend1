@@ -7,6 +7,7 @@ import java.util.UUID;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import com.sean.base.entity.SysDept;
 import com.sean.base.mapper.SysDeptMapper;
@@ -28,11 +29,39 @@ public class DeptServiceImpl implements DeptService {
 		return list;
 	}
 
+	
 	@Override
 	public List<SysDept> selectAll() {
-		List<SysDept> list = sysDeptMapper.selectAll();
-		return list;
+		return sysDeptMapper.selectAll();
 	}
+	
+	@Override
+	public List<SysDept> subDepts(String deptId) {
+		List<SysDept> allDeptsList = sysDeptMapper.selectAll();
+		if(!StringUtils.isEmpty(deptId) && !allDeptsList.isEmpty()) {
+			SysDept dept = sysDeptMapper.selectByPrimaryKey(deptId);
+			allDeptsList.remove(dept);
+			
+			// 查找子部门
+			List<SysDept> subDeptlist = sysDeptMapper.findDeptByPid(deptId);
+			if(!subDeptlist.isEmpty()) {
+				for(SysDept sonDept : subDeptlist) {
+					allDeptsList.remove(sonDept);
+					
+					// 查找孙部门
+					List<SysDept> grandSonDeptlist = sysDeptMapper.findDeptByPid(sonDept.getId());
+					if(!grandSonDeptlist.isEmpty()) {
+						for(SysDept grandsonDept : grandSonDeptlist) {
+							allDeptsList.remove(grandsonDept);
+						}
+					}
+				}
+			}
+			
+		}
+		return allDeptsList;
+	}	
+	
 
 	@Override
 	public SysDept addDept(DeptAddReqVO vo) {
@@ -61,20 +90,26 @@ public class DeptServiceImpl implements DeptService {
 		}
 	}
 
-	
-//	@Override
-//	public List<SysDept> selectAll() {
-//		//为部门list添加父集部门名称
-//		List<SysDept> all = sysDeptMapper.selectAll();
-//		for(SysDept dept : all) {
-//			SysDept primaryKey = sysDeptMapper.selectByPrimaryKey(dept.getPid());
-//			if(primaryKey!=null) {
-////				dept.setPidName(parentDept.getName());
-//				dept.setSubDept(sysDeptMapper.getSubDept()););
-//			}
-//		}
-//		return all;
-//	}
 
+	@Override
+	public void deleteDept(String deptId) {
+		SysDept dept = sysDeptMapper.selectByPrimaryKey(deptId);
+		if(dept==null) {
+			throw new BusinessException(BaseResponseCode.DATA_ERROR);
+		}
+		// 如果有子部门，则不允许删除
+		List<SysDept> subDeptlist = sysDeptMapper.findDeptByPid(deptId);
+		if(!subDeptlist.isEmpty()) {
+			throw new BusinessException(BaseResponseCode.HAS_SUBDEPT_NOT_PERMIT_TO_DELETE);
+		}
+		// 后续需要补充存在关联用户的处理方法
+		
+		dept.setUpdateTime(new Date());
+		int ret = sysDeptMapper.deleteDept(deptId);
+		if(ret!=1) {
+			throw new BusinessException(BaseResponseCode.DATA_ERROR);
+		}
+	}
+	
 
 }

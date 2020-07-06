@@ -28,6 +28,7 @@ public enum BaseResponseCode implements ResponseCodeInterface{
     NOT_PERMISSION(4030001,"没有权限访问该资源"),
     
     OPERATION_ERROR(4000005,"操作失败"),
+    HAS_SUBDEPT_NOT_PERMIT_TO_DELETE(4000006,"存在子部门，不允许删除部门"),
     ACCOUNT_LOCK_TIP(4010001,"该账户被锁定"),
     ;
 

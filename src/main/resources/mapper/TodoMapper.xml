@@ -200,7 +200,7 @@
     ORDER BY create_time
   </select>
   
-  <!--  批量逻辑删除角色(list需要删除Todo的id列表) -->
+  <!--  批量逻辑删除Todo(list需要删除Todo的id列表) -->
   <update id="batchDeleteTodo">
   	update todo_todo
   	set deleted=0
