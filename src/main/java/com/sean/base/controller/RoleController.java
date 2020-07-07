@@ -28,7 +28,6 @@ import io.swagger.annotations.ApiParam;
 
 @RestController
 @RequestMapping("/api/v1")
-@CrossOrigin
 @Api(tags="角色模块相关接口", description = "角色模块相关接口")
 public class RoleController {
 
@@ -46,7 +45,6 @@ public class RoleController {
 	@PostMapping("/role/list")
 	@ApiModelProperty("分页查询用户接口")
 	public DataResult<PageVO<SysRole>> pageInfo(@RequestBody RolePageReqVO vo){
-	  	System.out.println(vo);
 	  	DataResult result = DataResult.success();
 	  	result.setData(roleService.selectAll(vo));
 	  	return result;

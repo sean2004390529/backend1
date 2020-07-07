@@ -27,7 +27,6 @@ import io.swagger.annotations.ApiParam;
 
 @RestController
 @RequestMapping("/api/v1")
-@CrossOrigin
 @Api(tags="todo模块相关接口")
 public class TodoController {
 

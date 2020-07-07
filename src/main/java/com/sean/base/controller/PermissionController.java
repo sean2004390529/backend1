@@ -15,7 +15,6 @@ import io.swagger.annotations.Api;
 
 @RestController
 @RequestMapping("/api/v1")
-@CrossOrigin
 @Api(tags="权限模块相关接口")
 public class PermissionController {
 

@@ -41,7 +41,7 @@ import io.swagger.annotations.ApiParam;
 
 @RestController
 @RequestMapping("/api/v1")
-@CrossOrigin
+//@CrossOrigin(origins = "http://localhost:9527", maxAge = 3600)
 @Api(tags="用户模块相关接口", description = "用户模块相关接口")
 public class UserController {
 	

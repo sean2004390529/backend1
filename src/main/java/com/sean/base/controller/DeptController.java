@@ -27,7 +27,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 @RestController
 @RequestMapping("/api/v1")
-@CrossOrigin
 @Api(tags="Dept模块相关接口", description = "Dept模块相关接口")
 public class DeptController {
 

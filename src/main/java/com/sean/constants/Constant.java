@@ -10,7 +10,7 @@ public class Constant {
 
     public static final String JWT_REFRESH_TOKEN_BLACKLIST="jwt-refresh-token-blacklist_";
 
-    public static final String ACCESS_TOKEN="authorization";
+    public static final String ACCESS_TOKEN="Authorization";
 
     public static final String REFRESH_TOKEN="refresh_token";
 

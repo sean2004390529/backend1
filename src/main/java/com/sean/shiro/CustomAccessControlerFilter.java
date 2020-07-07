@@ -29,7 +29,6 @@ public class CustomAccessControlerFilter extends AccessControlFilter {
         //判断客户端是否携带accessToken
         try {
             String accessToken=request.getHeader(Constant.ACCESS_TOKEN);
-            System.out.println(accessToken);
             if(StringUtils.isEmpty(accessToken)){
                 throw new BusinessException(BaseResponseCode.TOKEN_NOT_NULL);
             }
