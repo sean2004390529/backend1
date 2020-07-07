@@ -11,6 +11,7 @@ import java.util.concurrent.TimeUnit;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import com.github.pagehelper.PageHelper;
 import com.sean.base.entity.SysRole;
@@ -81,7 +82,7 @@ public class UserServiceImpl implements UserService{
 		Map<String, Object> claims = new HashMap<>();
 		claims.put(Constant.JWT_USER_NAME, sysUser.getUsername());
 		claims.put(Constant.JWT_ROLES_KEY, getRolesByUserId(sysUser.getId()));
-		claims.put(Constant.JWT_PERMISSIONS_KEY, getPermissionsByUserId(sysUser.getId()));
+//		claims.put(Constant.JWT_PERMISSIONS_KEY, getPermissionsByUserId(sysUser.getId()));
 		String accessToken = JwtTokenUtil.getAccessToken(sysUser.getId(), claims);
 		System.out.println("accessToken Create: ");
 		System.out.println(claims);
@@ -107,16 +108,12 @@ public class UserServiceImpl implements UserService{
 		return loginRespVO;
 	}
 
-	// mock假数据
-    private List<String> getRolesByUserId(String userId){
-
-        List<String> roles=new ArrayList<>();
-        if("9a26f5f1-cbd2-473d-82db-1d6dcf4598f8".equals(userId)){
-            roles.add("admin");
-        }else {
-            roles.add("editor");
-        }
-        return roles;
+	// 通过用户ID,获取角色名称列表
+    public List<String> getRolesByUserId(String userId){
+    	if(StringUtils.isEmpty(userId)){
+    		throw new BusinessException(BaseResponseCode.TOKEN_ERROR);
+    	}
+    	return  roleService.getRoleNames(userId);
     }
     
     // mock假数据
@@ -240,6 +237,11 @@ public class UserServiceImpl implements UserService{
 					TimeUnit.MICROSECONDS
 					);
 		}
+	}
+
+	@Override
+	public String selectByUserId(String userId) {
+		return sysUserMapper.selectByUserId(userId);
 	}
 	
 }

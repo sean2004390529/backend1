@@ -28,4 +28,6 @@ public interface SysUserMapper {
     // 批量删除用户(sysUser操作人id，list需要删除用户的id列表)
     int batchDeleteUser(@Param("list") List<String> list);
     
+    // 根据用户ID，获取用户名字
+    String selectByUserId(String userId);
 }

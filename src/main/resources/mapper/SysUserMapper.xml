@@ -291,4 +291,10 @@
   	</foreach>
   </update>
   
+  <!-- 通过用户ID查询名称 -->
+  <select id="selectByUserId" parameterType="String" resultType="String">
+  	select username
+  	from sys_user
+  	where id=#{id} and deleted=1
+  </select>
 </mapper>

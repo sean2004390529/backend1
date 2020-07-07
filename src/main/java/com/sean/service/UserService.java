@@ -40,4 +40,10 @@ public interface UserService {
     // 批量删除用户(list需要删除用户的id列表)
     void batchDeleteUser(List<String> list);
     
+    // 通过用户ID,获取角色名称列表
+    List<String> getRolesByUserId(String userId);
+    
+    // 根据用户ID，获取用户名字
+    String selectByUserId(String userId);
+    
 }

@@ -1,6 +1,6 @@
 package com.sean.service.impl;
 
-import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
@@ -15,6 +15,7 @@ import com.sean.base.mapper.SysRoleMapper;
 import com.sean.exception.BusinessException;
 import com.sean.exception.code.BaseResponseCode;
 import com.sean.service.RoleService;
+import com.sean.service.UserRoleService;
 import com.sean.utils.PageUtil;
 import com.sean.vo.req.RoleAddReqVO;
 import com.sean.vo.req.RolePageReqVO;
@@ -26,6 +27,9 @@ public class RoleServiceImpl implements RoleService{
 
 	@Autowired
 	private SysRoleMapper sysRoleMapper;
+	
+	@Autowired
+	private UserRoleService userRoleService;
 	
 	// 查询所有角色
 //	@Override
@@ -91,6 +95,19 @@ public class RoleServiceImpl implements RoleService{
 		if(i==0) {
 			throw new BusinessException(BaseResponseCode.OPERATION_ERROR);
 		}
+	}
+
+	@Override
+	public List<String> getRoleNames(String userId) {
+        List<SysRole> sysRoles = userRoleService.getRoleIdsByUserId(userId);
+        if (null==sysRoles||sysRoles.isEmpty()){
+            return null;
+        }
+        List<String> list=new ArrayList<>();
+        for (SysRole sysRole:sysRoles){
+            list.add(sysRole.getName());
+        }
+        return list;
 	}
 	
 }

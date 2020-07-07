@@ -5,10 +5,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,6 +24,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.sean.base.entity.SysUser;
 import com.sean.base.mapper.SysUserRoleMapper;
 import com.sean.constants.Constant;
+import com.sean.exception.BusinessException;
+import com.sean.exception.code.BaseResponseCode;
 import com.sean.service.UserService;
 import com.sean.utils.DataResult;
 import com.sean.utils.JwtTokenUtil;
@@ -57,14 +61,35 @@ public class UserController {
     }
 	
     // mock假数据
+//    @GetMapping("/user/info")
+//    @ApiOperation(value = "用户信息查询接口")
+//    public DataResult<LoginRespVO> login(){
+//        DataResult result=DataResult.success();
+//        List<String> list = new ArrayList<String>();
+//        list.add("admin");
+//        Map<String, Object> claims = new HashMap<>();
+//        claims.put("roles", list);
+//        result.setData(claims);
+//        return result;
+//    }
+    
     @GetMapping("/user/info")
     @ApiOperation(value = "用户信息查询接口")
-    public DataResult<LoginRespVO> login(){
+    public DataResult<LoginRespVO> login(ServletRequest servletRequest){
+    	HttpServletRequest request= (HttpServletRequest) servletRequest;
+    	String accessToken=request.getHeader(Constant.ACCESS_TOKEN);
+    	if(StringUtils.isEmpty(accessToken)){
+    		throw new BusinessException(BaseResponseCode.TOKEN_NOT_NULL);
+    	}
+    	String userId = JwtTokenUtil.getUserId(accessToken);
+    	List<String> rolesNameList = userService.getRolesByUserId(userId);
+    	String username = userService.selectByUserId(userId);
+    	
+    	Map<String, Object> claims = new HashMap<>();
+    	claims.put("roles", rolesNameList);
+    	claims.put("name", username);
+    	
         DataResult result=DataResult.success();
-        List<String> list = new ArrayList<String>();
-        list.add("admin");
-        Map<String, Object> claims = new HashMap<>();
-        claims.put("roles", list);
         result.setData(claims);
         return result;
     }
