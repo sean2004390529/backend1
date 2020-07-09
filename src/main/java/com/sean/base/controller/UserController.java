@@ -105,7 +105,6 @@ public class UserController {
     @PostMapping("/user/list")
     @ApiModelProperty("分页查询用户接口")
     public DataResult<PageVO<SysUser>> pageInfo(@RequestBody UserPageReqVO vo){
-    	System.out.println(vo);
     	DataResult result = DataResult.success();
     	result.setData(userService.selectAll(vo));
     	return result;
@@ -122,7 +121,6 @@ public class UserController {
     @PutMapping("/user")
     @ApiModelProperty("修改用户信息")
     public DataResult updateUser(@RequestBody @Valid UserUpdateReqVO vo) {
-    	System.out.println(vo);
     	DataResult result = DataResult.success();
     	userService.updateUser(vo);
     	return result;

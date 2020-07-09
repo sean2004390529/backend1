@@ -109,7 +109,7 @@
                enableSelectByExample="false"
                selectByExampleQueryId="true">
         </table>
--->
+
 		
 		<table tableName="todo_todo" domainObjectName="Todo"
                enableCountByExample="false"
@@ -122,5 +122,17 @@
             <columnOverride column="deleted" javaType="java.lang.Integer"/>
             <columnOverride column="is_public" javaType="java.lang.Integer"/>
         </table>
+-->
+        
+        <table tableName="stock_staff" domainObjectName="StockStaff"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="true">
+            <columnOverride column="id" javaType="java.lang.Integer"/>
+            <columnOverride column="deleted" javaType="java.lang.Integer"/>
+        </table>
+        
     </context>
 </generatorConfiguration>

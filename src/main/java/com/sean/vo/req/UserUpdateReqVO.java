@@ -31,8 +31,6 @@ public class UserUpdateReqVO {
 		this.id = id;
 	}
 
-
-
 	public String getUsername() {
 		return username;
 	}
