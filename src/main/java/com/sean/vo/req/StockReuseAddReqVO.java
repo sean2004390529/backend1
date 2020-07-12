@@ -1,11 +1,13 @@
 package com.sean.vo.req;
 
+import java.util.Date;
+
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 import io.swagger.annotations.ApiModelProperty;
 
-public class StockPurchaseAddReqVO {
+public class StockReuseAddReqVO {
 
 	@ApiModelProperty("物品名称")
 	@NotBlank(message = "物品名称不能为空")
@@ -14,12 +16,9 @@ public class StockPurchaseAddReqVO {
 	@ApiModelProperty("物品数量")
 	@NotNull(message = "物品数量不能为空")
 	private Integer number;
-	
-	@ApiModelProperty("总金额物品数量")
-	private Double amount;
-	
-	@ApiModelProperty("购买目的")
-	private String purpose;
+
+	@ApiModelProperty("购买日期")
+	private Date createTime;
 	
 	@ApiModelProperty("是否可复用(1可复用；0一次性使用)")
     private Integer reuse;
@@ -40,20 +39,12 @@ public class StockPurchaseAddReqVO {
 		this.number = number;
 	}
 
-	public Double getAmount() {
-		return amount;
+	public Date getCreateTime() {
+		return createTime;
 	}
 
-	public void setAmount(Double amount) {
-		this.amount = amount;
-	}
-
-	public String getPurpose() {
-		return purpose;
-	}
-
-	public void setPurpose(String purpose) {
-		this.purpose = purpose;
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
 	}
 
 	public Integer getReuse() {
@@ -63,7 +54,6 @@ public class StockPurchaseAddReqVO {
 	public void setReuse(Integer reuse) {
 		this.reuse = reuse;
 	}
-	
-	
+
 	
 }

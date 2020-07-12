@@ -1,45 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.sean.base.mapper.StockPurchaseMapper">
-  <resultMap id="BaseResultMap" type="com.sean.base.entity.StockPurchase">
+<mapper namespace="com.sean.base.mapper.StockReuseMapper">
+  <resultMap id="BaseResultMap" type="com.sean.base.entity.StockReuse">
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="goodsname" jdbcType="VARCHAR" property="goodsname" />
     <result column="number" jdbcType="INTEGER" property="number" />
     <result column="unit" jdbcType="VARCHAR" property="unit" />
-    <result column="amount" jdbcType="DECIMAL" property="amount" />
     <result column="create_id" jdbcType="VARCHAR" property="createId" />
-    <result column="purpose" jdbcType="VARCHAR" property="purpose" />
     <result column="create_time" jdbcType="DATE" property="createTime" />
     <result column="update_time" jdbcType="DATE" property="updateTime" />
     <result column="reuse" jdbcType="TINYINT" property="reuse" />
     <result column="deleted" jdbcType="TINYINT" property="deleted" />
   </resultMap>
   <sql id="Base_Column_List">
-    id, goodsname, `number`, unit, amount, create_id, purpose, create_time, update_time, 
-    reuse, deleted
+    id, goodsname, `number`, unit, create_id, create_time, update_time, reuse, deleted
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from stock_purchase
+    from stock_reuse
     where id = #{id,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    delete from stock_purchase
+    delete from stock_reuse
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.sean.base.entity.StockPurchase">
-    insert into stock_purchase (id, goodsname, `number`, 
-      unit, amount, create_id, 
-      purpose, create_time, update_time, 
-      reuse, deleted)
+  <insert id="insert" parameterType="com.sean.base.entity.StockReuse">
+    insert into stock_reuse (id, goodsname, `number`, 
+      unit, create_id, create_time, 
+      update_time, reuse, deleted
+      )
     values (#{id,jdbcType=INTEGER}, #{goodsname,jdbcType=VARCHAR}, #{number,jdbcType=INTEGER}, 
-      #{unit,jdbcType=VARCHAR}, #{amount,jdbcType=DECIMAL}, #{createId,jdbcType=VARCHAR}, 
-      #{purpose,jdbcType=VARCHAR}, #{createTime,jdbcType=DATE}, #{updateTime,jdbcType=DATE}, 
-      #{reuse,jdbcType=TINYINT}, #{deleted,jdbcType=TINYINT})
+      #{unit,jdbcType=VARCHAR}, #{createId,jdbcType=VARCHAR}, #{createTime,jdbcType=DATE}, 
+      #{updateTime,jdbcType=DATE}, #{reuse,jdbcType=TINYINT}, #{deleted,jdbcType=TINYINT}
+      )
   </insert>
-  <insert id="insertSelective" parameterType="com.sean.base.entity.StockPurchase">
-    insert into stock_purchase
+  <insert id="insertSelective" parameterType="com.sean.base.entity.StockReuse">
+    insert into stock_reuse
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
         id,
@@ -53,14 +50,8 @@
       <if test="unit != null">
         unit,
       </if>
-      <if test="amount != null">
-        amount,
-      </if>
       <if test="createId != null">
         create_id,
-      </if>
-      <if test="purpose != null">
-        purpose,
       </if>
       <if test="createTime != null">
         create_time,
@@ -88,14 +79,8 @@
       <if test="unit != null">
         #{unit,jdbcType=VARCHAR},
       </if>
-      <if test="amount != null">
-        #{amount,jdbcType=DECIMAL},
-      </if>
       <if test="createId != null">
         #{createId,jdbcType=VARCHAR},
-      </if>
-      <if test="purpose != null">
-        #{purpose,jdbcType=VARCHAR},
       </if>
       <if test="createTime != null">
         #{createTime,jdbcType=DATE},
@@ -111,8 +96,8 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.sean.base.entity.StockPurchase">
-    update stock_purchase
+  <update id="updateByPrimaryKeySelective" parameterType="com.sean.base.entity.StockReuse">
+    update stock_reuse
     <set>
       <if test="goodsname != null">
         goodsname = #{goodsname,jdbcType=VARCHAR},
@@ -123,14 +108,8 @@
       <if test="unit != null">
         unit = #{unit,jdbcType=VARCHAR},
       </if>
-      <if test="amount != null">
-        amount = #{amount,jdbcType=DECIMAL},
-      </if>
       <if test="createId != null">
         create_id = #{createId,jdbcType=VARCHAR},
-      </if>
-      <if test="purpose != null">
-        purpose = #{purpose,jdbcType=VARCHAR},
       </if>
       <if test="createTime != null">
         create_time = #{createTime,jdbcType=DATE},
@@ -147,14 +126,12 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.sean.base.entity.StockPurchase">
-    update stock_purchase
+  <update id="updateByPrimaryKey" parameterType="com.sean.base.entity.StockReuse">
+    update stock_reuse
     set goodsname = #{goodsname,jdbcType=VARCHAR},
       `number` = #{number,jdbcType=INTEGER},
       unit = #{unit,jdbcType=VARCHAR},
-      amount = #{amount,jdbcType=DECIMAL},
       create_id = #{createId,jdbcType=VARCHAR},
-      purpose = #{purpose,jdbcType=VARCHAR},
       create_time = #{createTime,jdbcType=DATE},
       update_time = #{updateTime,jdbcType=DATE},
       reuse = #{reuse,jdbcType=TINYINT},
@@ -162,17 +139,14 @@
     where id = #{id,jdbcType=INTEGER}
   </update>
   
-  <!-- 查询所有用户 -->
-  <select id="selectAll" resultMap="BaseResultMap" parameterType="com.sean.vo.req.StockPurchasePageReqVO">
+  <!-- 查询所有使用品 -->
+  <select id="selectAll" resultMap="BaseResultMap" parameterType="com.sean.vo.req.StockReusePageReqVO">
   	select <include refid="Base_Column_List"></include>
-  	from stock_purchase
+  	from stock_reuse
   	<where>
       deleted=1
   	  <if test="goodsname !=null and goodsname != ''">
         and goodsname like concat('%',#{goodsname},'%')
-      </if>
-      <if test="purpose !=null and purpose != ''">
-        and purpose like concat('%',#{purpose},'%')
       </if>
       <if test="unit !=null and unit != ''">
         and unit like concat('%',#{unit},'%')
@@ -187,8 +161,8 @@
   	order by id DESC
   </select>
   
-  <update id="batchDeletePurchase">
-  	update stock_purchase
+  <update id="batchDeleteReuse">
+  	update stock_reuse
   	set deleted=0
   	where id in
   	<foreach collection="list" open="(" close=")" separator="," item="item">
