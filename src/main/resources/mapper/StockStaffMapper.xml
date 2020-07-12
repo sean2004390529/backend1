@@ -127,7 +127,7 @@
   </update>
   
   <!-- 查询所有员工 -->
-  <select id="selectAll" resultMap="BaseResultMap" parameterType="com.sean.vo.req.UserPageReqVO">
+  <select id="selectAll" resultMap="BaseResultMap" parameterType="com.sean.vo.req.StockStaffPageReqVO">
   	select <include refid="Base_Column_List"></include>
   	from stock_staff
   	<where>
@@ -142,7 +142,7 @@
         and phone like concat('%',#{phone},'%')
       </if>
     </where>
-  	order by create_time
+  	order by id
   </select>
   
   <!--  批量逻辑删除员工(list需要删除员工用户的id列表) -->

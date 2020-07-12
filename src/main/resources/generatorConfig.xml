@@ -122,7 +122,6 @@
             <columnOverride column="deleted" javaType="java.lang.Integer"/>
             <columnOverride column="is_public" javaType="java.lang.Integer"/>
         </table>
--->
         
         <table tableName="stock_staff" domainObjectName="StockStaff"
                enableCountByExample="false"
@@ -131,6 +130,19 @@
                enableSelectByExample="false"
                selectByExampleQueryId="true">
             <columnOverride column="id" javaType="java.lang.Integer"/>
+            <columnOverride column="deleted" javaType="java.lang.Integer"/>
+        </table>
+-->   
+        <table tableName="stock_purchase" domainObjectName="StockPurchase"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="true">
+            <columnOverride column="id" javaType="java.lang.Integer"/>
+            <columnOverride column="number" javaType="java.lang.Integer"/>
+            <columnOverride column="amount" javaType="java.lang.Double"/>
+            <columnOverride column="reuse" javaType="java.lang.Integer"/>
             <columnOverride column="deleted" javaType="java.lang.Integer"/>
         </table>
         
