@@ -25,6 +25,9 @@ public class StockReusePageReqVO {
 	@ApiModelProperty("可否复用")
 	private Integer reuse;
 	
+	@ApiModelProperty("使用人")
+	private Integer personId;
+	
 	public Integer getReuse() {
 		return reuse;
 	}
@@ -79,6 +82,14 @@ public class StockReusePageReqVO {
 
 	public void setCreateId(String createId) {
 		this.createId = createId;
+	}
+
+	public Integer getPersonId() {
+		return personId;
+	}
+
+	public void setPersonId(Integer personId) {
+		this.personId = personId;
 	}
 	
 	

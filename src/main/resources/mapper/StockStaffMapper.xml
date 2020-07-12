@@ -155,4 +155,12 @@
   	</foreach>
   </update>
   
+	<!-- 查询所有员工  没有分页-->
+  <select id="selectAllNoPage" resultMap="BaseResultMap">
+	select id, staffname
+	from stock_staff
+	where deleted=1
+	order by id
+  </select>
+  
 </mapper>

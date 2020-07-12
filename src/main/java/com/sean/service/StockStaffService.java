@@ -13,6 +13,9 @@ public interface StockStaffService {
 	// 查询所有员工
 	PageVO<StockStaff> selectAll(StockStaffPageReqVO vo);
 	
+	// 查询所有员工--不分页，只查id, staffname
+	List<StockStaff> selectAllNoPage();
+	
 	// 增加员工
 	void addStaff(StockStaffAddReqVO vo);
 	

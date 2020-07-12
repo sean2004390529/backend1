@@ -155,6 +155,7 @@
             <columnOverride column="id" javaType="java.lang.Integer"/>
             <columnOverride column="number" javaType="java.lang.Integer"/>
             <columnOverride column="reuse" javaType="java.lang.Integer"/>
+            <columnOverride column="person_id" javaType="java.lang.Integer"/>
             <columnOverride column="deleted" javaType="java.lang.Integer"/>
         </table>
     </context>

@@ -7,6 +7,7 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -36,6 +37,14 @@ public class StockStaffController {
 	public DataResult<PageVO<StockStaff>> pageInfo(@RequestBody StockStaffPageReqVO vo){
 		DataResult result = DataResult.success();
 		result.setData(stockStaffService.selectAll(vo));
+		return result;
+	}
+	
+	@GetMapping("/staff/nopage")
+    @ApiModelProperty("查询员工id,staffname")
+	public DataResult<StockStaff> selectAllNoPage(){
+		DataResult result = DataResult.success();
+		result.setData(stockStaffService.selectAllNoPage());
 		return result;
 	}
 	

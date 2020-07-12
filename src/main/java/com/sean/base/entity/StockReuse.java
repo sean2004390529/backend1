@@ -20,6 +20,8 @@ public class StockReuse implements Serializable {
 
     private Integer reuse;
 
+    private Integer personId;
+
     private Integer deleted;
 
     private static final long serialVersionUID = 1L;
@@ -88,6 +90,14 @@ public class StockReuse implements Serializable {
         this.reuse = reuse;
     }
 
+    public Integer getPersonId() {
+        return personId;
+    }
+
+    public void setPersonId(Integer personId) {
+        this.personId = personId;
+    }
+
     public Integer getDeleted() {
         return deleted;
     }
@@ -110,6 +120,7 @@ public class StockReuse implements Serializable {
         sb.append(", createTime=").append(createTime);
         sb.append(", updateTime=").append(updateTime);
         sb.append(", reuse=").append(reuse);
+        sb.append(", personId=").append(personId);
         sb.append(", deleted=").append(deleted);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");

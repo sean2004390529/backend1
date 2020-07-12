@@ -8,7 +8,6 @@ import com.sean.base.entity.StockReuse;
 import com.sean.vo.req.StockReuseAddReqVO;
 import com.sean.vo.req.StockReusePageReqVO;
 
-
 public interface StockReuseMapper {
     int deleteByPrimaryKey(Integer id);
 

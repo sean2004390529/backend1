@@ -23,6 +23,9 @@ public interface StockStaffMapper {
     // 查询所有员工（可带查询条件）
     List<StockStaff> selectAll(StockStaffPageReqVO vo );
     
+    // 查询所有员工（全部员工，只查询id，staffname列）
+    List<StockStaff> selectAllNoPage();
+    
     // 批量删除员工(list需要删除员工的id列表)
     int batchDeleteUser(@Param("list") List<String> list);
     

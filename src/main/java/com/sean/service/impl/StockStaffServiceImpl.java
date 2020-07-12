@@ -64,4 +64,9 @@ public class StockStaffServiceImpl implements StockStaffService {
 		}
 	}
 
+	@Override
+	public List<StockStaff> selectAllNoPage() {
+		return stockStaffMapper.selectAllNoPage();
+	}
+
 }

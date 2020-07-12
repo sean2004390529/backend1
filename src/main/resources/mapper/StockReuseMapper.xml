@@ -10,10 +10,12 @@
     <result column="create_time" jdbcType="DATE" property="createTime" />
     <result column="update_time" jdbcType="DATE" property="updateTime" />
     <result column="reuse" jdbcType="TINYINT" property="reuse" />
+    <result column="person_id" jdbcType="INTEGER" property="personId" />
     <result column="deleted" jdbcType="TINYINT" property="deleted" />
   </resultMap>
   <sql id="Base_Column_List">
-    id, goodsname, `number`, unit, create_id, create_time, update_time, reuse, deleted
+    id, goodsname, `number`, unit, create_id, create_time, update_time, reuse, person_id, 
+    deleted
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
@@ -28,12 +30,12 @@
   <insert id="insert" parameterType="com.sean.base.entity.StockReuse">
     insert into stock_reuse (id, goodsname, `number`, 
       unit, create_id, create_time, 
-      update_time, reuse, deleted
-      )
+      update_time, reuse, person_id, 
+      deleted)
     values (#{id,jdbcType=INTEGER}, #{goodsname,jdbcType=VARCHAR}, #{number,jdbcType=INTEGER}, 
       #{unit,jdbcType=VARCHAR}, #{createId,jdbcType=VARCHAR}, #{createTime,jdbcType=DATE}, 
-      #{updateTime,jdbcType=DATE}, #{reuse,jdbcType=TINYINT}, #{deleted,jdbcType=TINYINT}
-      )
+      #{updateTime,jdbcType=DATE}, #{reuse,jdbcType=TINYINT}, #{personId,jdbcType=INTEGER}, 
+      #{deleted,jdbcType=TINYINT})
   </insert>
   <insert id="insertSelective" parameterType="com.sean.base.entity.StockReuse">
     insert into stock_reuse
@@ -61,6 +63,9 @@
       </if>
       <if test="reuse != null">
         reuse,
+      </if>
+      <if test="personId != null">
+        person_id,
       </if>
       <if test="deleted != null">
         deleted,
@@ -91,6 +96,9 @@
       <if test="reuse != null">
         #{reuse,jdbcType=TINYINT},
       </if>
+      <if test="personId != null">
+        #{personId,jdbcType=INTEGER},
+      </if>
       <if test="deleted != null">
         #{deleted,jdbcType=TINYINT},
       </if>
@@ -120,6 +128,9 @@
       <if test="reuse != null">
         reuse = #{reuse,jdbcType=TINYINT},
       </if>
+      <if test="personId != null">
+        person_id = #{personId,jdbcType=INTEGER},
+      </if>
       <if test="deleted != null">
         deleted = #{deleted,jdbcType=TINYINT},
       </if>
@@ -135,6 +146,7 @@
       create_time = #{createTime,jdbcType=DATE},
       update_time = #{updateTime,jdbcType=DATE},
       reuse = #{reuse,jdbcType=TINYINT},
+      person_id = #{personId,jdbcType=INTEGER},
       deleted = #{deleted,jdbcType=TINYINT}
     where id = #{id,jdbcType=INTEGER}
   </update>
@@ -157,6 +169,9 @@
       <if test="reuse !=null">
         and reuse=#{reuse}
       </if>
+      <if test="personId !=null">
+        and person_id=#{personId}
+      </if>
     </where>
   	order by id DESC
   </select>
@@ -169,5 +184,4 @@
   		#{item}
   	</foreach>
   </update>
-  
 </mapper>

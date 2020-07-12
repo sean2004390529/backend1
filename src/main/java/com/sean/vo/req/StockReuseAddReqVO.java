@@ -20,8 +20,11 @@ public class StockReuseAddReqVO {
 	@ApiModelProperty("购买日期")
 	private Date createTime;
 	
-	@ApiModelProperty("是否可复用(1可复用；0一次性使用)")
+	@ApiModelProperty("")
     private Integer reuse;
+	
+	@ApiModelProperty("使用人ID")
+    private Integer personId;
 	
 	public String getGoodsname() {
 		return goodsname;
@@ -53,6 +56,14 @@ public class StockReuseAddReqVO {
 
 	public void setReuse(Integer reuse) {
 		this.reuse = reuse;
+	}
+
+	public Integer getPersonId() {
+		return personId;
+	}
+
+	public void setPersonId(Integer personId) {
+		this.personId = personId;
 	}
 
 	
