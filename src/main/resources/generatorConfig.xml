@@ -23,7 +23,7 @@
         </commentGenerator>
 
         <!-- jdbc连接 -->
-        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://192.168.163.100:3306/company_frame" userId="root"
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://192.168.224.101:3306/company_frame" userId="root"
                         password="P@ssw0rd"/>
         <!-- 类型转换 -->
         <javaTypeResolver>
@@ -145,7 +145,7 @@
             <columnOverride column="reuse" javaType="java.lang.Integer"/>
             <columnOverride column="deleted" javaType="java.lang.Integer"/>
         </table>
-   -->      
+     
         <table tableName="stock_reuse" domainObjectName="StockReuse"
                enableCountByExample="false"
                enableUpdateByExample="false"
@@ -158,5 +158,35 @@
             <columnOverride column="person_id" javaType="java.lang.Integer"/>
             <columnOverride column="deleted" javaType="java.lang.Integer"/>
         </table>
+        
+   
+        <table tableName="stock_disposable" domainObjectName="StockDispo"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="true">
+            <columnOverride column="id" javaType="java.lang.Integer"/>
+            <columnOverride column="number" javaType="java.lang.Integer"/>
+            <columnOverride column="reuse" javaType="java.lang.Integer"/>
+            <columnOverride column="person_id" javaType="java.lang.Integer"/>
+            <columnOverride column="deleted" javaType="java.lang.Integer"/>
+        </table>
+-->        
+        
+        <table tableName="stock_borrow" domainObjectName="StockBorrow"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="true">
+            <columnOverride column="id" javaType="java.lang.Integer"/>
+            <columnOverride column="number" javaType="java.lang.Integer"/>
+            <columnOverride column="reuse" javaType="java.lang.Integer"/>
+            <columnOverride column="person_id" javaType="java.lang.Integer"/>
+            <columnOverride column="is_borrow" javaType="java.lang.Integer"/>
+            <columnOverride column="deleted" javaType="java.lang.Integer"/>
+        </table>
+        
     </context>
 </generatorConfiguration>

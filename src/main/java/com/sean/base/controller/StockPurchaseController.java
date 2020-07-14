@@ -60,8 +60,8 @@ public class StockPurchaseController {
 	}
 	
     @DeleteMapping("/purchase")
-    @ApiModelProperty("[批量]删除用户")
-    public DataResult deleteUser(@RequestBody @ApiParam("用户id集合") List<String> list, 
+    @ApiModelProperty("[批量]删除购买记录")
+    public DataResult deleteUser(@RequestBody @ApiParam("购买记录id集合") List<String> list, 
     		HttpServletRequest request) {
     	// 获取当前操作人
     	// String accessToken = request.getHeader(Constant.ACCESS_TOKEN);

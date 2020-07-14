@@ -13,7 +13,7 @@ public interface StockPurchaseService {
 	// 查询所有购买记录
 	PageVO<StockPurchase> selectAll(StockPurchasePageReqVO vo);
 	
-	// 增加查询记录
+	// 增加购买记录
 	void addStockPurchase(StockPurchaseAddReqVO vo);
 	
 	// 更新购买记录
