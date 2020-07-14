@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sean.base.mapper.StockDispenseMapper">
+  <resultMap id="BaseResultMap" type="com.sean.base.entity.StockDispense">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="goodsname" jdbcType="VARCHAR" property="goodsname" />
+    <result column="number" jdbcType="INTEGER" property="number" />
+    <result column="unit" jdbcType="VARCHAR" property="unit" />
+    <result column="create_id" jdbcType="VARCHAR" property="createId" />
+    <result column="purpose" jdbcType="VARCHAR" property="purpose" />
+    <result column="create_time" jdbcType="DATE" property="createTime" />
+    <result column="update_time" jdbcType="DATE" property="updateTime" />
+    <result column="reuse" jdbcType="TINYINT" property="reuse" />
+    <result column="person_id" jdbcType="INTEGER" property="personId" />
+    <result column="dispense_date" jdbcType="DATE" property="dispenseDate" />
+    <result column="deleted" jdbcType="TINYINT" property="deleted" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, goodsname, `number`, unit, create_id, purpose, create_time, update_time, reuse, 
+    person_id, dispense_date, deleted
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from stock_dispense
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from stock_dispense
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.sean.base.entity.StockDispense">
+    insert into stock_dispense (id, goodsname, `number`, 
+      unit, create_id, purpose, 
+      create_time, update_time, reuse, 
+      person_id, dispense_date, deleted
+      )
+    values (#{id,jdbcType=INTEGER}, #{goodsname,jdbcType=VARCHAR}, #{number,jdbcType=INTEGER}, 
+      #{unit,jdbcType=VARCHAR}, #{createId,jdbcType=VARCHAR}, #{purpose,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=DATE}, #{updateTime,jdbcType=DATE}, #{reuse,jdbcType=TINYINT}, 
+      #{personId,jdbcType=INTEGER}, #{dispenseDate,jdbcType=DATE}, #{deleted,jdbcType=TINYINT}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.sean.base.entity.StockDispense">
+    insert into stock_dispense
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="goodsname != null">
+        goodsname,
+      </if>
+      <if test="number != null">
+        `number`,
+      </if>
+      <if test="unit != null">
+        unit,
+      </if>
+      <if test="createId != null">
+        create_id,
+      </if>
+      <if test="purpose != null">
+        purpose,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+      <if test="reuse != null">
+        reuse,
+      </if>
+      <if test="personId != null">
+        person_id,
+      </if>
+      <if test="dispenseDate != null">
+        dispense_date,
+      </if>
+      <if test="deleted != null">
+        deleted,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="goodsname != null">
+        #{goodsname,jdbcType=VARCHAR},
+      </if>
+      <if test="number != null">
+        #{number,jdbcType=INTEGER},
+      </if>
+      <if test="unit != null">
+        #{unit,jdbcType=VARCHAR},
+      </if>
+      <if test="createId != null">
+        #{createId,jdbcType=VARCHAR},
+      </if>
+      <if test="purpose != null">
+        #{purpose,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=DATE},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=DATE},
+      </if>
+      <if test="reuse != null">
+        #{reuse,jdbcType=TINYINT},
+      </if>
+      <if test="personId != null">
+        #{personId,jdbcType=INTEGER},
+      </if>
+      <if test="dispenseDate != null">
+        #{dispenseDate,jdbcType=DATE},
+      </if>
+      <if test="deleted != null">
+        #{deleted,jdbcType=TINYINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.sean.base.entity.StockDispense">
+    update stock_dispense
+    <set>
+      <if test="goodsname != null">
+        goodsname = #{goodsname,jdbcType=VARCHAR},
+      </if>
+      <if test="number != null">
+        `number` = #{number,jdbcType=INTEGER},
+      </if>
+      <if test="unit != null">
+        unit = #{unit,jdbcType=VARCHAR},
+      </if>
+      <if test="createId != null">
+        create_id = #{createId,jdbcType=VARCHAR},
+      </if>
+      <if test="purpose != null">
+        purpose = #{purpose,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=DATE},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=DATE},
+      </if>
+      <if test="reuse != null">
+        reuse = #{reuse,jdbcType=TINYINT},
+      </if>
+      <if test="personId != null">
+        person_id = #{personId,jdbcType=INTEGER},
+      </if>
+      <if test="dispenseDate != null">
+        dispense_date = #{dispenseDate,jdbcType=DATE},
+      </if>
+      <if test="deleted != null">
+        deleted = #{deleted,jdbcType=TINYINT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.sean.base.entity.StockDispense">
+    update stock_dispense
+    set goodsname = #{goodsname,jdbcType=VARCHAR},
+      `number` = #{number,jdbcType=INTEGER},
+      unit = #{unit,jdbcType=VARCHAR},
+      create_id = #{createId,jdbcType=VARCHAR},
+      purpose = #{purpose,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=DATE},
+      update_time = #{updateTime,jdbcType=DATE},
+      reuse = #{reuse,jdbcType=TINYINT},
+      person_id = #{personId,jdbcType=INTEGER},
+      dispense_date = #{dispenseDate,jdbcType=DATE},
+      deleted = #{deleted,jdbcType=TINYINT}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  
+     <!-- 查询所有用户 -->
+  <select id="selectAll" resultMap="BaseResultMap" parameterType="com.sean.vo.req.StockDispensePageReqVO">
+  	select <include refid="Base_Column_List"></include>
+  	from stock_dispense
+  	<where>
+      deleted=1
+  	  <if test="goodsname !=null and goodsname != ''">
+        and goodsname like concat('%',#{goodsname},'%')
+      </if>
+      <if test="purpose !=null and purpose != ''">
+        and purpose like concat('%',#{purpose},'%')
+      </if>
+      <if test="personId !=null">
+        and person_id=#{personId}
+      </if>
+    </where>
+  	order by id DESC
+  </select>
+  
+  <!-- 批量删除 -->
+  <update id="batchDeleteDispense">
+  	update stock_dispense
+  	set deleted=0
+  	where id in
+  	<foreach collection="list" open="(" close=")" separator="," item="item">
+  		#{item}
+  	</foreach>
+  </update>
+</mapper>

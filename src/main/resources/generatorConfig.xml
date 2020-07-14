@@ -171,8 +171,7 @@
             <columnOverride column="reuse" javaType="java.lang.Integer"/>
             <columnOverride column="person_id" javaType="java.lang.Integer"/>
             <columnOverride column="deleted" javaType="java.lang.Integer"/>
-        </table>
--->        
+        </table>     
         
         <table tableName="stock_borrow" domainObjectName="StockBorrow"
                enableCountByExample="false"
@@ -187,6 +186,18 @@
             <columnOverride column="is_borrow" javaType="java.lang.Integer"/>
             <columnOverride column="deleted" javaType="java.lang.Integer"/>
         </table>
+ -->
         
+        <table tableName="stock_dispense" domainObjectName="StockDispense"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="true">
+            <columnOverride column="id" javaType="java.lang.Integer"/>
+            <columnOverride column="number" javaType="java.lang.Integer"/>
+            <columnOverride column="person_id" javaType="java.lang.Integer"/>
+            <columnOverride column="deleted" javaType="java.lang.Integer"/>
+        </table>
     </context>
 </generatorConfiguration>
