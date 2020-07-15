@@ -11,11 +11,12 @@
     <result column="update_time" jdbcType="DATE" property="updateTime" />
     <result column="reuse" jdbcType="TINYINT" property="reuse" />
     <result column="person_id" jdbcType="INTEGER" property="personId" />
+    <result column="is_borrow" jdbcType="TINYINT" property="isBorrow" />
     <result column="deleted" jdbcType="TINYINT" property="deleted" />
   </resultMap>
   <sql id="Base_Column_List">
     id, goodsname, `number`, unit, create_id, create_time, update_time, reuse, person_id, 
-    deleted
+    is_borrow, deleted
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
@@ -31,11 +32,11 @@
     insert into stock_reuse (id, goodsname, `number`, 
       unit, create_id, create_time, 
       update_time, reuse, person_id, 
-      deleted)
+      is_borrow, deleted)
     values (#{id,jdbcType=INTEGER}, #{goodsname,jdbcType=VARCHAR}, #{number,jdbcType=INTEGER}, 
       #{unit,jdbcType=VARCHAR}, #{createId,jdbcType=VARCHAR}, #{createTime,jdbcType=DATE}, 
       #{updateTime,jdbcType=DATE}, #{reuse,jdbcType=TINYINT}, #{personId,jdbcType=INTEGER}, 
-      #{deleted,jdbcType=TINYINT})
+      #{isBorrow,jdbcType=TINYINT}, #{deleted,jdbcType=TINYINT})
   </insert>
   <insert id="insertSelective" parameterType="com.sean.base.entity.StockReuse">
     insert into stock_reuse
@@ -66,6 +67,9 @@
       </if>
       <if test="personId != null">
         person_id,
+      </if>
+      <if test="isBorrow != null">
+        is_borrow,
       </if>
       <if test="deleted != null">
         deleted,
@@ -99,6 +103,9 @@
       <if test="personId != null">
         #{personId,jdbcType=INTEGER},
       </if>
+      <if test="isBorrow != null">
+        #{isBorrow,jdbcType=TINYINT},
+      </if>
       <if test="deleted != null">
         #{deleted,jdbcType=TINYINT},
       </if>
@@ -131,6 +138,9 @@
       <if test="personId != null">
         person_id = #{personId,jdbcType=INTEGER},
       </if>
+      <if test="isBorrow != null">
+        is_borrow = #{isBorrow,jdbcType=TINYINT},
+      </if>
       <if test="deleted != null">
         deleted = #{deleted,jdbcType=TINYINT},
       </if>
@@ -147,6 +157,7 @@
       update_time = #{updateTime,jdbcType=DATE},
       reuse = #{reuse,jdbcType=TINYINT},
       person_id = #{personId,jdbcType=INTEGER},
+      is_borrow = #{isBorrow,jdbcType=TINYINT},
       deleted = #{deleted,jdbcType=TINYINT}
     where id = #{id,jdbcType=INTEGER}
   </update>
@@ -169,6 +180,9 @@
       <if test="reuse !=null">
         and reuse=#{reuse}
       </if>
+      <if test="isBorrow !=null">
+        and is_borrow=#{isBorrow}
+      </if>
       <if test="personId !=null">
         and person_id=#{personId}
       </if>
@@ -184,4 +198,5 @@
   		#{item}
   	</foreach>
   </update>
+  
 </mapper>

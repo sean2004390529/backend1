@@ -25,6 +25,18 @@ public class StockDispenseAddReqVO {
 
 	@ApiModelProperty("派发日期")
 	private Date dispenseDate;
+
+	@ApiModelProperty("单位")
+	private String unit;
+	
+	public String getUnit() {
+		return unit;
+	}
+
+	public void setUnit(String unit) {
+		this.unit = unit;
+	}
+
 	
 	public String getGoodsname() {
 		return goodsname;

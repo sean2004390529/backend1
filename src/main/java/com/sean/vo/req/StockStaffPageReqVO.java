@@ -8,7 +8,7 @@ public class StockStaffPageReqVO {
 	private Integer pageNum = 1;
 	
 	@ApiModelProperty("当前页数据条目数")
-	private Integer pageSize = 10;
+	private Integer pageSize = 20;
 	
 	@ApiModelProperty("员工")
 	private String staffname;

@@ -27,6 +27,21 @@ public class StockReuseUpdateReqVO {
 	@ApiModelProperty("是否可复用(1可复用；0一次性使用)")
     private Integer reuse;
 	
+	@ApiModelProperty("1为借用，0为在库")
+	private Integer isBorrow;
+	
+	@ApiModelProperty("单位")
+	private String unit;
+	
+	public String getUnit() {
+		return unit;
+	}
+
+	public void setUnit(String unit) {
+		this.unit = unit;
+	}
+
+	
 	public String getGoodsname() {
 		return goodsname;
 	}
@@ -65,6 +80,14 @@ public class StockReuseUpdateReqVO {
 
 	public void setId(Integer id) {
 		this.id = id;
+	}
+
+	public Integer getIsBorrow() {
+		return isBorrow;
+	}
+
+	public void setIsBorrow(Integer isBorrow) {
+		this.isBorrow = isBorrow;
 	}
 
 	

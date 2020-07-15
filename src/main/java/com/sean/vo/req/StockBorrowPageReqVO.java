@@ -8,7 +8,7 @@ public class StockBorrowPageReqVO {
 	private Integer pageNum = 1;
 	
 	@ApiModelProperty("当前页数据条目数")
-	private Integer pageSize = 10;
+	private Integer pageSize = 20;
 	
 	@ApiModelProperty("物品名称")
 	private String goodsname;

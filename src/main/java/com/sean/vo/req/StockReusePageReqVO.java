@@ -8,7 +8,7 @@ public class StockReusePageReqVO {
 	private Integer pageNum = 1;
 	
 	@ApiModelProperty("当前页数据条目数")
-	private Integer pageSize = 10;
+	private Integer pageSize = 20;
 	
 	@ApiModelProperty("物品名称")
 	private String goodsname;
@@ -24,6 +24,9 @@ public class StockReusePageReqVO {
 	
 	@ApiModelProperty("可否复用")
 	private Integer reuse;
+	
+	@ApiModelProperty("是否在库")
+	private Integer isBorrow;
 	
 	@ApiModelProperty("使用人")
 	private Integer personId;
@@ -90,6 +93,14 @@ public class StockReusePageReqVO {
 
 	public void setPersonId(Integer personId) {
 		this.personId = personId;
+	}
+
+	public Integer getIsBorrow() {
+		return isBorrow;
+	}
+
+	public void setIsBorrow(Integer isBorrow) {
+		this.isBorrow = isBorrow;
 	}
 	
 	

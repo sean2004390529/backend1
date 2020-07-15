@@ -1,14 +1,14 @@
 package com.sean.base.controller;
 
-import java.util.Date;
+import java.util.Arrays;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -69,6 +69,16 @@ public class StockPurchaseController {
     	
     	stockPurchaseService.batchDeletePurchase(list);
     	DataResult result = DataResult.success();
+    	return result;
+    }
+    
+    @GetMapping("/unit")
+    @ApiModelProperty("获取单位列表")
+    public DataResult fetchUnit() {
+    	List<String> unitList = Arrays.asList("套","件","支");
+
+    	DataResult result = DataResult.success();
+    	result.setData(unitList);
     	return result;
     }
 	

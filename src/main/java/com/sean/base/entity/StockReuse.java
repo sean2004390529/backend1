@@ -22,6 +22,8 @@ public class StockReuse implements Serializable {
 
     private Integer personId;
 
+    private Integer isBorrow;
+
     private Integer deleted;
 
     private static final long serialVersionUID = 1L;
@@ -98,6 +100,14 @@ public class StockReuse implements Serializable {
         this.personId = personId;
     }
 
+    public Integer getIsBorrow() {
+        return isBorrow;
+    }
+
+    public void setIsBorrow(Integer isBorrow) {
+        this.isBorrow = isBorrow;
+    }
+
     public Integer getDeleted() {
         return deleted;
     }
@@ -121,6 +131,7 @@ public class StockReuse implements Serializable {
         sb.append(", updateTime=").append(updateTime);
         sb.append(", reuse=").append(reuse);
         sb.append(", personId=").append(personId);
+        sb.append(", isBorrow=").append(isBorrow);
         sb.append(", deleted=").append(deleted);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");

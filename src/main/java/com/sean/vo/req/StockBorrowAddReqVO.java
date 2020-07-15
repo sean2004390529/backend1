@@ -32,6 +32,18 @@ public class StockBorrowAddReqVO {
 	@ApiModelProperty("实际归还日期")
 	private Date actualReturn;
 	
+	@ApiModelProperty("单位")
+	private String unit;
+	
+	public String getUnit() {
+		return unit;
+	}
+
+	public void setUnit(String unit) {
+		this.unit = unit;
+	}
+
+	
 	public String getGoodsname() {
 		return goodsname;
 	}
