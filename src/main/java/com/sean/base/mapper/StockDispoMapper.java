@@ -21,12 +21,15 @@ public interface StockDispoMapper {
 
     int updateByPrimaryKey(StockDispo record);
     
-    // 查询使用品（可带查询条件）
+    // 查询一次性用品（可带查询条件）
     List<StockDispo> selectAll(StockDispoPageReqVO vo);
     
-    // 增加使用品
+    // 查询在库一次性用品（不分页）
+    List<StockDispo> selectStockDispo();
+    
+    // 增加一次性用品
     void addStockDispo(StockDispoAddReqVO vo);
 
-    // 批量删除使用品(list需要删除使用品的id列表)
+    // 批量删除一次性用品(list需要删除使用品的id列表)
     int batchDeleteDispo(@Param("list") List<String> list);
 }

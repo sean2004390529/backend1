@@ -72,14 +72,14 @@ public class StockPurchaseController {
     	return result;
     }
     
-    @GetMapping("/unit")
-    @ApiModelProperty("获取单位列表")
-    public DataResult fetchUnit() {
-    	List<String> unitList = Arrays.asList("套","件","支");
-
-    	DataResult result = DataResult.success();
-    	result.setData(unitList);
-    	return result;
-    }
+//    @GetMapping("/unit")
+//    @ApiModelProperty("获取单位列表")
+//    public DataResult fetchUnit() {
+//    	List<String> unitList = Arrays.asList("套","件","支");
+//    	
+//    	DataResult result = DataResult.success();
+//    	result.setData(unitList);
+//    	return result;
+//    }
 	
 }

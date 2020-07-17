@@ -13,6 +13,9 @@ public interface StockReuseSerivce {
 	// 查询所有借用品
 	PageVO<StockReuse> selectAll(StockReusePageReqVO vo);
 	
+	// 查询在库可借用品（不分页）
+	List<StockReuse> selectStockReuse();
+	
 	// 增加借用品
 	void addStockReuse(StockReuseAddReqVO vo);
     

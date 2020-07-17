@@ -27,6 +27,9 @@ public class StockPurchaseAddReqVO {
 	@ApiModelProperty("单位")
 	private String unit;
 	
+	@ApiModelProperty("是否保存到用品列表")
+	private Boolean save;
+	
 	public String getUnit() {
 		return unit;
 	}
@@ -73,6 +76,20 @@ public class StockPurchaseAddReqVO {
 
 	public void setReuse(Integer reuse) {
 		this.reuse = reuse;
+	}
+
+	public Boolean getSave() {
+		return save;
+	}
+
+	public void setSave(Boolean save) {
+		this.save = save;
+	}
+
+	@Override
+	public String toString() {
+		return "StockPurchaseAddReqVO [goodsname=" + goodsname + ", number=" + number + ", amount=" + amount
+				+ ", purpose=" + purpose + ", reuse=" + reuse + ", unit=" + unit + ", save=" + save + "]";
 	}
 	
 	

@@ -176,6 +176,13 @@
   	order by id DESC
   </select>
   
+  <!-- 查询在库一次性使用品 非分页 -->
+  <select id="selectStockDispo" resultMap="BaseResultMap" >
+  	select id, goodsname, number, unit
+  	from stock_disposable
+  	where deleted = 1
+  </select>
+  
   <update id="batchDeleteDispo">
   	update stock_disposable
   	set deleted=0

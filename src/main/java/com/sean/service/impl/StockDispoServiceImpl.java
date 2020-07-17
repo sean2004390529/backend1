@@ -62,5 +62,10 @@ public class StockDispoServiceImpl implements StockDispoSerivce{
 		}
 	}
 
+	@Override
+	public List<StockDispo> selectStockDispo() {
+		return stockDispoMapper.selectStockDispo();
+	}
+
 	
 }

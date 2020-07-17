@@ -62,5 +62,10 @@ public class StockReuseServiceImpl implements StockReuseSerivce{
 		}
 	}
 
+	@Override
+	public List<StockReuse> selectStockReuse() {
+		return stockReuseMapper.selectStockReuse();
+	}
+
 	
 }

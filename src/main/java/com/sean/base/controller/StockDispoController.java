@@ -7,6 +7,7 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -38,6 +39,14 @@ public class StockDispoController {
     public DataResult<PageVO<StockDispo>> pageInfo(@RequestBody StockDispoPageReqVO vo){
 		DataResult result = DataResult.success();
 		result.setData(stockDispoSerivce.selectAll(vo));
+		return result;
+	}
+	
+	@GetMapping("/dispo/instock")
+    @ApiModelProperty("查询在库一次性用品")
+    public DataResult<StockDispo> selectStockDispo(){
+		DataResult result = DataResult.success();
+		result.setData(stockDispoSerivce.selectStockDispo());
 		return result;
 	}
 	

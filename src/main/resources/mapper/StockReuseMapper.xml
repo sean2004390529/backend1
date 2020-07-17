@@ -190,6 +190,13 @@
   	order by id DESC
   </select>
   
+  <!-- 查询在库重复使用品 非分页 -->
+  <select id="selectStockReuse" resultMap="BaseResultMap" >
+  	select id, goodsname, number, unit
+  	from stock_reuse
+  	where deleted = 1 AND is_borrow = 0
+  </select>
+  
   <update id="batchDeleteReuse">
   	update stock_reuse
   	set deleted=0

@@ -23,10 +23,13 @@ public interface StockReuseMapper {
     
     // 查询使用品（可带查询条件）
     List<StockReuse> selectAll(StockReusePageReqVO vo);
+
+    // 查询在库可借用品（不分页）
+    List<StockReuse> selectStockReuse();
     
     // 增加使用品
     void addStockReuse(StockReuseAddReqVO vo);
-
+    
     // 批量删除使用品(list需要删除使用品的id列表)
     int batchDeleteReuse(@Param("list") List<String> list);
 }

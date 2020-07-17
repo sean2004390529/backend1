@@ -60,7 +60,7 @@ public class StockBorrowController {
 	
 	@DeleteMapping("/borrow")
     @ApiModelProperty("[批量]删除借出记录")
-	public DataResult deleteBorrow(@RequestBody @ApiParam("购买记录id集合") List<String> list, 
+	public DataResult deleteBorrow(@RequestBody @ApiParam("借出记录id集合") List<String> list, 
     		HttpServletRequest request) {
     	// 获取当前操作人
     	// String accessToken = request.getHeader(Constant.ACCESS_TOKEN);
