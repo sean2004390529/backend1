@@ -245,7 +245,7 @@
   	select id, username, phone, dept_id, email, status, sex, create_time, update_time
   	from sys_user
   	<where>
-      deleted=1
+      deleted=1 and username!='admin'
   	  <if test="username !=null and username != ''">
         and username like concat('%',#{username},'%')
       </if>

@@ -1,43 +1,860 @@
-2020-07-17 18:11:37.527  INFO 14820 --- [main] com.sean.InternalSystemApplicationTests  : Starting InternalSystemApplicationTests on SEAN-PC with PID 14820 (started by sean in D:\JavaPJ\InternalSystem)
-2020-07-17 18:11:37.540 DEBUG 14820 --- [main] com.sean.InternalSystemApplicationTests  : Running with Spring Boot v2.1.14.RELEASE, Spring v5.1.15.RELEASE
-2020-07-17 18:11:37.540  INFO 14820 --- [main] com.sean.InternalSystemApplicationTests  : No active profile set, falling back to default profiles: default
-2020-07-17 18:11:38.662  INFO 14820 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-07-17 18:11:38.667  INFO 14820 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2020-07-17 18:11:38.831  INFO 14820 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50ms. Found 0 Redis repository interfaces.
-2020-07-17 18:11:39.356  INFO 14820 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.sean.config.ShiroConfig$$EnhancerBySpringCGLIB$$cf16cb42] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-07-17 18:11:42.222  INFO 14820 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.sean.config.RedisConfig$$EnhancerBySpringCGLIB$$19e5528c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-07-17 18:11:42.259  INFO 14820 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-07-17 18:11:42.268  INFO 14820 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration$$EnhancerBySpringCGLIB$$7a156f5e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-07-17 18:11:42.496  INFO 14820 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'lettuceClientResources' of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-07-17 18:11:42.641  INFO 14820 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConnectionFactory' of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-07-17 18:11:42.678  INFO 14820 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisTemplate' of type [org.springframework.data.redis.core.RedisTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-07-17 18:11:42.683  INFO 14820 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisService' of type [com.sean.service.RedisService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-07-17 18:11:42.685  INFO 14820 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'customHashedCredentialsMatcher' of type [com.sean.shiro.CustomHashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-07-17 18:11:42.692  INFO 14820 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisCacheManager' of type [com.sean.shiro.RedisCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-07-17 18:11:42.706  INFO 14820 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'customRealm' of type [com.sean.shiro.CustomRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-07-17 18:11:42.725  INFO 14820 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-07-17 18:11:42.741  INFO 14820 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-07-17 18:11:44.495  INFO 14820 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2020-07-17 18:11:45.100  INFO 14820 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-07-17 18:11:45.873  INFO 14820 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-07-17 18:11:45.905  INFO 14820 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-07-17 18:11:45.964  INFO 14820 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-07-17 18:11:46.211  INFO 14820 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_1
-2020-07-17 18:11:46.241  INFO 14820 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_2
-2020-07-17 18:11:46.262  INFO 14820 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_3
-2020-07-17 18:11:46.296  INFO 14820 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_4
-2020-07-17 18:11:46.307  INFO 14820 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUserUsingDELETE_1
-2020-07-17 18:11:46.319  INFO 14820 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_5
-2020-07-17 18:11:46.334  INFO 14820 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUserUsingDELETE_2
-2020-07-17 18:11:46.343  INFO 14820 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_6
-2020-07-17 18:11:46.360  INFO 14820 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_7
-2020-07-17 18:11:46.364  INFO 14820 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: selectAllNoPageUsingGET_1
-2020-07-17 18:11:46.376  INFO 14820 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteRoleUsingDELETE_1
-2020-07-17 18:11:46.384  INFO 14820 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_8
-2020-07-17 18:11:46.394  INFO 14820 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUserUsingDELETE_3
-2020-07-17 18:11:46.415  INFO 14820 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_9
-2020-07-17 18:11:46.448  INFO 14820 --- [main] com.sean.InternalSystemApplicationTests  : Started InternalSystemApplicationTests in 9.378 seconds (JVM running for 10.814)
-2020-07-17 18:11:47.056  INFO 14820 --- [main] io.lettuce.core.EpollProvider            : Starting without optional epoll library
-2020-07-17 18:11:47.059  INFO 14820 --- [main] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
-2020-07-17 18:11:49.759  INFO 14820 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-07-17 18:11:49.764  INFO 14820 --- [Thread-3] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2020-07-18 00:14:38.355  INFO 5012 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-18 00:14:38.409  INFO 5012 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-18 00:14:38.430  INFO 5012 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 21 ms
+2020-07-18 00:14:38.535  INFO 5012 --- [http-nio-8080-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-8} inited
+2020-07-18 00:14:38.537 DEBUG 5012 --- [http-nio-8080-exec-1] c.s.b.m.SysUserMapper.selectByUsername   : ==>  Preparing: select id, username, salt, `password`, phone, dept_id, real_name, nick_name, email, `status`, sex, deleted, create_id, update_id, create_where, create_time, update_time from sys_user where username=? and deleted=1 order by create_time 
+2020-07-18 00:14:38.538 DEBUG 5012 --- [http-nio-8080-exec-1] c.s.b.m.SysUserMapper.selectByUsername   : ==> Parameters: admin(String)
+2020-07-18 00:14:38.542 DEBUG 5012 --- [http-nio-8080-exec-1] c.s.b.m.SysUserMapper.selectByUsername   : <==      Total: 1
+2020-07-18 00:14:38.552 DEBUG 5012 --- [http-nio-8080-exec-1] c.s.b.m.S.getRoleIdsByUserId             : ==>  Preparing: select id, user_id, role_id, create_time from sys_user_role where user_id=? 
+2020-07-18 00:14:38.553 DEBUG 5012 --- [http-nio-8080-exec-1] c.s.b.m.S.getRoleIdsByUserId             : ==> Parameters: 9a26f5f1-cbd2-473d-82db-1d6dcf4598f8(String)
+2020-07-18 00:14:38.554 DEBUG 5012 --- [http-nio-8080-exec-1] c.s.b.m.S.getRoleIdsByUserId             : <==      Total: 1
+2020-07-18 00:14:38.556 DEBUG 5012 --- [http-nio-8080-exec-1] c.s.b.m.S.selectByPrimaryKey             : ==>  Preparing: select id, `name`, description, `status`, create_time, update_time, deleted from sys_role where id = ? 
+2020-07-18 00:14:38.556 DEBUG 5012 --- [http-nio-8080-exec-1] c.s.b.m.S.selectByPrimaryKey             : ==> Parameters: UDkrhi234iasdflss(String)
+2020-07-18 00:14:38.559 DEBUG 5012 --- [http-nio-8080-exec-1] c.s.b.m.S.selectByPrimaryKey             : <==      Total: 1
+2020-07-18 00:14:38.622 DEBUG 5012 --- [http-nio-8080-exec-4] c.s.b.m.S.getRoleIdsByUserId             : ==>  Preparing: select id, user_id, role_id, create_time from sys_user_role where user_id=? 
+2020-07-18 00:14:38.623 DEBUG 5012 --- [http-nio-8080-exec-4] c.s.b.m.S.getRoleIdsByUserId             : ==> Parameters: 9a26f5f1-cbd2-473d-82db-1d6dcf4598f8(String)
+2020-07-18 00:14:38.627 DEBUG 5012 --- [http-nio-8080-exec-4] c.s.b.m.S.getRoleIdsByUserId             : <==      Total: 1
+2020-07-18 00:14:38.628 DEBUG 5012 --- [http-nio-8080-exec-4] c.s.b.m.S.selectByPrimaryKey             : ==>  Preparing: select id, `name`, description, `status`, create_time, update_time, deleted from sys_role where id = ? 
+2020-07-18 00:14:38.628 DEBUG 5012 --- [http-nio-8080-exec-4] c.s.b.m.S.selectByPrimaryKey             : ==> Parameters: UDkrhi234iasdflss(String)
+2020-07-18 00:14:38.630 DEBUG 5012 --- [http-nio-8080-exec-4] c.s.b.m.S.selectByPrimaryKey             : <==      Total: 1
+2020-07-18 00:14:38.631 DEBUG 5012 --- [http-nio-8080-exec-4] c.s.b.m.SysUserMapper.selectByUserId     : ==>  Preparing: select username from sys_user where id=? and deleted=1 
+2020-07-18 00:14:38.632 DEBUG 5012 --- [http-nio-8080-exec-4] c.s.b.m.SysUserMapper.selectByUserId     : ==> Parameters: 9a26f5f1-cbd2-473d-82db-1d6dcf4598f8(String)
+2020-07-18 00:14:38.635 DEBUG 5012 --- [http-nio-8080-exec-4] c.s.b.m.SysUserMapper.selectByUserId     : <==      Total: 1
+2020-07-18 00:14:39.147 DEBUG 5012 --- [http-nio-8080-exec-8] c.s.b.m.StockUnitMapper.selectAllNoPage  : ==>  Preparing: select id, value from stock_unit order by id 
+2020-07-18 00:14:39.148 DEBUG 5012 --- [http-nio-8080-exec-8] c.s.b.m.StockUnitMapper.selectAllNoPage  : ==> Parameters: 
+2020-07-18 00:14:39.150 DEBUG 5012 --- [http-nio-8080-exec-8] c.s.b.m.StockUnitMapper.selectAllNoPage  : <==      Total: 7
+2020-07-18 00:14:39.151 DEBUG 5012 --- [http-nio-8080-exec-7] c.s.b.m.S.selectAll_COUNT                : ==>  Preparing: SELECT count(0) FROM stock_disposable WHERE deleted = 1 
+2020-07-18 00:14:39.152 DEBUG 5012 --- [http-nio-8080-exec-7] c.s.b.m.S.selectAll_COUNT                : ==> Parameters: 
+2020-07-18 00:14:39.155 DEBUG 5012 --- [http-nio-8080-exec-7] c.s.b.m.S.selectAll_COUNT                : <==      Total: 1
+2020-07-18 00:14:39.156 DEBUG 5012 --- [http-nio-8080-exec-7] c.s.b.mapper.StockDispoMapper.selectAll  : ==>  Preparing: select id, goodsname, `number`, unit, create_id, create_time, update_time, reuse, person_id, deleted from stock_disposable WHERE deleted=1 order by id DESC LIMIT ? 
+2020-07-18 00:14:39.157 DEBUG 5012 --- [http-nio-8080-exec-7] c.s.b.mapper.StockDispoMapper.selectAll  : ==> Parameters: 20(Integer)
+2020-07-18 00:14:39.159 DEBUG 5012 --- [http-nio-8080-exec-7] c.s.b.mapper.StockDispoMapper.selectAll  : <==      Total: 1
+2020-07-18 00:19:11.415 DEBUG 5012 --- [http-nio-8080-exec-1] c.s.b.m.S.selectAll_COUNT                : ==>  Preparing: SELECT count(0) FROM stock_staff WHERE deleted = 1 
+2020-07-18 00:19:11.415 DEBUG 5012 --- [http-nio-8080-exec-1] c.s.b.m.S.selectAll_COUNT                : ==> Parameters: 
+2020-07-18 00:19:11.416 DEBUG 5012 --- [http-nio-8080-exec-1] c.s.b.m.S.selectAll_COUNT                : <==      Total: 1
+2020-07-18 00:19:11.417 DEBUG 5012 --- [http-nio-8080-exec-1] c.s.b.mapper.StockStaffMapper.selectAll  : ==>  Preparing: select id, staffname, phone, email, dept_id, create_time, update_time, deleted from stock_staff WHERE deleted=1 order by id LIMIT ? 
+2020-07-18 00:19:11.417 DEBUG 5012 --- [http-nio-8080-exec-1] c.s.b.mapper.StockStaffMapper.selectAll  : ==> Parameters: 20(Integer)
+2020-07-18 00:19:11.418 DEBUG 5012 --- [http-nio-8080-exec-1] c.s.b.mapper.StockStaffMapper.selectAll  : <==      Total: 2
+2020-07-18 00:21:52.820 DEBUG 5012 --- [http-nio-8080-exec-4] c.s.b.m.SysUserMapper.selectByUsername   : ==>  Preparing: select id, username, salt, `password`, phone, dept_id, real_name, nick_name, email, `status`, sex, deleted, create_id, update_id, create_where, create_time, update_time from sys_user where username=? and deleted=1 order by create_time 
+2020-07-18 00:21:52.820 DEBUG 5012 --- [http-nio-8080-exec-4] c.s.b.m.SysUserMapper.selectByUsername   : ==> Parameters: admin(String)
+2020-07-18 00:21:52.821 DEBUG 5012 --- [http-nio-8080-exec-4] c.s.b.m.SysUserMapper.selectByUsername   : <==      Total: 1
+2020-07-18 00:21:52.822 DEBUG 5012 --- [http-nio-8080-exec-4] c.s.b.m.S.getRoleIdsByUserId             : ==>  Preparing: select id, user_id, role_id, create_time from sys_user_role where user_id=? 
+2020-07-18 00:21:52.822 DEBUG 5012 --- [http-nio-8080-exec-4] c.s.b.m.S.getRoleIdsByUserId             : ==> Parameters: 9a26f5f1-cbd2-473d-82db-1d6dcf4598f8(String)
+2020-07-18 00:21:52.823 DEBUG 5012 --- [http-nio-8080-exec-4] c.s.b.m.S.getRoleIdsByUserId             : <==      Total: 1
+2020-07-18 00:21:52.823 DEBUG 5012 --- [http-nio-8080-exec-4] c.s.b.m.S.selectByPrimaryKey             : ==>  Preparing: select id, `name`, description, `status`, create_time, update_time, deleted from sys_role where id = ? 
+2020-07-18 00:21:52.823 DEBUG 5012 --- [http-nio-8080-exec-4] c.s.b.m.S.selectByPrimaryKey             : ==> Parameters: UDkrhi234iasdflss(String)
+2020-07-18 00:21:52.824 DEBUG 5012 --- [http-nio-8080-exec-4] c.s.b.m.S.selectByPrimaryKey             : <==      Total: 1
+2020-07-18 00:21:52.976 DEBUG 5012 --- [http-nio-8080-exec-5] c.s.b.m.S.getRoleIdsByUserId             : ==>  Preparing: select id, user_id, role_id, create_time from sys_user_role where user_id=? 
+2020-07-18 00:21:52.977 DEBUG 5012 --- [http-nio-8080-exec-5] c.s.b.m.S.getRoleIdsByUserId             : ==> Parameters: 9a26f5f1-cbd2-473d-82db-1d6dcf4598f8(String)
+2020-07-18 00:21:52.979 DEBUG 5012 --- [http-nio-8080-exec-5] c.s.b.m.S.getRoleIdsByUserId             : <==      Total: 1
+2020-07-18 00:21:52.981 DEBUG 5012 --- [http-nio-8080-exec-5] c.s.b.m.S.selectByPrimaryKey             : ==>  Preparing: select id, `name`, description, `status`, create_time, update_time, deleted from sys_role where id = ? 
+2020-07-18 00:21:52.981 DEBUG 5012 --- [http-nio-8080-exec-5] c.s.b.m.S.selectByPrimaryKey             : ==> Parameters: UDkrhi234iasdflss(String)
+2020-07-18 00:21:52.983 DEBUG 5012 --- [http-nio-8080-exec-5] c.s.b.m.S.selectByPrimaryKey             : <==      Total: 1
+2020-07-18 00:21:52.984 DEBUG 5012 --- [http-nio-8080-exec-5] c.s.b.m.SysUserMapper.selectByUserId     : ==>  Preparing: select username from sys_user where id=? and deleted=1 
+2020-07-18 00:21:52.984 DEBUG 5012 --- [http-nio-8080-exec-5] c.s.b.m.SysUserMapper.selectByUserId     : ==> Parameters: 9a26f5f1-cbd2-473d-82db-1d6dcf4598f8(String)
+2020-07-18 00:21:52.985 DEBUG 5012 --- [http-nio-8080-exec-5] c.s.b.m.SysUserMapper.selectByUserId     : <==      Total: 1
+2020-07-18 00:21:53.420 DEBUG 5012 --- [http-nio-8080-exec-6] c.s.b.m.S.selectAll_COUNT                : ==>  Preparing: SELECT count(0) FROM stock_staff WHERE deleted = 1 
+2020-07-18 00:21:53.421 DEBUG 5012 --- [http-nio-8080-exec-6] c.s.b.m.S.selectAll_COUNT                : ==> Parameters: 
+2020-07-18 00:21:53.422 DEBUG 5012 --- [http-nio-8080-exec-6] c.s.b.m.S.selectAll_COUNT                : <==      Total: 1
+2020-07-18 00:21:53.423 DEBUG 5012 --- [http-nio-8080-exec-6] c.s.b.mapper.StockStaffMapper.selectAll  : ==>  Preparing: select id, staffname, phone, email, dept_id, create_time, update_time, deleted from stock_staff WHERE deleted=1 order by id LIMIT ? 
+2020-07-18 00:21:53.423 DEBUG 5012 --- [http-nio-8080-exec-6] c.s.b.mapper.StockStaffMapper.selectAll  : ==> Parameters: 20(Integer)
+2020-07-18 00:21:53.426 DEBUG 5012 --- [http-nio-8080-exec-6] c.s.b.mapper.StockStaffMapper.selectAll  : <==      Total: 2
+2020-07-18 00:23:43.958  INFO 5012 --- [lettuce-nioEventLoop-87-1] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_211]
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[na:1.8.0_211]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_211]
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_211]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380) ~[na:1.8.0_211]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253) ~[netty-buffer-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133) ~[netty-buffer-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350) ~[netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) ~[netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714) [netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650) [netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576) [netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493) [netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) [netty-common-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.49.Final.jar:4.1.49.Final]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_211]
+
+2020-07-18 00:23:44.100  INFO 5012 --- [lettuce-eventExecutorLoop-85-5] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /192.168.224.101:6379
+2020-07-18 00:27:28.079  WARN 5012 --- [lettuce-nioEventLoop-87-2] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: java.util.concurrent.TimeoutException: Reconnection attempt exceeded timeout of 60 SECONDS 
+2020-07-18 00:27:28.176  INFO 5012 --- [lettuce-eventExecutorLoop-85-7] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 192.168.224.101:6379
+2020-07-18 00:27:38.183  WARN 5012 --- [lettuce-nioEventLoop-87-3] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.ConnectTimeoutException: connection timed out: /192.168.224.101:6379
+2020-07-18 00:27:38.274  INFO 5012 --- [lettuce-eventExecutorLoop-85-8] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 192.168.224.101:6379
+2020-07-18 00:27:38.281  INFO 5012 --- [lettuce-nioEventLoop-87-4] i.l.core.protocol.ReconnectionHandler    : Reconnected to 192.168.224.101:6379
+2020-07-18 00:29:44.280  INFO 5012 --- [lettuce-nioEventLoop-87-4] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_211]
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[na:1.8.0_211]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_211]
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_211]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380) ~[na:1.8.0_211]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253) ~[netty-buffer-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133) ~[netty-buffer-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350) ~[netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) ~[netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714) [netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650) [netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576) [netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493) [netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) [netty-common-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.49.Final.jar:4.1.49.Final]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_211]
+
+2020-07-18 00:29:44.375  INFO 5012 --- [lettuce-eventExecutorLoop-85-9] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /192.168.224.101:6379
+2020-07-18 02:30:42.255  WARN 5012 --- [lettuce-nioEventLoop-87-5] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: java.util.concurrent.TimeoutException: Reconnection attempt exceeded timeout of 60 SECONDS 
+2020-07-18 02:30:42.316  INFO 5012 --- [lettuce-eventExecutorLoop-85-11] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 192.168.224.101:6379
+2020-07-18 02:30:42.495  WARN 5012 --- [lettuce-nioEventLoop-87-6] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.AbstractChannel$AnnotatedSocketException: Network is unreachable: no further information: /192.168.224.101:6379
+
+io.netty.channel.AbstractChannel$AnnotatedSocketException: Network is unreachable: no further information: /192.168.224.101:6379
+Caused by: java.net.SocketException: Network is unreachable: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[na:1.8.0_211]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717) ~[na:1.8.0_211]
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330) ~[netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334) ~[netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:702) ~[netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650) ~[netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576) ~[netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493) ~[netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) ~[netty-common-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.49.Final.jar:4.1.49.Final]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_211]
+
+2020-07-18 02:30:47.965  INFO 5012 --- [lettuce-nioEventLoop-87-4] i.l.core.protocol.ReconnectionHandler    : Reconnected to 192.168.224.101:6379
+2020-07-18 02:32:39.273  INFO 5012 --- [lettuce-nioEventLoop-87-4] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_211]
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[na:1.8.0_211]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_211]
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_211]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380) ~[na:1.8.0_211]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253) ~[netty-buffer-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133) ~[netty-buffer-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350) ~[netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) ~[netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714) [netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650) [netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576) [netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493) [netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) [netty-common-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.49.Final.jar:4.1.49.Final]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_211]
+
+2020-07-18 02:32:39.368  INFO 5012 --- [lettuce-eventExecutorLoop-85-10] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /192.168.224.101:6379
+2020-07-18 02:32:39.372  WARN 5012 --- [lettuce-nioEventLoop-87-5] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.AbstractChannel$AnnotatedNoRouteToHostException: No route to host: no further information: /192.168.224.101:6379
+
+io.netty.channel.AbstractChannel$AnnotatedNoRouteToHostException: No route to host: no further information: /192.168.224.101:6379
+Caused by: java.net.NoRouteToHostException: No route to host: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[na:1.8.0_211]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717) ~[na:1.8.0_211]
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330) ~[netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334) ~[netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:702) ~[netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650) ~[netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576) ~[netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493) ~[netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) ~[netty-common-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.49.Final.jar:4.1.49.Final]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_211]
+
+2020-07-18 03:24:50.110  INFO 5012 --- [lettuce-eventExecutorLoop-85-2] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 192.168.224.101:6379
+2020-07-18 03:24:50.112  WARN 5012 --- [lettuce-nioEventLoop-87-9] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.AbstractChannel$AnnotatedNoRouteToHostException: No route to host: no further information: /192.168.224.101:6379
+
+io.netty.channel.AbstractChannel$AnnotatedNoRouteToHostException: No route to host: no further information: /192.168.224.101:6379
+Caused by: java.net.NoRouteToHostException: No route to host: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[na:1.8.0_211]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717) ~[na:1.8.0_211]
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330) ~[netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334) ~[netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:702) ~[netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650) ~[netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576) ~[netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493) ~[netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) ~[netty-common-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.49.Final.jar:4.1.49.Final]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_211]
+
+2020-07-18 03:24:55.816  INFO 5012 --- [lettuce-nioEventLoop-87-4] i.l.core.protocol.ReconnectionHandler    : Reconnected to 192.168.224.101:6379
+2020-07-18 03:25:20.741  INFO 5012 --- [lettuce-nioEventLoop-87-4] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_211]
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[na:1.8.0_211]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_211]
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_211]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380) ~[na:1.8.0_211]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253) ~[netty-buffer-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133) ~[netty-buffer-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350) ~[netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) ~[netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714) [netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650) [netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576) [netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493) [netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) [netty-common-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.49.Final.jar:4.1.49.Final]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_211]
+
+2020-07-18 03:25:20.762  INFO 5012 --- [lettuce-eventExecutorLoop-85-10] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /192.168.224.101:6379
+2020-07-18 12:12:48.016  WARN 5012 --- [lettuce-nioEventLoop-87-5] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: java.util.concurrent.TimeoutException: Reconnection attempt exceeded timeout of 60 SECONDS 
+2020-07-18 12:12:48.039  INFO 5012 --- [lettuce-eventExecutorLoop-85-12] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 192.168.224.101:6379
+2020-07-18 12:12:48.236  WARN 5012 --- [lettuce-nioEventLoop-87-6] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.AbstractChannel$AnnotatedSocketException: Network is unreachable: no further information: /192.168.224.101:6379
+
+io.netty.channel.AbstractChannel$AnnotatedSocketException: Network is unreachable: no further information: /192.168.224.101:6379
+Caused by: java.net.SocketException: Network is unreachable: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[na:1.8.0_211]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717) ~[na:1.8.0_211]
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330) ~[netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334) ~[netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:702) ~[netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650) ~[netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576) ~[netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493) ~[netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) ~[netty-common-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.49.Final.jar:4.1.49.Final]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_211]
+
+2020-07-18 12:12:53.139  INFO 5012 --- [lettuce-eventExecutorLoop-85-10] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 192.168.224.101:6379
+2020-07-18 12:12:57.577  INFO 5012 --- [lettuce-nioEventLoop-87-4] i.l.core.protocol.ReconnectionHandler    : Reconnected to 192.168.224.101:6379
+2020-07-18 12:13:21.160  INFO 5012 --- [lettuce-nioEventLoop-87-4] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_211]
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[na:1.8.0_211]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_211]
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_211]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380) ~[na:1.8.0_211]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253) ~[netty-buffer-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133) ~[netty-buffer-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350) ~[netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) ~[netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714) [netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650) [netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576) [netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493) [netty-transport-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) [netty-common-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.49.Final.jar:4.1.49.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.49.Final.jar:4.1.49.Final]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_211]
+
+2020-07-18 12:13:21.237  INFO 5012 --- [lettuce-eventExecutorLoop-85-11] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /192.168.224.101:6379
+2020-07-18 12:17:23.099  WARN 5012 --- [lettuce-nioEventLoop-87-5] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: java.util.concurrent.TimeoutException: Reconnection attempt exceeded timeout of 60 SECONDS 
+2020-07-18 12:17:23.177  INFO 5012 --- [lettuce-eventExecutorLoop-85-1] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 192.168.224.101:6379
+2020-07-18 12:17:33.180  WARN 5012 --- [lettuce-nioEventLoop-87-6] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.ConnectTimeoutException: connection timed out: /192.168.224.101:6379
+2020-07-18 12:17:33.276  INFO 5012 --- [lettuce-eventExecutorLoop-85-2] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 192.168.224.101:6379
+2020-07-18 12:17:33.278  INFO 5012 --- [lettuce-nioEventLoop-87-7] i.l.core.protocol.ReconnectionHandler    : Reconnected to 192.168.224.101:6379
+2020-07-18 12:17:51.026  WARN 5012 --- [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.sean.exception.BusinessException: 用户未登录，请重新登录]
+2020-07-18 12:17:53.258 DEBUG 5012 --- [http-nio-8080-exec-2] c.s.b.m.SysUserMapper.selectByUsername   : ==>  Preparing: select id, username, salt, `password`, phone, dept_id, real_name, nick_name, email, `status`, sex, deleted, create_id, update_id, create_where, create_time, update_time from sys_user where username=? and deleted=1 order by create_time 
+2020-07-18 12:17:53.259 DEBUG 5012 --- [http-nio-8080-exec-2] c.s.b.m.SysUserMapper.selectByUsername   : ==> Parameters: admin(String)
+2020-07-18 12:17:53.261 DEBUG 5012 --- [http-nio-8080-exec-2] c.s.b.m.SysUserMapper.selectByUsername   : <==      Total: 1
+2020-07-18 12:17:53.261 DEBUG 5012 --- [http-nio-8080-exec-2] c.s.b.m.S.getRoleIdsByUserId             : ==>  Preparing: select id, user_id, role_id, create_time from sys_user_role where user_id=? 
+2020-07-18 12:17:53.261 DEBUG 5012 --- [http-nio-8080-exec-2] c.s.b.m.S.getRoleIdsByUserId             : ==> Parameters: 9a26f5f1-cbd2-473d-82db-1d6dcf4598f8(String)
+2020-07-18 12:17:53.262 DEBUG 5012 --- [http-nio-8080-exec-2] c.s.b.m.S.getRoleIdsByUserId             : <==      Total: 1
+2020-07-18 12:17:53.262 DEBUG 5012 --- [http-nio-8080-exec-2] c.s.b.m.S.selectByPrimaryKey             : ==>  Preparing: select id, `name`, description, `status`, create_time, update_time, deleted from sys_role where id = ? 
+2020-07-18 12:17:53.262 DEBUG 5012 --- [http-nio-8080-exec-2] c.s.b.m.S.selectByPrimaryKey             : ==> Parameters: UDkrhi234iasdflss(String)
+2020-07-18 12:17:53.263 DEBUG 5012 --- [http-nio-8080-exec-2] c.s.b.m.S.selectByPrimaryKey             : <==      Total: 1
+2020-07-18 12:17:53.275 DEBUG 5012 --- [http-nio-8080-exec-1] c.s.b.m.S.getRoleIdsByUserId             : ==>  Preparing: select id, user_id, role_id, create_time from sys_user_role where user_id=? 
+2020-07-18 12:17:53.275 DEBUG 5012 --- [http-nio-8080-exec-1] c.s.b.m.S.getRoleIdsByUserId             : ==> Parameters: 9a26f5f1-cbd2-473d-82db-1d6dcf4598f8(String)
+2020-07-18 12:17:53.277 DEBUG 5012 --- [http-nio-8080-exec-1] c.s.b.m.S.getRoleIdsByUserId             : <==      Total: 1
+2020-07-18 12:17:53.277 DEBUG 5012 --- [http-nio-8080-exec-1] c.s.b.m.S.selectByPrimaryKey             : ==>  Preparing: select id, `name`, description, `status`, create_time, update_time, deleted from sys_role where id = ? 
+2020-07-18 12:17:53.277 DEBUG 5012 --- [http-nio-8080-exec-1] c.s.b.m.S.selectByPrimaryKey             : ==> Parameters: UDkrhi234iasdflss(String)
+2020-07-18 12:17:53.278 DEBUG 5012 --- [http-nio-8080-exec-1] c.s.b.m.S.selectByPrimaryKey             : <==      Total: 1
+2020-07-18 12:17:53.278 DEBUG 5012 --- [http-nio-8080-exec-1] c.s.b.m.SysUserMapper.selectByUserId     : ==>  Preparing: select username from sys_user where id=? and deleted=1 
+2020-07-18 12:17:53.278 DEBUG 5012 --- [http-nio-8080-exec-1] c.s.b.m.SysUserMapper.selectByUserId     : ==> Parameters: 9a26f5f1-cbd2-473d-82db-1d6dcf4598f8(String)
+2020-07-18 12:17:53.279 DEBUG 5012 --- [http-nio-8080-exec-1] c.s.b.m.SysUserMapper.selectByUserId     : <==      Total: 1
+2020-07-18 12:17:53.477 DEBUG 5012 --- [http-nio-8080-exec-4] c.s.b.m.S.selectAll_COUNT                : ==>  Preparing: SELECT count(0) FROM stock_staff WHERE deleted = 1 
+2020-07-18 12:17:53.477 DEBUG 5012 --- [http-nio-8080-exec-4] c.s.b.m.S.selectAll_COUNT                : ==> Parameters: 
+2020-07-18 12:17:53.478 DEBUG 5012 --- [http-nio-8080-exec-4] c.s.b.m.S.selectAll_COUNT                : <==      Total: 1
+2020-07-18 12:17:53.478 DEBUG 5012 --- [http-nio-8080-exec-4] c.s.b.mapper.StockStaffMapper.selectAll  : ==>  Preparing: select id, staffname, phone, email, dept_id, create_time, update_time, deleted from stock_staff WHERE deleted=1 order by id LIMIT ? 
+2020-07-18 12:17:53.478 DEBUG 5012 --- [http-nio-8080-exec-4] c.s.b.mapper.StockStaffMapper.selectAll  : ==> Parameters: 20(Integer)
+2020-07-18 12:17:53.478 DEBUG 5012 --- [http-nio-8080-exec-4] c.s.b.mapper.StockStaffMapper.selectAll  : <==      Total: 2
+2020-07-18 12:18:17.454  INFO 5012 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-07-18 12:18:17.457  INFO 5012 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-18 12:18:17.457  INFO 5012 --- [RMI TCP Connection(2)-127.0.0.1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-8} closing ...
+2020-07-18 12:18:17.458  INFO 5012 --- [RMI TCP Connection(2)-127.0.0.1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-8} closed
+2020-07-18 13:07:13.324  INFO 19052 --- [main] com.sean.InternalSystemApplicationTests  : Starting InternalSystemApplicationTests on SEAN-PC with PID 19052 (started by sean in D:\JavaPJ\InternalSystem)
+2020-07-18 13:07:13.324 DEBUG 19052 --- [main] com.sean.InternalSystemApplicationTests  : Running with Spring Boot v2.1.14.RELEASE, Spring v5.1.15.RELEASE
+2020-07-18 13:07:13.325  INFO 19052 --- [main] com.sean.InternalSystemApplicationTests  : No active profile set, falling back to default profiles: default
+2020-07-18 13:07:14.053  INFO 19052 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-18 13:07:14.055  INFO 19052 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-18 13:07:14.088  INFO 19052 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21ms. Found 0 Redis repository interfaces.
+2020-07-18 13:07:14.432  INFO 19052 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.sean.config.ShiroConfig$$EnhancerBySpringCGLIB$$179f3ec5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:07:16.123  INFO 19052 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.sean.config.RedisConfig$$EnhancerBySpringCGLIB$$626dc60f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:07:16.146  INFO 19052 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:07:16.152  INFO 19052 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration$$EnhancerBySpringCGLIB$$c29de2e1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:07:16.296  INFO 19052 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'lettuceClientResources' of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:07:16.385  INFO 19052 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConnectionFactory' of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:07:16.409  INFO 19052 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisTemplate' of type [org.springframework.data.redis.core.RedisTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:07:16.412  INFO 19052 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisService' of type [com.sean.service.RedisService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:07:16.413  INFO 19052 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'customHashedCredentialsMatcher' of type [com.sean.shiro.CustomHashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:07:16.416  INFO 19052 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisCacheManager' of type [com.sean.shiro.RedisCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:07:16.423  INFO 19052 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'customRealm' of type [com.sean.shiro.CustomRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:07:16.431  INFO 19052 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:07:16.441  INFO 19052 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:07:17.965  INFO 19052 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-07-18 13:07:18.408  INFO 19052 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-18 13:07:18.840  INFO 19052 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-07-18 13:07:18.863  INFO 19052 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-07-18 13:07:18.909  INFO 19052 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-07-18 13:07:19.091  INFO 19052 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_1
+2020-07-18 13:07:19.109  INFO 19052 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_2
+2020-07-18 13:07:19.128  INFO 19052 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_3
+2020-07-18 13:07:19.148  INFO 19052 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_4
+2020-07-18 13:07:19.158  INFO 19052 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUserUsingDELETE_1
+2020-07-18 13:07:19.164  INFO 19052 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_5
+2020-07-18 13:07:19.173  INFO 19052 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUserUsingDELETE_2
+2020-07-18 13:07:19.179  INFO 19052 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_6
+2020-07-18 13:07:19.193  INFO 19052 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_7
+2020-07-18 13:07:19.196  INFO 19052 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: selectAllNoPageUsingGET_1
+2020-07-18 13:07:19.204  INFO 19052 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteRoleUsingDELETE_1
+2020-07-18 13:07:19.212  INFO 19052 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_8
+2020-07-18 13:07:19.221  INFO 19052 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUserUsingDELETE_3
+2020-07-18 13:07:19.238  INFO 19052 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_9
+2020-07-18 13:07:19.260  INFO 19052 --- [main] com.sean.InternalSystemApplicationTests  : Started InternalSystemApplicationTests in 6.204 seconds (JVM running for 6.818)
+2020-07-18 13:07:19.815  INFO 19052 --- [main] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-07-18 13:07:19.816  INFO 19052 --- [main] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-07-18 13:07:31.603  INFO 19052 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-18 13:07:31.606  INFO 19052 --- [Thread-3] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2020-07-18 13:08:09.074  INFO 28772 --- [main] com.sean.InternalSystemApplicationTests  : Starting InternalSystemApplicationTests on SEAN-PC with PID 28772 (started by sean in D:\JavaPJ\InternalSystem)
+2020-07-18 13:08:09.074 DEBUG 28772 --- [main] com.sean.InternalSystemApplicationTests  : Running with Spring Boot v2.1.14.RELEASE, Spring v5.1.15.RELEASE
+2020-07-18 13:08:09.075  INFO 28772 --- [main] com.sean.InternalSystemApplicationTests  : No active profile set, falling back to default profiles: default
+2020-07-18 13:08:09.803  INFO 28772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-18 13:08:09.805  INFO 28772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-18 13:08:09.839  INFO 28772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23ms. Found 0 Redis repository interfaces.
+2020-07-18 13:08:10.182  INFO 28772 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.sean.config.ShiroConfig$$EnhancerBySpringCGLIB$$1b86c7ad] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:08:11.814  INFO 28772 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.sean.config.RedisConfig$$EnhancerBySpringCGLIB$$66554ef7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:08:11.839  INFO 28772 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:08:11.846  INFO 28772 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration$$EnhancerBySpringCGLIB$$c6856bc9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:08:12.000  INFO 28772 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'lettuceClientResources' of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:08:12.088  INFO 28772 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConnectionFactory' of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:08:12.111  INFO 28772 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisTemplate' of type [org.springframework.data.redis.core.RedisTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:08:12.114  INFO 28772 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisService' of type [com.sean.service.RedisService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:08:12.115  INFO 28772 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'customHashedCredentialsMatcher' of type [com.sean.shiro.CustomHashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:08:12.119  INFO 28772 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisCacheManager' of type [com.sean.shiro.RedisCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:08:12.126  INFO 28772 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'customRealm' of type [com.sean.shiro.CustomRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:08:12.137  INFO 28772 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:08:12.148  INFO 28772 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:08:13.189  INFO 28772 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-07-18 13:08:13.612  INFO 28772 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-18 13:08:14.023  INFO 28772 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-07-18 13:08:14.042  INFO 28772 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-07-18 13:08:14.081  INFO 28772 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-07-18 13:08:14.243  INFO 28772 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_1
+2020-07-18 13:08:14.259  INFO 28772 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_2
+2020-07-18 13:08:14.274  INFO 28772 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_3
+2020-07-18 13:08:14.291  INFO 28772 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_4
+2020-07-18 13:08:14.300  INFO 28772 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUserUsingDELETE_1
+2020-07-18 13:08:14.308  INFO 28772 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_5
+2020-07-18 13:08:14.316  INFO 28772 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUserUsingDELETE_2
+2020-07-18 13:08:14.322  INFO 28772 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_6
+2020-07-18 13:08:14.335  INFO 28772 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_7
+2020-07-18 13:08:14.337  INFO 28772 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: selectAllNoPageUsingGET_1
+2020-07-18 13:08:14.345  INFO 28772 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteRoleUsingDELETE_1
+2020-07-18 13:08:14.350  INFO 28772 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_8
+2020-07-18 13:08:14.356  INFO 28772 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUserUsingDELETE_3
+2020-07-18 13:08:14.385  INFO 28772 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_9
+2020-07-18 13:08:14.404  INFO 28772 --- [main] com.sean.InternalSystemApplicationTests  : Started InternalSystemApplicationTests in 5.594 seconds (JVM running for 6.241)
+2020-07-18 13:08:14.583  INFO 28772 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-18 13:08:14.586  INFO 28772 --- [Thread-3] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2020-07-18 13:09:34.955  INFO 13824 --- [main] com.sean.InternalSystemApplicationTests  : Starting InternalSystemApplicationTests on SEAN-PC with PID 13824 (started by sean in D:\JavaPJ\InternalSystem)
+2020-07-18 13:09:34.956 DEBUG 13824 --- [main] com.sean.InternalSystemApplicationTests  : Running with Spring Boot v2.1.14.RELEASE, Spring v5.1.15.RELEASE
+2020-07-18 13:09:34.956  INFO 13824 --- [main] com.sean.InternalSystemApplicationTests  : No active profile set, falling back to default profiles: default
+2020-07-18 13:09:35.797  INFO 13824 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-18 13:09:35.799  INFO 13824 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-18 13:09:35.831  INFO 13824 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22ms. Found 0 Redis repository interfaces.
+2020-07-18 13:09:36.196  INFO 13824 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.sean.config.ShiroConfig$$EnhancerBySpringCGLIB$$1b86c7ad] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:09:37.861  INFO 13824 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.sean.config.RedisConfig$$EnhancerBySpringCGLIB$$66554ef7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:09:37.883  INFO 13824 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:09:37.890  INFO 13824 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration$$EnhancerBySpringCGLIB$$c6856bc9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:09:38.033  INFO 13824 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'lettuceClientResources' of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:09:38.124  INFO 13824 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConnectionFactory' of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:09:38.148  INFO 13824 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisTemplate' of type [org.springframework.data.redis.core.RedisTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:09:38.150  INFO 13824 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisService' of type [com.sean.service.RedisService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:09:38.151  INFO 13824 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'customHashedCredentialsMatcher' of type [com.sean.shiro.CustomHashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:09:38.154  INFO 13824 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisCacheManager' of type [com.sean.shiro.RedisCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:09:38.161  INFO 13824 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'customRealm' of type [com.sean.shiro.CustomRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:09:38.171  INFO 13824 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:09:38.183  INFO 13824 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:09:39.176  INFO 13824 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-07-18 13:09:39.594  INFO 13824 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-18 13:09:39.982  INFO 13824 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-07-18 13:09:39.999  INFO 13824 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-07-18 13:09:40.040  INFO 13824 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-07-18 13:09:40.209  INFO 13824 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_1
+2020-07-18 13:09:40.227  INFO 13824 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_2
+2020-07-18 13:09:40.239  INFO 13824 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_3
+2020-07-18 13:09:40.254  INFO 13824 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_4
+2020-07-18 13:09:40.261  INFO 13824 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUserUsingDELETE_1
+2020-07-18 13:09:40.267  INFO 13824 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_5
+2020-07-18 13:09:40.275  INFO 13824 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUserUsingDELETE_2
+2020-07-18 13:09:40.281  INFO 13824 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_6
+2020-07-18 13:09:40.291  INFO 13824 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_7
+2020-07-18 13:09:40.293  INFO 13824 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: selectAllNoPageUsingGET_1
+2020-07-18 13:09:40.298  INFO 13824 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteRoleUsingDELETE_1
+2020-07-18 13:09:40.303  INFO 13824 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_8
+2020-07-18 13:09:40.308  INFO 13824 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUserUsingDELETE_3
+2020-07-18 13:09:40.322  INFO 13824 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_9
+2020-07-18 13:09:40.343  INFO 13824 --- [main] com.sean.InternalSystemApplicationTests  : Started InternalSystemApplicationTests in 5.704 seconds (JVM running for 6.377)
+2020-07-18 13:09:40.521  INFO 13824 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-18 13:09:40.526  INFO 13824 --- [Thread-3] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2020-07-18 13:10:22.538  INFO 27852 --- [main] com.sean.InternalSystemApplicationTests  : Starting InternalSystemApplicationTests on SEAN-PC with PID 27852 (started by sean in D:\JavaPJ\InternalSystem)
+2020-07-18 13:10:22.539 DEBUG 27852 --- [main] com.sean.InternalSystemApplicationTests  : Running with Spring Boot v2.1.14.RELEASE, Spring v5.1.15.RELEASE
+2020-07-18 13:10:22.540  INFO 27852 --- [main] com.sean.InternalSystemApplicationTests  : No active profile set, falling back to default profiles: default
+2020-07-18 13:10:23.310  INFO 27852 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-18 13:10:23.314  INFO 27852 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-18 13:10:23.352  INFO 27852 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27ms. Found 0 Redis repository interfaces.
+2020-07-18 13:10:23.689  INFO 27852 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.sean.config.ShiroConfig$$EnhancerBySpringCGLIB$$1b86c7ad] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:10:25.333  INFO 27852 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.sean.config.RedisConfig$$EnhancerBySpringCGLIB$$66554ef7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:10:25.357  INFO 27852 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:10:25.363  INFO 27852 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration$$EnhancerBySpringCGLIB$$c6856bc9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:10:25.511  INFO 27852 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'lettuceClientResources' of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:10:25.595  INFO 27852 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConnectionFactory' of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:10:25.620  INFO 27852 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisTemplate' of type [org.springframework.data.redis.core.RedisTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:10:25.622  INFO 27852 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisService' of type [com.sean.service.RedisService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:10:25.623  INFO 27852 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'customHashedCredentialsMatcher' of type [com.sean.shiro.CustomHashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:10:25.628  INFO 27852 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisCacheManager' of type [com.sean.shiro.RedisCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:10:25.637  INFO 27852 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'customRealm' of type [com.sean.shiro.CustomRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:10:25.646  INFO 27852 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:10:25.656  INFO 27852 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:10:26.712  INFO 27852 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-07-18 13:10:27.161  INFO 27852 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-18 13:10:27.589  INFO 27852 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-07-18 13:10:27.606  INFO 27852 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-07-18 13:10:27.643  INFO 27852 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-07-18 13:10:27.801  INFO 27852 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_1
+2020-07-18 13:10:27.821  INFO 27852 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_2
+2020-07-18 13:10:27.835  INFO 27852 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_3
+2020-07-18 13:10:27.856  INFO 27852 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_4
+2020-07-18 13:10:27.866  INFO 27852 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUserUsingDELETE_1
+2020-07-18 13:10:27.872  INFO 27852 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_5
+2020-07-18 13:10:27.880  INFO 27852 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUserUsingDELETE_2
+2020-07-18 13:10:27.886  INFO 27852 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_6
+2020-07-18 13:10:27.900  INFO 27852 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_7
+2020-07-18 13:10:27.902  INFO 27852 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: selectAllNoPageUsingGET_1
+2020-07-18 13:10:27.909  INFO 27852 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteRoleUsingDELETE_1
+2020-07-18 13:10:27.915  INFO 27852 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_8
+2020-07-18 13:10:27.921  INFO 27852 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUserUsingDELETE_3
+2020-07-18 13:10:27.939  INFO 27852 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_9
+2020-07-18 13:10:27.959  INFO 27852 --- [main] com.sean.InternalSystemApplicationTests  : Started InternalSystemApplicationTests in 5.692 seconds (JVM running for 6.331)
+2020-07-18 13:10:28.142  INFO 27852 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-18 13:10:28.146  INFO 27852 --- [Thread-3] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2020-07-18 13:33:23.367  INFO 25296 --- [main] com.sean.InternalSystemApplicationTests  : Starting InternalSystemApplicationTests on SEAN-PC with PID 25296 (started by sean in D:\JavaPJ\InternalSystem)
+2020-07-18 13:33:23.368 DEBUG 25296 --- [main] com.sean.InternalSystemApplicationTests  : Running with Spring Boot v2.1.14.RELEASE, Spring v5.1.15.RELEASE
+2020-07-18 13:33:23.368  INFO 25296 --- [main] com.sean.InternalSystemApplicationTests  : No active profile set, falling back to default profiles: default
+2020-07-18 13:33:24.119  INFO 25296 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-18 13:33:24.121  INFO 25296 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-18 13:33:24.158  INFO 25296 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26ms. Found 0 Redis repository interfaces.
+2020-07-18 13:33:24.525  INFO 25296 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.sean.config.ShiroConfig$$EnhancerBySpringCGLIB$$1b86c7ad] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:33:26.184  INFO 25296 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.sean.config.RedisConfig$$EnhancerBySpringCGLIB$$66554ef7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:33:26.204  INFO 25296 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:33:26.211  INFO 25296 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration$$EnhancerBySpringCGLIB$$c6856bc9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:33:26.341  INFO 25296 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'lettuceClientResources' of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:33:26.425  INFO 25296 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConnectionFactory' of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:33:26.449  INFO 25296 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisTemplate' of type [org.springframework.data.redis.core.RedisTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:33:26.451  INFO 25296 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisService' of type [com.sean.service.RedisService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:33:26.452  INFO 25296 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'customHashedCredentialsMatcher' of type [com.sean.shiro.CustomHashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:33:26.455  INFO 25296 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisCacheManager' of type [com.sean.shiro.RedisCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:33:26.463  INFO 25296 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'customRealm' of type [com.sean.shiro.CustomRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:33:26.471  INFO 25296 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:33:26.481  INFO 25296 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:33:27.566  INFO 25296 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-07-18 13:33:27.968  INFO 25296 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-18 13:33:28.399  INFO 25296 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-07-18 13:33:28.417  INFO 25296 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-07-18 13:33:28.455  INFO 25296 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-07-18 13:33:28.609  INFO 25296 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_1
+2020-07-18 13:33:28.625  INFO 25296 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_2
+2020-07-18 13:33:28.639  INFO 25296 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_3
+2020-07-18 13:33:28.654  INFO 25296 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_4
+2020-07-18 13:33:28.661  INFO 25296 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUserUsingDELETE_1
+2020-07-18 13:33:28.667  INFO 25296 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_5
+2020-07-18 13:33:28.674  INFO 25296 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUserUsingDELETE_2
+2020-07-18 13:33:28.679  INFO 25296 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_6
+2020-07-18 13:33:28.690  INFO 25296 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_7
+2020-07-18 13:33:28.692  INFO 25296 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: selectAllNoPageUsingGET_1
+2020-07-18 13:33:28.699  INFO 25296 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteRoleUsingDELETE_1
+2020-07-18 13:33:28.704  INFO 25296 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_8
+2020-07-18 13:33:28.710  INFO 25296 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUserUsingDELETE_3
+2020-07-18 13:33:28.724  INFO 25296 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_9
+2020-07-18 13:33:28.746  INFO 25296 --- [main] com.sean.InternalSystemApplicationTests  : Started InternalSystemApplicationTests in 5.655 seconds (JVM running for 6.268)
+2020-07-18 13:33:28.938  INFO 25296 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-18 13:33:28.943  INFO 25296 --- [Thread-3] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2020-07-18 13:34:18.001  INFO 24212 --- [main] com.sean.InternalSystemApplicationTests  : Starting InternalSystemApplicationTests on SEAN-PC with PID 24212 (started by sean in D:\JavaPJ\InternalSystem)
+2020-07-18 13:34:18.002 DEBUG 24212 --- [main] com.sean.InternalSystemApplicationTests  : Running with Spring Boot v2.1.14.RELEASE, Spring v5.1.15.RELEASE
+2020-07-18 13:34:18.003  INFO 24212 --- [main] com.sean.InternalSystemApplicationTests  : No active profile set, falling back to default profiles: default
+2020-07-18 13:34:18.732  INFO 24212 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-18 13:34:18.735  INFO 24212 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-18 13:34:18.770  INFO 24212 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24ms. Found 0 Redis repository interfaces.
+2020-07-18 13:34:19.115  INFO 24212 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.sean.config.ShiroConfig$$EnhancerBySpringCGLIB$$1b86c7ad] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:34:20.749  INFO 24212 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.sean.config.RedisConfig$$EnhancerBySpringCGLIB$$66554ef7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:34:20.769  INFO 24212 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:34:20.775  INFO 24212 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration$$EnhancerBySpringCGLIB$$c6856bc9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:34:20.912  INFO 24212 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'lettuceClientResources' of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:34:20.999  INFO 24212 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConnectionFactory' of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:34:21.021  INFO 24212 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisTemplate' of type [org.springframework.data.redis.core.RedisTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:34:21.023  INFO 24212 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisService' of type [com.sean.service.RedisService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:34:21.024  INFO 24212 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'customHashedCredentialsMatcher' of type [com.sean.shiro.CustomHashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:34:21.028  INFO 24212 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisCacheManager' of type [com.sean.shiro.RedisCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:34:21.036  INFO 24212 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'customRealm' of type [com.sean.shiro.CustomRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:34:21.044  INFO 24212 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:34:21.054  INFO 24212 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:34:22.142  INFO 24212 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-07-18 13:34:22.563  INFO 24212 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-18 13:34:22.979  INFO 24212 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-07-18 13:34:22.997  INFO 24212 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-07-18 13:34:23.033  INFO 24212 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-07-18 13:34:23.184  INFO 24212 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_1
+2020-07-18 13:34:23.202  INFO 24212 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_2
+2020-07-18 13:34:23.217  INFO 24212 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_3
+2020-07-18 13:34:23.234  INFO 24212 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_4
+2020-07-18 13:34:23.242  INFO 24212 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUserUsingDELETE_1
+2020-07-18 13:34:23.249  INFO 24212 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_5
+2020-07-18 13:34:23.258  INFO 24212 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUserUsingDELETE_2
+2020-07-18 13:34:23.263  INFO 24212 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_6
+2020-07-18 13:34:23.275  INFO 24212 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_7
+2020-07-18 13:34:23.277  INFO 24212 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: selectAllNoPageUsingGET_1
+2020-07-18 13:34:23.285  INFO 24212 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteRoleUsingDELETE_1
+2020-07-18 13:34:23.291  INFO 24212 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_8
+2020-07-18 13:34:23.297  INFO 24212 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUserUsingDELETE_3
+2020-07-18 13:34:23.311  INFO 24212 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_9
+2020-07-18 13:34:23.331  INFO 24212 --- [main] com.sean.InternalSystemApplicationTests  : Started InternalSystemApplicationTests in 5.596 seconds (JVM running for 6.219)
+2020-07-18 13:34:23.520  INFO 24212 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-18 13:34:23.525  INFO 24212 --- [Thread-3] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2020-07-18 13:36:53.327  INFO 9772 --- [main] com.sean.InternalSystemApplicationTests  : Starting InternalSystemApplicationTests on SEAN-PC with PID 9772 (started by sean in D:\JavaPJ\InternalSystem)
+2020-07-18 13:36:53.328 DEBUG 9772 --- [main] com.sean.InternalSystemApplicationTests  : Running with Spring Boot v2.1.14.RELEASE, Spring v5.1.15.RELEASE
+2020-07-18 13:36:53.328  INFO 9772 --- [main] com.sean.InternalSystemApplicationTests  : No active profile set, falling back to default profiles: default
+2020-07-18 13:36:54.063  INFO 9772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-18 13:36:54.065  INFO 9772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-18 13:36:54.096  INFO 9772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21ms. Found 0 Redis repository interfaces.
+2020-07-18 13:36:54.437  INFO 9772 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.sean.config.ShiroConfig$$EnhancerBySpringCGLIB$$1b86c7ad] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:36:56.052  INFO 9772 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.sean.config.RedisConfig$$EnhancerBySpringCGLIB$$66554ef7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:36:56.073  INFO 9772 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:36:56.078  INFO 9772 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration$$EnhancerBySpringCGLIB$$c6856bc9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:36:56.212  INFO 9772 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'lettuceClientResources' of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:36:56.297  INFO 9772 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConnectionFactory' of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:36:56.320  INFO 9772 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisTemplate' of type [org.springframework.data.redis.core.RedisTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:36:56.322  INFO 9772 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisService' of type [com.sean.service.RedisService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:36:56.323  INFO 9772 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'customHashedCredentialsMatcher' of type [com.sean.shiro.CustomHashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:36:56.327  INFO 9772 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisCacheManager' of type [com.sean.shiro.RedisCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:36:56.335  INFO 9772 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'customRealm' of type [com.sean.shiro.CustomRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:36:56.343  INFO 9772 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:36:56.353  INFO 9772 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:36:57.407  INFO 9772 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-07-18 13:36:57.813  INFO 9772 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-18 13:36:58.256  INFO 9772 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-07-18 13:36:58.274  INFO 9772 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-07-18 13:36:58.309  INFO 9772 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-07-18 13:36:58.453  INFO 9772 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_1
+2020-07-18 13:36:58.468  INFO 9772 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_2
+2020-07-18 13:36:58.484  INFO 9772 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_3
+2020-07-18 13:36:58.498  INFO 9772 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_4
+2020-07-18 13:36:58.506  INFO 9772 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUserUsingDELETE_1
+2020-07-18 13:36:58.512  INFO 9772 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_5
+2020-07-18 13:36:58.519  INFO 9772 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUserUsingDELETE_2
+2020-07-18 13:36:58.523  INFO 9772 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_6
+2020-07-18 13:36:58.534  INFO 9772 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_7
+2020-07-18 13:36:58.536  INFO 9772 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: selectAllNoPageUsingGET_1
+2020-07-18 13:36:58.543  INFO 9772 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteRoleUsingDELETE_1
+2020-07-18 13:36:58.547  INFO 9772 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_8
+2020-07-18 13:36:58.553  INFO 9772 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUserUsingDELETE_3
+2020-07-18 13:36:58.567  INFO 9772 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_9
+2020-07-18 13:36:58.589  INFO 9772 --- [main] com.sean.InternalSystemApplicationTests  : Started InternalSystemApplicationTests in 5.548 seconds (JVM running for 6.172)
+2020-07-18 13:36:58.774  INFO 9772 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-18 13:36:58.777  INFO 9772 --- [Thread-3] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2020-07-18 13:44:31.127  INFO 15020 --- [main] com.sean.InternalSystemApplicationTests  : Starting InternalSystemApplicationTests on SEAN-PC with PID 15020 (started by sean in D:\JavaPJ\InternalSystem)
+2020-07-18 13:44:31.147 DEBUG 15020 --- [main] com.sean.InternalSystemApplicationTests  : Running with Spring Boot v2.1.14.RELEASE, Spring v5.1.15.RELEASE
+2020-07-18 13:44:31.152  INFO 15020 --- [main] com.sean.InternalSystemApplicationTests  : No active profile set, falling back to default profiles: default
+2020-07-18 13:44:31.839  INFO 15020 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-18 13:44:31.841  INFO 15020 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-18 13:44:31.871  INFO 15020 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20ms. Found 0 Redis repository interfaces.
+2020-07-18 13:44:32.213  INFO 15020 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.sean.config.ShiroConfig$$EnhancerBySpringCGLIB$$1b86c7ad] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:44:33.750  INFO 15020 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.sean.config.RedisConfig$$EnhancerBySpringCGLIB$$66554ef7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:44:33.772  INFO 15020 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:44:33.778  INFO 15020 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration$$EnhancerBySpringCGLIB$$c6856bc9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:44:33.911  INFO 15020 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'lettuceClientResources' of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:44:33.995  INFO 15020 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConnectionFactory' of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:44:34.038  INFO 15020 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisTemplate' of type [org.springframework.data.redis.core.RedisTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:44:34.041  INFO 15020 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisService' of type [com.sean.service.RedisService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:44:34.041  INFO 15020 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'customHashedCredentialsMatcher' of type [com.sean.shiro.CustomHashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:44:34.044  INFO 15020 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisCacheManager' of type [com.sean.shiro.RedisCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:44:34.051  INFO 15020 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'customRealm' of type [com.sean.shiro.CustomRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:44:34.058  INFO 15020 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:44:34.068  INFO 15020 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:44:35.799  INFO 15020 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-07-18 13:44:36.270  INFO 15020 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-18 13:44:36.683  INFO 15020 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-07-18 13:44:36.706  INFO 15020 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-07-18 13:44:36.746  INFO 15020 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-07-18 13:44:36.954  INFO 15020 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_1
+2020-07-18 13:44:36.968  INFO 15020 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_2
+2020-07-18 13:44:36.981  INFO 15020 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_3
+2020-07-18 13:44:36.996  INFO 15020 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_4
+2020-07-18 13:44:37.003  INFO 15020 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUserUsingDELETE_1
+2020-07-18 13:44:37.009  INFO 15020 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_5
+2020-07-18 13:44:37.017  INFO 15020 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUserUsingDELETE_2
+2020-07-18 13:44:37.022  INFO 15020 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_6
+2020-07-18 13:44:37.033  INFO 15020 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_7
+2020-07-18 13:44:37.035  INFO 15020 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: selectAllNoPageUsingGET_1
+2020-07-18 13:44:37.041  INFO 15020 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteRoleUsingDELETE_1
+2020-07-18 13:44:37.046  INFO 15020 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_8
+2020-07-18 13:44:37.052  INFO 15020 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUserUsingDELETE_3
+2020-07-18 13:44:37.068  INFO 15020 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_9
+2020-07-18 13:44:37.088  INFO 15020 --- [main] com.sean.InternalSystemApplicationTests  : Started InternalSystemApplicationTests in 6.237 seconds (JVM running for 6.835)
+2020-07-18 13:44:37.428  INFO 15020 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-18 13:44:37.431  INFO 15020 --- [Thread-3] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2020-07-18 13:44:59.315  INFO 7008 --- [main] com.sean.InternalSystemApplicationTests  : Starting InternalSystemApplicationTests on SEAN-PC with PID 7008 (started by sean in D:\JavaPJ\InternalSystem)
+2020-07-18 13:44:59.316 DEBUG 7008 --- [main] com.sean.InternalSystemApplicationTests  : Running with Spring Boot v2.1.14.RELEASE, Spring v5.1.15.RELEASE
+2020-07-18 13:44:59.316  INFO 7008 --- [main] com.sean.InternalSystemApplicationTests  : No active profile set, falling back to default profiles: default
+2020-07-18 13:45:00.075  INFO 7008 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-18 13:45:00.077  INFO 7008 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-18 13:45:00.109  INFO 7008 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21ms. Found 0 Redis repository interfaces.
+2020-07-18 13:45:00.465  INFO 7008 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.sean.config.ShiroConfig$$EnhancerBySpringCGLIB$$1b86c7ad] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:45:01.995  INFO 7008 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.sean.config.RedisConfig$$EnhancerBySpringCGLIB$$66554ef7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:45:02.018  INFO 7008 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:45:02.024  INFO 7008 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration$$EnhancerBySpringCGLIB$$c6856bc9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:45:02.162  INFO 7008 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'lettuceClientResources' of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:45:02.253  INFO 7008 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConnectionFactory' of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:45:02.286  INFO 7008 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisTemplate' of type [org.springframework.data.redis.core.RedisTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:45:02.289  INFO 7008 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisService' of type [com.sean.service.RedisService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:45:02.290  INFO 7008 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'customHashedCredentialsMatcher' of type [com.sean.shiro.CustomHashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:45:02.295  INFO 7008 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisCacheManager' of type [com.sean.shiro.RedisCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:45:02.307  INFO 7008 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'customRealm' of type [com.sean.shiro.CustomRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:45:02.320  INFO 7008 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:45:02.335  INFO 7008 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:45:03.596  INFO 7008 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-07-18 13:45:04.035  INFO 7008 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-18 13:45:04.450  INFO 7008 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-07-18 13:45:04.468  INFO 7008 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-07-18 13:45:04.511  INFO 7008 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-07-18 13:45:04.669  INFO 7008 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_1
+2020-07-18 13:45:04.686  INFO 7008 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_2
+2020-07-18 13:45:04.703  INFO 7008 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_3
+2020-07-18 13:45:04.718  INFO 7008 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_4
+2020-07-18 13:45:04.729  INFO 7008 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUserUsingDELETE_1
+2020-07-18 13:45:04.738  INFO 7008 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_5
+2020-07-18 13:45:04.748  INFO 7008 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUserUsingDELETE_2
+2020-07-18 13:45:04.757  INFO 7008 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_6
+2020-07-18 13:45:04.773  INFO 7008 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_7
+2020-07-18 13:45:04.775  INFO 7008 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: selectAllNoPageUsingGET_1
+2020-07-18 13:45:04.790  INFO 7008 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteRoleUsingDELETE_1
+2020-07-18 13:45:04.798  INFO 7008 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_8
+2020-07-18 13:45:04.817  INFO 7008 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUserUsingDELETE_3
+2020-07-18 13:45:04.835  INFO 7008 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_9
+2020-07-18 13:45:04.863  INFO 7008 --- [main] com.sean.InternalSystemApplicationTests  : Started InternalSystemApplicationTests in 5.818 seconds (JVM running for 6.43)
+2020-07-18 13:45:05.120  INFO 7008 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-18 13:45:05.122  INFO 7008 --- [Thread-3] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2020-07-18 13:54:18.000  INFO 11228 --- [main] com.sean.InternalSystemApplicationTests  : Starting InternalSystemApplicationTests on SEAN-PC with PID 11228 (started by sean in D:\JavaPJ\InternalSystem)
+2020-07-18 13:54:18.001 DEBUG 11228 --- [main] com.sean.InternalSystemApplicationTests  : Running with Spring Boot v2.1.14.RELEASE, Spring v5.1.15.RELEASE
+2020-07-18 13:54:18.004  INFO 11228 --- [main] com.sean.InternalSystemApplicationTests  : No active profile set, falling back to default profiles: default
+2020-07-18 13:54:18.788  INFO 11228 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-18 13:54:18.790  INFO 11228 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-18 13:54:18.825  INFO 11228 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22ms. Found 0 Redis repository interfaces.
+2020-07-18 13:54:19.166  INFO 11228 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.sean.config.ShiroConfig$$EnhancerBySpringCGLIB$$b9e48f22] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:54:20.686  INFO 11228 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.sean.config.RedisConfig$$EnhancerBySpringCGLIB$$4b3166c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:54:20.708  INFO 11228 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:54:20.714  INFO 11228 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration$$EnhancerBySpringCGLIB$$64e3333e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:54:20.845  INFO 11228 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'lettuceClientResources' of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:54:20.926  INFO 11228 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConnectionFactory' of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:54:20.947  INFO 11228 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisTemplate' of type [org.springframework.data.redis.core.RedisTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:54:20.949  INFO 11228 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisService' of type [com.sean.service.RedisService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:54:20.950  INFO 11228 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'customHashedCredentialsMatcher' of type [com.sean.shiro.CustomHashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:54:20.955  INFO 11228 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisCacheManager' of type [com.sean.shiro.RedisCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:54:20.962  INFO 11228 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'customRealm' of type [com.sean.shiro.CustomRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:54:20.971  INFO 11228 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:54:20.985  INFO 11228 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 13:54:22.056  INFO 11228 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-07-18 13:54:22.483  INFO 11228 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-18 13:54:22.527  INFO 11228 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2020-07-18 13:54:22.597  WARN 11228 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-07-18 13:54:22.935  INFO 11228 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-07-18 13:54:22.953  INFO 11228 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-07-18 13:54:22.991  INFO 11228 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-07-18 13:54:23.147  INFO 11228 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_1
+2020-07-18 13:54:23.163  INFO 11228 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_2
+2020-07-18 13:54:23.176  INFO 11228 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_3
+2020-07-18 13:54:23.192  INFO 11228 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_4
+2020-07-18 13:54:23.199  INFO 11228 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUserUsingDELETE_1
+2020-07-18 13:54:23.207  INFO 11228 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_5
+2020-07-18 13:54:23.214  INFO 11228 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUserUsingDELETE_2
+2020-07-18 13:54:23.219  INFO 11228 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_6
+2020-07-18 13:54:23.229  INFO 11228 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_7
+2020-07-18 13:54:23.231  INFO 11228 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: selectAllNoPageUsingGET_1
+2020-07-18 13:54:23.237  INFO 11228 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteRoleUsingDELETE_1
+2020-07-18 13:54:23.242  INFO 11228 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_8
+2020-07-18 13:54:23.248  INFO 11228 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUserUsingDELETE_3
+2020-07-18 13:54:23.262  INFO 11228 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_9
+2020-07-18 13:54:23.282  INFO 11228 --- [main] com.sean.InternalSystemApplicationTests  : Started InternalSystemApplicationTests in 5.544 seconds (JVM running for 6.173)
+2020-07-18 13:54:23.450  INFO 11228 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-18 13:54:23.456  INFO 11228 --- [Thread-3] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2020-07-18 14:15:10.757  INFO 16592 --- [main] com.sean.InternalSystemApplicationTests  : Starting InternalSystemApplicationTests on SEAN-PC with PID 16592 (started by sean in D:\JavaPJ\InternalSystem)
+2020-07-18 14:15:10.758 DEBUG 16592 --- [main] com.sean.InternalSystemApplicationTests  : Running with Spring Boot v2.1.14.RELEASE, Spring v5.1.15.RELEASE
+2020-07-18 14:15:10.758  INFO 16592 --- [main] com.sean.InternalSystemApplicationTests  : No active profile set, falling back to default profiles: default
+2020-07-18 14:15:11.521  INFO 16592 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-18 14:15:11.523  INFO 16592 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-18 14:15:11.561  INFO 16592 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27ms. Found 0 Redis repository interfaces.
+2020-07-18 14:15:11.993  INFO 16592 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.sean.config.ShiroConfig$$EnhancerBySpringCGLIB$$b9e48f22] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:15:13.603  INFO 16592 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.sean.config.RedisConfig$$EnhancerBySpringCGLIB$$4b3166c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:15:13.624  INFO 16592 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:15:13.630  INFO 16592 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration$$EnhancerBySpringCGLIB$$64e3333e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:15:13.760  INFO 16592 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'lettuceClientResources' of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:15:13.847  INFO 16592 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConnectionFactory' of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:15:13.870  INFO 16592 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisTemplate' of type [org.springframework.data.redis.core.RedisTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:15:13.872  INFO 16592 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisService' of type [com.sean.service.RedisService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:15:13.873  INFO 16592 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'customHashedCredentialsMatcher' of type [com.sean.shiro.CustomHashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:15:13.876  INFO 16592 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisCacheManager' of type [com.sean.shiro.RedisCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:15:13.884  INFO 16592 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'customRealm' of type [com.sean.shiro.CustomRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:15:13.892  INFO 16592 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:15:13.902  INFO 16592 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:15:14.981  INFO 16592 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-07-18 14:15:15.368  INFO 16592 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-18 14:15:15.413  INFO 16592 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2020-07-18 14:15:15.483  WARN 16592 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-07-18 14:15:15.899  INFO 16592 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-07-18 14:15:15.919  INFO 16592 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-07-18 14:15:15.963  INFO 16592 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-07-18 14:15:16.133  INFO 16592 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_1
+2020-07-18 14:15:16.149  INFO 16592 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_2
+2020-07-18 14:15:16.164  INFO 16592 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_3
+2020-07-18 14:15:16.179  INFO 16592 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_4
+2020-07-18 14:15:16.187  INFO 16592 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUserUsingDELETE_1
+2020-07-18 14:15:16.195  INFO 16592 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_5
+2020-07-18 14:15:16.203  INFO 16592 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUserUsingDELETE_2
+2020-07-18 14:15:16.208  INFO 16592 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_6
+2020-07-18 14:15:16.221  INFO 16592 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_7
+2020-07-18 14:15:16.223  INFO 16592 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: selectAllNoPageUsingGET_1
+2020-07-18 14:15:16.229  INFO 16592 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteRoleUsingDELETE_1
+2020-07-18 14:15:16.234  INFO 16592 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_8
+2020-07-18 14:15:16.239  INFO 16592 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUserUsingDELETE_3
+2020-07-18 14:15:16.253  INFO 16592 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_9
+2020-07-18 14:15:16.274  INFO 16592 --- [main] com.sean.InternalSystemApplicationTests  : Started InternalSystemApplicationTests in 5.806 seconds (JVM running for 6.411)
+2020-07-18 14:15:16.442  INFO 16592 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-18 14:15:16.446  INFO 16592 --- [Thread-3] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2020-07-18 14:18:20.013  INFO 6848 --- [main] com.sean.InternalSystemApplicationTests  : Starting InternalSystemApplicationTests on SEAN-PC with PID 6848 (started by sean in D:\JavaPJ\InternalSystem)
+2020-07-18 14:18:20.014 DEBUG 6848 --- [main] com.sean.InternalSystemApplicationTests  : Running with Spring Boot v2.1.14.RELEASE, Spring v5.1.15.RELEASE
+2020-07-18 14:18:20.014  INFO 6848 --- [main] com.sean.InternalSystemApplicationTests  : No active profile set, falling back to default profiles: default
+2020-07-18 14:18:20.754  INFO 6848 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-18 14:18:20.756  INFO 6848 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-18 14:18:20.789  INFO 6848 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22ms. Found 0 Redis repository interfaces.
+2020-07-18 14:18:21.154  INFO 6848 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.sean.config.ShiroConfig$$EnhancerBySpringCGLIB$$b9e48f22] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:18:22.682  INFO 6848 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.sean.config.RedisConfig$$EnhancerBySpringCGLIB$$4b3166c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:18:22.702  INFO 6848 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:18:22.708  INFO 6848 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration$$EnhancerBySpringCGLIB$$64e3333e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:18:22.847  INFO 6848 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'lettuceClientResources' of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:18:22.930  INFO 6848 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConnectionFactory' of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:18:22.952  INFO 6848 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisTemplate' of type [org.springframework.data.redis.core.RedisTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:18:22.954  INFO 6848 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisService' of type [com.sean.service.RedisService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:18:22.955  INFO 6848 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'customHashedCredentialsMatcher' of type [com.sean.shiro.CustomHashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:18:22.959  INFO 6848 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisCacheManager' of type [com.sean.shiro.RedisCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:18:22.966  INFO 6848 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'customRealm' of type [com.sean.shiro.CustomRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:18:22.975  INFO 6848 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:18:22.984  INFO 6848 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:18:24.021  INFO 6848 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-07-18 14:18:24.429  INFO 6848 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-18 14:18:24.475  INFO 6848 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2020-07-18 14:18:24.556  WARN 6848 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-07-18 14:18:24.897  INFO 6848 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-07-18 14:18:24.917  INFO 6848 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-07-18 14:18:24.917  INFO 6848 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Skipping initializing disabled plugin bean swagger v2.0
+2020-07-18 14:18:24.928  INFO 6848 --- [main] com.sean.InternalSystemApplicationTests  : Started InternalSystemApplicationTests in 5.176 seconds (JVM running for 5.795)
+2020-07-18 14:18:25.106  INFO 6848 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-18 14:18:25.110  INFO 6848 --- [Thread-3] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2020-07-18 14:27:36.863  INFO 16944 --- [main] com.sean.InternalSystemApplicationTests  : Starting InternalSystemApplicationTests on SEAN-PC with PID 16944 (started by sean in D:\JavaPJ\InternalSystem)
+2020-07-18 14:27:36.863 DEBUG 16944 --- [main] com.sean.InternalSystemApplicationTests  : Running with Spring Boot v2.1.14.RELEASE, Spring v5.1.15.RELEASE
+2020-07-18 14:27:36.864  INFO 16944 --- [main] com.sean.InternalSystemApplicationTests  : No active profile set, falling back to default profiles: default
+2020-07-18 14:27:37.586  INFO 16944 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-18 14:27:37.589  INFO 16944 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-18 14:27:37.627  INFO 16944 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24ms. Found 0 Redis repository interfaces.
+2020-07-18 14:27:38.002  INFO 16944 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.sean.config.ShiroConfig$$EnhancerBySpringCGLIB$$b9e48f22] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:27:39.543  INFO 16944 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.sean.config.RedisConfig$$EnhancerBySpringCGLIB$$4b3166c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:27:39.567  INFO 16944 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:27:39.573  INFO 16944 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration$$EnhancerBySpringCGLIB$$64e3333e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:27:39.705  INFO 16944 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'lettuceClientResources' of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:27:39.794  INFO 16944 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConnectionFactory' of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:27:39.817  INFO 16944 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisTemplate' of type [org.springframework.data.redis.core.RedisTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:27:39.820  INFO 16944 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisService' of type [com.sean.service.RedisService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:27:39.820  INFO 16944 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'customHashedCredentialsMatcher' of type [com.sean.shiro.CustomHashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:27:39.824  INFO 16944 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisCacheManager' of type [com.sean.shiro.RedisCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:27:39.832  INFO 16944 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'customRealm' of type [com.sean.shiro.CustomRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:27:39.841  INFO 16944 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:27:39.853  INFO 16944 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:27:40.947  INFO 16944 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-07-18 14:27:41.378  INFO 16944 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-18 14:27:41.427  INFO 16944 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2020-07-18 14:27:41.494  WARN 16944 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-07-18 14:27:41.842  INFO 16944 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-07-18 14:27:41.867  INFO 16944 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-07-18 14:27:41.867  INFO 16944 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Skipping initializing disabled plugin bean swagger v2.0
+2020-07-18 14:27:41.877  INFO 16944 --- [main] com.sean.InternalSystemApplicationTests  : Started InternalSystemApplicationTests in 5.29 seconds (JVM running for 5.903)
+2020-07-18 14:27:42.052  INFO 16944 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-18 14:27:42.055  INFO 16944 --- [Thread-3] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2020-07-18 14:40:51.751  INFO 17580 --- [main] com.sean.InternalSystemApplicationTests  : Starting InternalSystemApplicationTests on SEAN-PC with PID 17580 (started by sean in D:\JavaPJ\InternalSystem)
+2020-07-18 14:40:51.752 DEBUG 17580 --- [main] com.sean.InternalSystemApplicationTests  : Running with Spring Boot v2.1.14.RELEASE, Spring v5.1.15.RELEASE
+2020-07-18 14:40:51.752  INFO 17580 --- [main] com.sean.InternalSystemApplicationTests  : No active profile set, falling back to default profiles: default
+2020-07-18 14:40:52.524  INFO 17580 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-18 14:40:52.526  INFO 17580 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-18 14:40:52.569  INFO 17580 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31ms. Found 0 Redis repository interfaces.
+2020-07-18 14:40:52.940  INFO 17580 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.sean.config.ShiroConfig$$EnhancerBySpringCGLIB$$b9e48f22] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:40:54.535  INFO 17580 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.sean.config.RedisConfig$$EnhancerBySpringCGLIB$$4b3166c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:40:54.557  INFO 17580 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:40:54.563  INFO 17580 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration$$EnhancerBySpringCGLIB$$64e3333e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:40:54.698  INFO 17580 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'lettuceClientResources' of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:40:54.784  INFO 17580 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConnectionFactory' of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:40:54.807  INFO 17580 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisTemplate' of type [org.springframework.data.redis.core.RedisTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:40:54.810  INFO 17580 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisService' of type [com.sean.service.RedisService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:40:54.811  INFO 17580 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'customHashedCredentialsMatcher' of type [com.sean.shiro.CustomHashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:40:54.814  INFO 17580 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisCacheManager' of type [com.sean.shiro.RedisCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:40:54.823  INFO 17580 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'customRealm' of type [com.sean.shiro.CustomRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:40:54.834  INFO 17580 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:40:54.844  INFO 17580 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:40:55.973  INFO 17580 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-07-18 14:40:56.383  INFO 17580 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-18 14:40:56.429  INFO 17580 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2020-07-18 14:40:56.501  WARN 17580 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-07-18 14:40:56.867  INFO 17580 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-07-18 14:40:56.886  INFO 17580 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-07-18 14:40:56.886  INFO 17580 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Skipping initializing disabled plugin bean swagger v2.0
+2020-07-18 14:40:56.895  INFO 17580 --- [main] com.sean.InternalSystemApplicationTests  : Started InternalSystemApplicationTests in 5.422 seconds (JVM running for 6.033)
+2020-07-18 14:40:57.071  INFO 17580 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-18 14:40:57.076  INFO 17580 --- [Thread-3] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2020-07-18 14:55:51.525  INFO 1592 --- [main] com.sean.InternalSystemApplicationTests  : Starting InternalSystemApplicationTests on SEAN-PC with PID 1592 (started by sean in D:\JavaPJ\InternalSystem)
+2020-07-18 14:55:51.526 DEBUG 1592 --- [main] com.sean.InternalSystemApplicationTests  : Running with Spring Boot v2.1.14.RELEASE, Spring v5.1.15.RELEASE
+2020-07-18 14:55:51.526  INFO 1592 --- [main] com.sean.InternalSystemApplicationTests  : No active profile set, falling back to default profiles: default
+2020-07-18 14:55:52.241  INFO 1592 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-18 14:55:52.244  INFO 1592 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-18 14:55:52.285  INFO 1592 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26ms. Found 0 Redis repository interfaces.
+2020-07-18 14:55:52.676  INFO 1592 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.sean.config.ShiroConfig$$EnhancerBySpringCGLIB$$b9e48f22] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:55:54.218  INFO 1592 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.sean.config.RedisConfig$$EnhancerBySpringCGLIB$$4b3166c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:55:54.240  INFO 1592 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:55:54.245  INFO 1592 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration$$EnhancerBySpringCGLIB$$64e3333e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:55:54.379  INFO 1592 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'lettuceClientResources' of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:55:54.461  INFO 1592 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConnectionFactory' of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:55:54.484  INFO 1592 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisTemplate' of type [org.springframework.data.redis.core.RedisTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:55:54.486  INFO 1592 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisService' of type [com.sean.service.RedisService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:55:54.487  INFO 1592 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'customHashedCredentialsMatcher' of type [com.sean.shiro.CustomHashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:55:54.491  INFO 1592 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisCacheManager' of type [com.sean.shiro.RedisCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:55:54.498  INFO 1592 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'customRealm' of type [com.sean.shiro.CustomRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:55:54.506  INFO 1592 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:55:54.516  INFO 1592 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-18 14:55:55.579  INFO 1592 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-07-18 14:55:55.966  INFO 1592 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-18 14:55:56.018  INFO 1592 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2020-07-18 14:55:56.098  WARN 1592 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-07-18 14:55:56.493  INFO 1592 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-07-18 14:55:56.513  INFO 1592 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-07-18 14:55:56.513  INFO 1592 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Skipping initializing disabled plugin bean swagger v2.0
+2020-07-18 14:55:56.521  INFO 1592 --- [main] com.sean.InternalSystemApplicationTests  : Started InternalSystemApplicationTests in 5.268 seconds (JVM running for 5.885)
+2020-07-18 14:55:56.701  INFO 1592 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-18 14:55:56.704  INFO 1592 --- [Thread-3] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
